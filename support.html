@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Lens Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1D3557;
+    --navy-dark: #0D1B2A;
+    --mint: #A8DADC;
+    --bg: #FAFAFA;
+    --text: #1A1A1A;
+    --muted: #444444;
+    --border: #E5E5EA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .brand {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+  }
+  .meta {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 2.5rem 0 0.75rem;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 1.5rem 0 0.5rem;
+  }
+  p {
+    margin: 0 0 1rem;
+    color: var(--text);
+  }
+  .contact-card {
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 1.75rem 1.75rem 1.5rem;
+    border-radius: 14px;
+    margin: 1.5rem 0 2rem;
+  }
+  .contact-card h2 {
+    color: #FFFFFF;
+    margin: 0 0 0.5rem;
+  }
+  .contact-card p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.75rem;
+  }
+  .contact-card a {
+    color: var(--mint);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a:hover { color: var(--navy-dark); }
+  ul {
+    padding-left: 1.5rem;
+    margin: 0 0 1rem;
+  }
+  li {
+    margin-bottom: 0.4rem;
+  }
+  .lang-switch {
+    margin-top: 2rem;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <p class="brand">Lens Finance</p>
+    <h1>Support</h1>
+    <p class="meta">Questions, feedback, bug reports. One person reads everything.</p>
+  </header>
+
+  <div class="contact-card">
+    <h2>Get in touch</h2>
+    <p>Email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> for anything Lens-related. Bug reports, feature requests, billing questions, or just to say hello.</p>
+    <p>You can also tap Settings → Support → Share Feedback inside the app to send a message.</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <h3>Where is my data stored?</h3>
+  <p>On your device, in a local database. Lens has no cloud backend for your financial data. If you delete the app without backing up, the data is gone. See the <a href="privacy.html">Privacy Policy</a> for the architecture details.</p>
+
+  <h3>How do I back up my data?</h3>
+  <p>Settings → Data &amp; backup → Export. Choose a location (iCloud Drive recommended). The file is your snapshot. To restore, install Lens on a new device and use Settings → Data &amp; backup → Restore.</p>
+
+  <h3>How do I cancel my Pro subscription?</h3>
+  <p>Subscriptions are billed by Apple, so cancellation happens in your Apple ID settings, not in Lens. iPhone: Settings → tap your name at the top → Subscriptions → Lens Pro → Cancel. Cancellation takes effect at the end of the current billing period.</p>
+
+  <h3>I bought Lifetime. Why does the app still show the upgrade prompt?</h3>
+  <p>Open the paywall and tap Restore Purchases at the bottom. Apple sometimes takes a moment to propagate the entitlement, especially if you switched devices. If it still doesn't unlock after 5 minutes, email us with your Apple ID purchase receipt.</p>
+
+  <h3>How does the AI feature work?</h3>
+  <p>Ask AI uses your own OpenRouter API key (BYOK). You bring the key from <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>, paste it into Settings, and pick which model you want to use. Your prompts go directly from your device to OpenRouter, never through any Lens server.</p>
+
+  <h3>How does receipt scanning work?</h3>
+  <p>Two paths. The first uses on-device OCR built into iOS, no internet required. The second uses your OpenRouter API key for AI parsing on more complex receipts. Which one runs depends on your settings.</p>
+
+  <h3>Why does Lens not connect to my bank?</h3>
+  <p>Bank Sync is a planned add-on, not yet live in v1. When it ships, it will be optional and clearly labelled. For now, transactions are added manually or by importing a CSV file from your bank.</p>
+
+  <h3>I found a bug. What do I do?</h3>
+  <p>Email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> with what you were doing, what you expected, and what actually happened. A screenshot helps. We read every message and reply within a few days.</p>
+
+  <h3>Where can I read the privacy policy?</h3>
+  <p><a href="privacy.html">privacy.html</a>. Short version: your financial data never leaves your device.</p>
+
+  <p class="lang-switch"><a href="ja/support.html">日本語</a></p>
+
+  <footer>
+    <p>© 2026 Edniroya Ltd · Registered in England and Wales · Company number 09367944</p>
+  </footer>
+</div>
+</body>
+</html>

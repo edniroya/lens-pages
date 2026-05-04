@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Lens Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1D3557;
+    --navy-dark: #0D1B2A;
+    --mint: #A8DADC;
+    --bg: #FAFAFA;
+    --text: #1A1A1A;
+    --muted: #444444;
+    --border: #E5E5EA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .brand {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+  }
+  .meta {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 2.5rem 0 0.75rem;
+  }
+  p {
+    margin: 0 0 1rem;
+    color: var(--text);
+  }
+  .highlight {
+    background: var(--mint);
+    color: var(--navy-dark);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 2rem;
+    font-weight: 500;
+  }
+  .highlight p { margin: 0 0 0.75rem; color: var(--navy-dark); }
+  .highlight p:last-child { margin: 0; }
+  ul {
+    padding-left: 1.5rem;
+    margin: 0 0 1rem;
+  }
+  li {
+    margin-bottom: 0.4rem;
+  }
+  a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a:hover { color: var(--navy-dark); }
+  .lang-switch {
+    margin-top: 2rem;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <p class="brand">Lens Finance</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 4 May 2026 · Version 1.0</p>
+  </header>
+
+  <div class="highlight">
+    <p><strong>The core of this policy in one sentence:</strong></p>
+    <p>Your financial data never leaves your device. Lens does not collect it, store it on servers, sell it, or share it. What you enter stays on your phone.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Edniroya Ltd ("Lens", "we", "us") operates the Lens Finance mobile application (the "App").</p>
+  <p>To contact us, email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> or use the Share Feedback option in Settings → Support.</p>
+
+  <h2>2. Privacy by architecture</h2>
+  <p>Lens is engineered so that your financial data never reaches a Lens server. There is no Lens cloud database. All financial information is stored in a local database on your device only, protected by iOS Data Protection at rest.</p>
+  <p>This means:</p>
+  <ul>
+    <li>Lens has no record of your transactions, accounts, goals, or budgets.</li>
+    <li>Lens cannot see your financial data.</li>
+    <li>Lens cannot be compelled to hand over your financial data because we do not hold it.</li>
+    <li>If you delete the App, your financial data is gone (unless you created a backup).</li>
+  </ul>
+
+  <h2>3. Data stored on your device</h2>
+  <p>The following data is stored exclusively on your device. It is never transmitted to Lens:</p>
+  <ul>
+    <li>Transactions (amounts, dates, merchants, categories, notes)</li>
+    <li>Accounts (names, types, balances)</li>
+    <li>Financial goals</li>
+    <li>Recurring bills and income items</li>
+    <li>Your monthly budget</li>
+    <li>App settings and preferences (theme, language, currency, date format)</li>
+  </ul>
+  <p>Your BYOK API key (if configured) is stored in the device Keychain via secure storage, encrypted by iOS.</p>
+
+  <h2>4. Third-party services</h2>
+  <p>While Lens itself does not collect your data, the App uses a small number of third-party services that process limited, non-financial information to function.</p>
+  <p><strong>RevenueCat</strong> — Subscription and in-app purchase management. Receives a pseudonymous device ID and your App Store purchase receipt. No financial data. No name or email.</p>
+  <p><strong>Firebase (Google)</strong> — Push notifications for bill reminders (if you opt in). Receives a pseudonymous device notification token. No financial data. Notifications are off by default.</p>
+  <p><strong>OpenRouter (if you configure BYOK)</strong> — AI receipt scanning and Ask AI chat, via your own API key. Receives receipt image text or your prompts. Sent directly from your device to OpenRouter using your own key. Not routed through Lens servers.</p>
+  <p><strong>Bank Sync provider (TBD)</strong> — Automatic transaction sync from UK bank accounts (paid add-on, coming later). Details will be confirmed when the provider is selected and this policy is updated.</p>
+  <p><strong>Apple</strong> — App distribution and in-app purchases. Governed by Apple's own terms. Lens receives only subscription entitlement status.</p>
+  <p>Lens does not sell, rent, or share any data with third parties for advertising or marketing purposes.</p>
+
+  <h2>5. Push notifications</h2>
+  <p>If you enable bill reminders or other push notifications in Settings, the App registers a pseudonymous device token with Firebase Cloud Messaging (Google). This token is used solely to route notifications to your device. It is not linked to your identity or your financial data.</p>
+  <p>Notifications are disabled by default. You can turn them off at any time in Settings or in your device's notification settings.</p>
+
+  <h2>6. Biometric authentication</h2>
+  <p>If you enable Face ID, Touch ID, or fingerprint lock, all authentication is handled by your device's operating system. Lens does not have access to your biometric data. The App receives only a pass or fail result from the OS.</p>
+
+  <h2>7. Backup and restore</h2>
+  <p>The backup feature exports a file of your App data to a location you choose (typically iCloud Drive on iOS). This file is transferred directly between your device and your chosen storage service. Lens does not receive or store copies of your backups.</p>
+  <p>Sensitive fields, including your BYOK API key and Pro entitlement status, are excluded from backups. The security of your backup depends on the security of your chosen cloud storage account; iCloud Drive encrypts files at rest by default.</p>
+
+  <h2>8. CSV import and export</h2>
+  <p>CSV files are processed entirely on your device. Exported CSV files are shared via your device's native share sheet to wherever you choose to send them. Lens does not receive copies.</p>
+
+  <h2>9. Receipt scanning</h2>
+  <p>Receipt scanning uses one of two paths:</p>
+  <ul>
+    <li><strong>On-device OCR</strong> (where supported): text recognition runs entirely on your device. No data leaves.</li>
+    <li><strong>BYOK AI</strong>: if you have configured your own OpenRouter API key, the extracted text is sent from your device directly to OpenRouter using your key. Lens does not proxy or see this data.</li>
+  </ul>
+  <p>Receipt images are not stored after processing.</p>
+
+  <div class="highlight">
+    <p><strong>10. Bank Sync add-on (coming later)</strong></p>
+    <p>The Bank Sync add-on is not yet live. When it launches, this policy will be updated to cover the specific open banking provider selected, the data they access, and how the token exchange works. The core principle will remain the same: transaction data is fetched, passed to your device, and stored locally. The server component acts as a pass-through only.</p>
+  </div>
+
+  <h2>11. Children</h2>
+  <p>Lens Finance is not directed at children under 13. If you believe a child under 13 has provided data through the App, please contact us at <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> and we will address it promptly.</p>
+
+  <h2>12. Financial information</h2>
+  <p>Lens is a tracking tool, not a financial adviser. The data displayed in the App reflects only what you have entered. It is not financial advice. See the Terms of Service for more detail.</p>
+
+  <h2>13. Your rights (UK GDPR and equivalents)</h2>
+  <p>Because Lens does not collect or hold your financial data, most data subject rights (access, deletion, rectification) are exercised directly on your device by editing or deleting the App. For data held by our third-party processors (RevenueCat, Firebase), please refer to their respective privacy policies. To exercise rights regarding any limited data we may hold, contact <a href="mailto:hello@edniroya.com">hello@edniroya.com</a>.</p>
+
+  <h2>14. Changes to this policy</h2>
+  <p>We will update this policy if our practices change. Material changes will be notified within the App. We will also update it when the Bank Sync provider is confirmed.</p>
+  <p>The "Last updated" date at the top reflects the most recent version.</p>
+
+  <h2>15. Contact</h2>
+  <p>Questions about this policy? Email us at <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> or use the Share Feedback option in Settings → Support.</p>
+
+  <p class="lang-switch"><a href="ja/privacy.html">日本語</a></p>
+
+  <footer>
+    <p>© 2026 Edniroya Ltd · Registered in England and Wales · Company number 09367944</p>
+  </footer>
+</div>
+</body>
+</html>

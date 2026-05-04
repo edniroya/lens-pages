@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lens Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1D3557;
+    --navy-dark: #0D1B2A;
+    --mint: #A8DADC;
+    --bg: #FAFAFA;
+    --text: #1A1A1A;
+    --muted: #444444;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: #FFFFFF;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 520px;
+    width: 100%;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+  .logo {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 1.5rem;
+    background: var(--navy);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo svg { width: 64px; height: 64px; }
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 2.5rem;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .link-card {
+    display: block;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .link-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.24);
+  }
+  .link-card .label {
+    font-size: 16px;
+  }
+  .link-card .desc {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  .lang-row {
+    margin-top: 2.5rem;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .lang-row a {
+    color: var(--mint);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  footer {
+    margin-top: 2rem;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="36" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+      <rect x="20" y="46" width="60" height="8" rx="4" fill="#A8DADC"/>
+    </svg>
+  </div>
+  <h1>Lens Finance</h1>
+  <p class="tagline">How much you can spend today.</p>
+
+  <div class="links">
+    <a class="link-card" href="privacy.html">
+      <span class="label">Privacy Policy</span>
+      <span class="desc">Your data stays on your phone. Here's the detail.</span>
+    </a>
+    <a class="link-card" href="support.html">
+      <span class="label">Support</span>
+      <span class="desc">FAQ and contact for anything Lens-related.</span>
+    </a>
+  </div>
+
+  <p class="lang-row">日本語： <a href="ja/privacy.html">プライバシーポリシー</a> · <a href="ja/support.html">サポート</a></p>
+
+  <footer>
+    © 2026 Edniroya Ltd
+  </footer>
+</div>
+</body>
+</html>
