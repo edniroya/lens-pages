@@ -157,11 +157,14 @@
   <h3>I bought Lifetime. Why does the app still show the upgrade prompt?</h3>
   <p>Open the paywall and tap Restore Purchases at the bottom. Apple sometimes takes a moment to propagate the entitlement, especially if you switched devices. If it still doesn't unlock after 5 minutes, email us with your Apple ID purchase receipt.</p>
 
-  <h3>How does the AI feature work?</h3>
-  <p>Ask AI uses your own OpenRouter API key (BYOK). You bring the key from <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>, paste it into Settings, and pick which model you want to use. Your prompts go directly from your device to OpenRouter, never through any Lens server.</p>
+  <h3>How does Ask AI work?</h3>
+  <p>Ask AI is a Pro feature. After you upgrade in the App Store, you can ask questions about your money and the AI answers using only the data already on your device. The model is Google Gemini 2.5 Flash, called directly from your device using a key bundled inside the app. Your questions and the financial snapshot are sent to Google's API and never to a Lens server.</p>
+
+  <h3>How many AI actions can I use?</h3>
+  <p>Pro includes 100 AI actions per month, covering both Ask AI messages and AI-assisted receipt parsing. Your allowance refreshes on the 1st of each month. On-device receipt OCR is unlimited and doesn't count toward this allowance.</p>
 
   <h3>How does receipt scanning work?</h3>
-  <p>Two paths. The first uses on-device OCR built into iOS, no internet required. The second uses your OpenRouter API key for AI parsing on more complex receipts. Which one runs depends on your settings.</p>
+  <p>Two paths. The first uses on-device OCR built into iOS, with no internet required. This is available on the free tier and pulls amount, merchant, and date out of most receipts using local pattern matching. The second is AI-assisted parsing for more complex receipts, available to Pro subscribers, which sends only the OCR text or the receipt image to Google Gemini for structured extraction. Which path runs depends on your tier and on how clean the receipt is.</p>
 
   <h3>Why does Lens not connect to my bank?</h3>
   <p>Bank Sync is a planned add-on, not yet live in v1. When it ships, it will be optional and clearly labelled. For now, transactions are added manually or by importing a CSV file from your bank.</p>
