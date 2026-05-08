@@ -142,13 +142,12 @@
     <li>Your monthly budget</li>
     <li>App settings and preferences (theme, language, currency, date format)</li>
   </ul>
-  <p>Your BYOK API key (if configured) is stored in the device Keychain via secure storage, encrypted by iOS.</p>
 
   <h2>4. Third-party services</h2>
   <p>While Lens itself does not collect your data, the App uses a small number of third-party services that process limited, non-financial information to function.</p>
   <p><strong>RevenueCat</strong> — Subscription and in-app purchase management. Receives a pseudonymous device ID and your App Store purchase receipt. No financial data. No name or email.</p>
   <p><strong>Firebase (Google)</strong> — Push notifications for bill reminders (if you opt in). Receives a pseudonymous device notification token. No financial data. Notifications are off by default.</p>
-  <p><strong>OpenRouter (if you configure BYOK)</strong> — AI receipt scanning and Ask AI chat, via your own API key. Receives receipt image text or your prompts. Sent directly from your device to OpenRouter using your own key. Not routed through Lens servers.</p>
+  <p><strong>Google Gemini API</strong> — AI receipt parsing and Ask AI (Pro only). Receives only receipt OCR text or image bytes for parsing, or your Ask AI question and the financial snapshot for answering. Sent directly from your device to Google's API using a key bundled inside the App. Not routed through Lens servers. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models. See Google's API terms at ai.google.dev/gemini-api/terms for the full data handling policy.</p>
   <p><strong>Bank Sync provider (TBD)</strong> — Automatic transaction sync from UK bank accounts (paid add-on, coming later). Details will be confirmed when the provider is selected and this policy is updated.</p>
   <p><strong>Apple</strong> — App distribution and in-app purchases. Governed by Apple's own terms. Lens receives only subscription entitlement status.</p>
   <p>Lens does not sell, rent, or share any data with third parties for advertising or marketing purposes.</p>
@@ -162,17 +161,18 @@
 
   <h2>7. Backup and restore</h2>
   <p>The backup feature exports a file of your App data to a location you choose (typically iCloud Drive on iOS). This file is transferred directly between your device and your chosen storage service. Lens does not receive or store copies of your backups.</p>
-  <p>Sensitive fields, including your BYOK API key and Pro entitlement status, are excluded from backups. The security of your backup depends on the security of your chosen cloud storage account; iCloud Drive encrypts files at rest by default.</p>
+  <p>The security of your backup depends on the security of your chosen cloud storage account; iCloud Drive encrypts files at rest by default.</p>
 
   <h2>8. CSV import and export</h2>
   <p>CSV files are processed entirely on your device. Exported CSV files are shared via your device's native share sheet to wherever you choose to send them. Lens does not receive copies.</p>
 
-  <h2>9. Receipt scanning</h2>
-  <p>Receipt scanning uses one of two paths:</p>
+  <h2>9. Receipt scanning and Ask AI</h2>
+  <p>Receipt scanning uses two paths depending on your tier:</p>
   <ul>
-    <li><strong>On-device OCR</strong> (where supported): text recognition runs entirely on your device. No data leaves.</li>
-    <li><strong>BYOK AI</strong>: if you have configured your own OpenRouter API key, the extracted text is sent from your device directly to OpenRouter using your key. Lens does not proxy or see this data.</li>
+    <li><strong>On-device OCR</strong> (free tier and Pro): text recognition runs entirely on your device using Apple Vision. No data leaves the device for this step.</li>
+    <li><strong>AI parsing</strong> (Pro only): for complex receipts, the extracted OCR text or the receipt image is sent directly from your device to Google's Gemini API to produce structured fields (amount, merchant, date, category). Lens does not proxy or see this data.</li>
   </ul>
+  <p>Ask AI (Pro only) sends your question along with a snapshot of your financial data directly from your device to Google's Gemini API. The snapshot includes only the data needed to answer your question, never raw transactions or account credentials. Lens does not proxy or see this data.</p>
   <p>Receipt images are not stored after processing.</p>
 
   <div class="highlight">
