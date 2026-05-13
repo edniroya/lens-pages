@@ -110,7 +110,7 @@
   <header>
     <p class="brand">Lens Finance</p>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">最終更新日：2026年5月12日 · バージョン 1.1</p>
+    <p class="meta">最終更新日：2026年5月13日 · バージョン 1.2</p>
   </header>
 
   <div class="highlight">
@@ -147,8 +147,8 @@
   <p>Lens自体はデータを収集しませんが、本アプリは機能を提供するために少数のサードパーティサービスを使用しており、これらは限定的な非財務情報を処理します。</p>
   <p><strong>RevenueCat</strong> — サブスクリプションおよびアプリ内課金の管理。疑似匿名のデバイスIDおよびApp Storeの購入レシートを受け取ります。財務データ、氏名、メールアドレスは含みません。</p>
   <p><strong>Firebase（Google）</strong> — 請求リマインダーのプッシュ通知（オプトインの場合）。疑似匿名のデバイス通知トークンを受け取ります。財務データは含みません。通知はデフォルトでオフになっています。</p>
-  <p><strong>Google Gemini API</strong> — AIレシート解析およびAsk AI（Pro限定）。レシートのOCRテキストまたは画像データ、もしくはAsk AIの質問と財務スナップショットのみを受け取ります。LensはGeminiの有料ティアを使用しています。Googleは、有料のGemini APIに送信されたプロンプトおよびレスポンスをモデルの学習には使用しないと表明しています。詳細はGoogleのAPI利用規約（ai.google.dev/gemini-api/terms）をご確認ください。</p>
-  <p><strong>Firebase Cloud Functions（Google）</strong> — Ask AIの質問と財務スナップショットは、Lensが運用するCloud Functionに送信されます。Cloud FunctionはProの利用権を確認し、月間AI利用回数をカウントしたうえで、Geminiに転送します。Lensはプロンプトの内容やレスポンスをログに保存しません。</p>
+  <p><strong>Google Gemini API</strong> — AIレシート解析およびAsk AI（Pro限定）。レシートのOCRテキストまたは縮小された画像データ、もしくはAsk AIの質問と財務スナップショットのみを受け取ります。LensはGeminiの有料ティアを使用しています。Googleは、有料のGemini APIに送信されたプロンプトおよびレスポンスをモデルの学習には使用しないと表明しています。詳細はGoogleのAPI利用規約（ai.google.dev/gemini-api/terms）をご確認ください。</p>
+  <p><strong>Firebase Cloud Functions（Google）</strong> — すべてのAIリクエスト（Ask AIとAIレシート解析の両方）は、まずLensが運用するCloud Functionに送信されます。Cloud FunctionはProの利用権を確認し、月間AI利用回数をカウントしたうえで、Geminiに転送します。Gemini APIキーはサーバー側で保持されており、アプリのバイナリには含まれません。Lensはプロンプトの内容、画像データ、レスポンスのいずれもログに保存しません。</p>
   <p><strong>銀行同期プロバイダー（未定）</strong> — 英国の銀行口座からの自動取引同期（有料アドオン、後日提供予定）。プロバイダー選定後に詳細を更新します。</p>
   <p><strong>Apple</strong> — アプリ配信およびアプリ内課金。Appleの利用規約に準拠。Lensはサブスクリプションの利用権状態のみを受け取ります。</p>
   <p>Lensは、広告やマーケティングを目的としてサードパーティにデータを販売・貸与・共有することはありません。</p>
@@ -171,9 +171,9 @@
   <p>レシートスキャンはプランに応じて2つの方法で動作します。</p>
   <ul>
     <li><strong>デバイス上OCR</strong>（無料プランとProの両方）：Apple Visionによるテキスト認識がすべてお客様のデバイス上で実行されます。この処理ではデータは外部に送信されません。</li>
-    <li><strong>AI解析</strong>（Pro限定）：複雑なレシートの場合、抽出されたOCRテキストまたはレシート画像が、お客様のデバイスからGoogleのGemini APIに送信され、構造化データ（金額、店舗、日付、カテゴリ）が抽出されます。</li>
+    <li><strong>AI解析</strong>（Pro限定）：複雑なレシートの場合、抽出されたOCRテキストまたは縮小されたレシート画像が、お客様のデバイスからLensが運用するCloud Function（Proの利用権を確認し、月間利用回数をカウントします）を経由してGoogleのGemini APIに送信され、構造化データ（金額、店舗、日付、カテゴリ）が抽出されます。</li>
   </ul>
-  <p>Ask AI（Pro限定）は、お客様の質問とお金のスナップショットを、Lensが運用するCloud Functionを経由してGoogleのGemini APIに送信します。Cloud FunctionはProの利用権を確認し、月間利用回数をカウントしたうえで転送します。Lensはプロンプトの内容やレスポンスをログに保存しません。スナップショットには質問への回答に必要なデータのみが含まれ、生の取引データやアカウント認証情報は含まれません。</p>
+  <p>Ask AI（Pro限定）も同じ経路を使用します。お客様の質問と財務スナップショットは同じLensが運用するCloud Functionを経由してGoogleのGemini APIに送信されます。Lensはプロンプトの内容、画像データ、レスポンスのいずれもログに保存しません。スナップショットには質問への回答に必要なデータのみが含まれ、生の取引データやアカウント認証情報は含まれません。</p>
   <p>レシート画像は処理後に保存されません。</p>
 
   <div class="highlight">
