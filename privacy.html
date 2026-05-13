@@ -110,7 +110,7 @@
   <header>
     <p class="brand">Lens Finance</p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 12 May 2026 · Version 1.1</p>
+    <p class="meta">Last updated: 13 May 2026 · Version 1.2</p>
   </header>
 
   <div class="highlight">
@@ -147,8 +147,8 @@
   <p>While Lens itself does not collect your data, the App uses a small number of third-party services that process limited, non-financial information to function.</p>
   <p><strong>RevenueCat</strong> — Subscription and in-app purchase management. Receives a pseudonymous device ID and your App Store purchase receipt. No financial data. No name or email.</p>
   <p><strong>Firebase (Google)</strong> — Push notifications for bill reminders (if you opt in). Receives a pseudonymous device notification token. No financial data. Notifications are off by default.</p>
-  <p><strong>Google Gemini API</strong> — AI receipt parsing and Ask AI (Pro only). Receives only receipt OCR text or image bytes for parsing, or your Ask AI question and the financial snapshot for answering. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models. See Google's API terms at ai.google.dev/gemini-api/terms for the full data handling policy.</p>
-  <p><strong>Firebase Cloud Functions (Google)</strong> — Ask AI questions and financial snapshots are sent to a Lens-operated Cloud Function which verifies your Pro entitlement, counts your monthly AI usage, and forwards the request to the Gemini API on your behalf. Lens does not log prompt content or responses.</p>
+  <p><strong>Google Gemini API</strong> — AI receipt parsing and Ask AI (Pro only). Receives only receipt OCR text or a downscaled image for parsing, or your Ask AI question and the financial snapshot for answering. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models. See Google's API terms at ai.google.dev/gemini-api/terms for the full data handling policy.</p>
+  <p><strong>Firebase Cloud Functions (Google)</strong> — All AI requests (both Ask AI and AI receipt parsing) are sent first to a Lens-operated Cloud Function which verifies your Pro entitlement, counts your monthly AI usage, and forwards the request to the Gemini API on your behalf. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log prompt content, image bytes, or responses.</p>
   <p><strong>Bank Sync provider (TBD)</strong> — Automatic transaction sync from UK bank accounts (paid add-on, coming later). Details will be confirmed when the provider is selected and this policy is updated.</p>
   <p><strong>Apple</strong> — App distribution and in-app purchases. Governed by Apple's own terms. Lens receives only subscription entitlement status.</p>
   <p>Lens does not sell, rent, or share any data with third parties for advertising or marketing purposes.</p>
@@ -171,9 +171,9 @@
   <p>Receipt scanning uses two paths depending on your tier:</p>
   <ul>
     <li><strong>On-device OCR</strong> (free tier and Pro): text recognition runs entirely on your device using Apple Vision. No data leaves the device for this step.</li>
-    <li><strong>AI parsing</strong> (Pro only): for complex receipts, the extracted OCR text or the receipt image is sent from your device to Google's Gemini API to produce structured fields (amount, merchant, date, category).</li>
+    <li><strong>AI parsing</strong> (Pro only): for complex receipts, the extracted OCR text or a downscaled receipt image is sent from your device through a Lens-operated Cloud Function (which verifies your Pro entitlement and counts your monthly usage) to Google's Gemini API to produce structured fields (amount, merchant, date, category).</li>
   </ul>
-  <p>Ask AI (Pro only) sends your question along with a snapshot of your financial data to Google's Gemini API through a Lens-operated Cloud Function, which verifies your Pro entitlement and counts your monthly usage before forwarding. Lens does not log prompt content or responses. The snapshot includes only the data needed to answer your question, never raw transactions or account credentials.</p>
+  <p>Ask AI (Pro only) follows the same routing: your question and a snapshot of your financial data are sent through the same Lens-operated Cloud Function to Google's Gemini API. Lens does not log prompt content, image bytes, or responses. The snapshot includes only the data needed to answer your question, never raw transactions or account credentials.</p>
   <p>Receipt images are not stored after processing.</p>
 
   <div class="highlight">
