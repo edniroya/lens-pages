@@ -110,7 +110,7 @@
   <header>
     <p class="brand">Lens Finance</p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 13 May 2026 · Version 1.2</p>
+    <p class="meta">Last updated: 10 June 2026 · Version 1.3</p>
   </header>
 
   <div class="highlight">
@@ -149,7 +149,6 @@
   <p><strong>Firebase (Google)</strong> — Push notifications for bill reminders (if you opt in). Receives a pseudonymous device notification token. No financial data. Notifications are off by default.</p>
   <p><strong>Google Gemini API</strong> — AI receipt parsing and Ask AI (Pro only). Receives only receipt OCR text or a downscaled image for parsing, or your Ask AI question and the financial snapshot for answering. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models. See Google's API terms at ai.google.dev/gemini-api/terms for the full data handling policy.</p>
   <p><strong>Firebase Cloud Functions (Google)</strong> — All AI requests (both Ask AI and AI receipt parsing) are sent first to a Lens-operated Cloud Function which verifies your Pro entitlement, counts your monthly AI usage, and forwards the request to the Gemini API on your behalf. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log prompt content, image bytes, or responses.</p>
-  <p><strong>Bank Sync provider (TBD)</strong> — Automatic transaction sync from UK bank accounts (paid add-on, coming later). Details will be confirmed when the provider is selected and this policy is updated.</p>
   <p><strong>Apple</strong> — App distribution and in-app purchases. Governed by Apple's own terms. Lens receives only subscription entitlement status.</p>
   <p>Lens does not sell, rent, or share any data with third parties for advertising or marketing purposes.</p>
 
@@ -176,25 +175,20 @@
   <p>Ask AI (Pro only) follows the same routing: your question and a snapshot of your financial data are sent through the same Lens-operated Cloud Function to Google's Gemini API. Lens does not log prompt content, image bytes, or responses. The snapshot includes only the data needed to answer your question, never raw transactions or account credentials.</p>
   <p>Receipt images are not stored after processing.</p>
 
-  <div class="highlight">
-    <p><strong>10. Bank Sync add-on (coming later)</strong></p>
-    <p>The Bank Sync add-on is not yet live. When it launches, this policy will be updated to cover the specific open banking provider selected, the data they access, and how the token exchange works. The core principle will remain the same: transaction data is fetched, passed to your device, and stored locally. The server component acts as a pass-through only.</p>
-  </div>
-
-  <h2>11. Children</h2>
+  <h2>10. Children</h2>
   <p>Lens Finance is not directed at children under 13. If you believe a child under 13 has provided data through the App, please contact us at <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> and we will address it promptly.</p>
 
-  <h2>12. Financial information</h2>
+  <h2>11. Financial information</h2>
   <p>Lens is a tracking tool, not a financial adviser. The data displayed in the App reflects only what you have entered. It is not financial advice. See the Terms of Service for more detail.</p>
 
-  <h2>13. Your rights (UK GDPR and equivalents)</h2>
+  <h2>12. Your rights (UK GDPR and equivalents)</h2>
   <p>Because Lens does not collect or hold your financial data, most data subject rights (access, deletion, rectification) are exercised directly on your device by editing or deleting the App. For data held by our third-party processors (RevenueCat, Firebase), please refer to their respective privacy policies. To exercise rights regarding any limited data we may hold, contact <a href="mailto:hello@edniroya.com">hello@edniroya.com</a>.</p>
 
-  <h2>14. Changes to this policy</h2>
-  <p>We will update this policy if our practices change. Material changes will be notified within the App. We will also update it when the Bank Sync provider is confirmed.</p>
+  <h2>13. Changes to this policy</h2>
+  <p>We will update this policy if our practices change. Material changes will be notified within the App.</p>
   <p>The "Last updated" date at the top reflects the most recent version.</p>
 
-  <h2>15. Contact</h2>
+  <h2>14. Contact</h2>
   <p>Questions about this policy? Email us at <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> or use the Share Feedback option in Settings → Support.</p>
 
   <footer>
