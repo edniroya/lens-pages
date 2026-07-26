@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help · Lens Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1D3557;
+    --navy-dark: #0D1B2A;
+    --mint: #A8DADC;
+    --bg: #FAFAFA;
+    --text: #1A1A1A;
+    --muted: #444444;
+    --border: #E5E5EA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .brand {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+  }
+  .meta {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 2.5rem 0 0.75rem;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 1.5rem 0 0.5rem;
+  }
+  p {
+    margin: 0 0 1rem;
+    color: var(--text);
+  }
+  .highlight {
+    background: var(--mint);
+    color: var(--navy-dark);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 2rem;
+    font-weight: 500;
+  }
+  .highlight p { margin: 0 0 0.75rem; color: var(--navy-dark); }
+  .highlight p:last-child { margin: 0; }
+  .contact-card {
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 1.75rem 1.75rem 1.5rem;
+    border-radius: 14px;
+    margin: 1.5rem 0 2rem;
+  }
+  .contact-card h2 {
+    color: #FFFFFF;
+    margin: 0 0 0.5rem;
+  }
+  .contact-card p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.75rem;
+  }
+  .contact-card a {
+    color: var(--mint);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  a:hover { color: var(--navy-dark); }
+  ul {
+    padding-left: 1.5rem;
+    margin: 0 0 1rem;
+  }
+  li {
+    margin-bottom: 0.4rem;
+  }
+  .lang-switch {
+    text-align: right;
+    margin: 0 0 1.5rem;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <p class="lang-switch"><a href="ja/help.html">日本語</a></p>
+  <header>
+    <p class="brand">Lens Finance</p>
+    <h1>Help</h1>
+    <p class="meta">How Lens works, and what to do when something looks wrong.</p>
+  </header>
+
+  <div class="highlight">
+    <p>These pages describe the Lens app on iPhone. Where something says to tap a button or open a screen, that means inside the app.</p>
+  </div>
+
+  <h2>Getting started</h2>
+  <h3 id="welcome-to-lens">Welcome to Lens</h3>
+  <p><strong>What is Lens?</strong></p>
+  <p>Lens is a privacy-first personal finance app. Your financial data stays on your device. No account, no ads. The only time anything leaves your phone is when you choose to use the optional Pro AI features.</p>
+  <p>Track accounts, transactions, goals, recurring bills, and your net worth, all in one place.</p>
+  <p><strong>Quick start</strong></p>
+  <ul>
+    <li>Add an account (your bank, savings, etc.) with its current balance.</li>
+    <li>Set your monthly budget during onboarding.</li>
+    <li>Start adding transactions as you spend or earn.</li>
+    <li>Optionally create a savings goal to track progress.</li>
+  </ul>
+  <p>That is it. Lens does the rest.</p>
+  <h3 id="onboarding-flow">Getting started: the onboarding flow</h3>
+  <p><strong>What happens during onboarding?</strong></p>
+  <p>Onboarding is four short steps, and &quot;Skip for now&quot; is there on every one of them.</p>
+  <ul>
+    <li>Welcome. What Lens is for, and a sample of the two numbers it keeps: how long your money lasts, and what is left to spend today.</li>
+    <li>The shape of your month. Your take-home each month, the money in your account right now, and your typical monthly spend. Your name is optional, and you can switch currency from the income field. A runway preview updates as you type.</li>
+    <li>Your starting numbers. Lens shows your runway in months and days, today's number (your typical spend divided by the days in this month), and what you are saving each month when your income is higher than your spend.</li>
+    <li>Screen lock. One toggle to require Face ID or a fingerprint to open Lens, then you are in.</li>
+  </ul>
+  <p>There is no email, no password, and no account to create. After onboarding, the Starters card on Today gives you guided tips for your first two weeks.</p>
+  <p><strong>No email, no cloud sync?</strong></p>
+  <p>That is right. Lens is privacy-first. What you enter is stored on your phone, not on a Lens server, and you do not need an account or sign in. The only time data leaves your phone is if you use the optional Pro AI features.</p>
+  <p>If you want to move to a new phone, you can back up your data from Profile &gt; Data &amp; backup and restore it on your new device.</p>
+  <h3 id="starters">Starters: learning tips</h3>
+  <p><strong>What are Starters?</strong></p>
+  <p>Starters are guided tips that appear on your Today screen for the first two weeks after onboarding or after you update your declared income or monthly budget.</p>
+  <p>Each starter is a small lesson about using Lens effectively. You can swipe left to dismiss one, or let it stay and learn from it.</p>
+  <p><strong>How long do Starters show?</strong></p>
+  <p>Starters appear for up to 14 days from your onboarding date or the last time you edited your declared numbers.</p>
+  <p>If you edit your budget or income again, the 14-day window resets and any dismissed starters come back so you can review them with your new numbers.</p>
+  <h3 id="free-vs-pro">What you get on Free and on Pro</h3>
+  <p><strong>Free</strong></p>
+  <p>Free is not a trial. It is a real budgeting app you can keep using for as long as you like.</p>
+  <p>You get up to 3 goals, 3 accounts, and a budget on 5 categories. The whole Today tab is yours: safe to spend, the week chart, the watch this week card. So are the income and net worth reports, this month's Reports summary, and an insight a day.</p>
+  <p>Recurring bills are unlimited, on every tier including this one. Add all of them. Your safe to spend is only as honest as the bills Lens knows about, so charging for that would just make your own numbers worse.</p>
+  <p>Importing a CSV is free too. Getting your existing data into Lens is never the paid part.</p>
+  <p><strong>Pro</strong></p>
+  <p>Pro takes the counts off: unlimited goals, unlimited accounts, a budget on as many categories as you like, and your own custom categories.</p>
+  <p>It also opens the parts that look backwards and further out. The full Spending view with category breakdowns and trends, last month and year to date, the whole insights feed instead of one a day, your weekly briefing, bank sync, CSV export, and the AI features, which are Ask AI and AI receipt scanning.</p>
+  <p>One thing that often surprises people: importing a CSV is free. Only exporting one is Pro.</p>
+  <p><strong>Where we draw the line</strong></p>
+  <p>The rule we hold ourselves to is that day to day still works on Free. Knowing what you can spend today, logging it, and seeing your bills is the job of the app, and that part is not for sale.</p>
+  <p>Pro is for depth: more history, more detail, more of the work done for you. If you find yourself wanting it, that should be because you want more out of Lens, not because something you were relying on stopped working.</p>
+  <h3 id="free-trial">Your free trial</h3>
+  <p><strong>What you get for seven days</strong></p>
+  <p>The trial runs for seven days and gives you the whole of Pro, not a sample of it. Unlimited goals and accounts, custom categories, the full Spending reports, the complete insights feed, your weekly briefing, bank sync, CSV export and the AI features are all open.</p>
+  <p>The idea is that you see what Lens is like with a month of your real data in it, rather than deciding from a feature list.</p>
+  <p><strong>Checking how long is left</strong></p>
+  <p>Open your profile and look at the Lens Pro row. During a trial it reads &quot;Pro trial&quot; with the days remaining next to it, so you always know where you are without hunting through the App Store.</p>
+  <p><strong>When it ends</strong></p>
+  <p>Nothing you created during the trial is deleted. If you do not continue, Lens goes back to the free tier and anything past the free limits is locked rather than removed, with the oldest kept active. Subscribe later and it all comes back exactly as it was.</p>
+  <p>Managing or cancelling the subscription itself happens in your App Store settings, the same as any other subscription.</p>
+  <h3 id="widgets-and-siri">Widgets, Siri and Shortcuts</h3>
+  <div class="highlight"><p>This feature is on iPhone only.</p></div>
+  <p><strong>Talking to Siri</strong></p>
+  <p>You can log a spend and check your numbers without opening Lens. Say any of these and answer the follow-up:</p>
+  <ul>
+    <li>&quot;Log a spend in Lens&quot;</li>
+    <li>&quot;Scan a receipt in Lens&quot;</li>
+    <li>&quot;Check my number in Lens&quot;</li>
+    <li>&quot;What's my net worth in Lens&quot;</li>
+    <li>&quot;What bills are coming up in Lens&quot;</li>
+    <li>&quot;Check my goals in Lens&quot;</li>
+  </ul>
+  <p>When Siri asks how much, say the number plainly. &quot;Five point five zero&quot; and &quot;four pounds fifty&quot; both land reliably. These phrases also work from Spotlight, the search you pull down on your Home Screen, and your goals turn up there by name.</p>
+  <p><strong>Widgets, the Lock Screen and Control Centre</strong></p>
+  <p>Press and hold your Home Screen, tap the plus button and search for Lens. Four widgets show the day at a glance: Today, Live pace, Streak and Tide.</p>
+  <p>You can also put Quick log on your Lock Screen, so one tap opens the keypad: press and hold the Lock Screen, tap Customise, choose the widget area under the clock and add it from Lens. Lens controls are available in Control Centre too.</p>
+  <p>If you want the fastest possible logging, build a shortcut with the Lens &quot;Log a spend&quot; action and set it as your Back Tap, then a double tap on the back of the phone logs a spend from anywhere.</p>
+  <p><strong>On a locked phone, and which devices</strong></p>
+  <p>With your phone locked, Siri will confirm that a spend was logged without reading your balance out loud. If you want to hear what you have left even while locked, turn on &quot;Show balances on the Lock Screen&quot; in Security. Net worth always needs the phone unlocked.</p>
+  <p>All of this is iPhone only, since it is built on Apple's own Shortcuts and widget system, and all of it works on the free tier. There is a fuller walkthrough with the exact steps in your profile, under Widgets &amp; Shortcuts.</p>
+  <h2>Accounts</h2>
+  <h3 id="add-first-account">Adding an account</h3>
+  <p><strong>How to add an account</strong></p>
+  <p>Go to Accounts (from the More menu) and tap the + button. Enter a name (e.g. &quot;NatWest Current&quot;), the current balance, and pick an account type.</p>
+  <p>The starting balance should be what your real account shows right now. Lens tracks changes from this point forward.</p>
+  <p><strong>Tips</strong></p>
+  <p>Use clear names so you can tell accounts apart at a glance. If you have multiple accounts at the same bank, include the type (e.g. &quot;Monzo Current&quot;, &quot;Monzo Savings&quot;).</p>
+  <p>You can always edit the name or balance later.</p>
+  <h3 id="edit-account">Editing and deleting accounts</h3>
+  <p><strong>How to edit</strong></p>
+  <p>Tap an account to open it, then use the menu to edit its name, balance, or type.</p>
+  <p>If you change the starting balance, Lens recalculates everything from that new starting point.</p>
+  <p><strong>Deleting an account</strong></p>
+  <p>You can delete an account from the edit screen. This removes the account and unlinks any transactions tied to it. The transactions themselves are not deleted.</p>
+  <h3 id="account-types">Account types explained</h3>
+  <p><strong>Available types</strong></p>
+  <ul>
+    <li>Current account: your everyday spending account. A minus balance is allowed here, so you can record an overdraft.</li>
+    <li>Savings: money set aside, easy access or fixed.</li>
+    <li>ISA: tax-free savings and investments. Shown as NISA in Japan.</li>
+    <li>Pension: a workplace or personal pension.</li>
+    <li>Investment: a general investing account for stocks and funds.</li>
+    <li>Crypto: cryptocurrency holdings.</li>
+    <li>Cash: physical cash you want to track.</li>
+    <li>Pot: a named pot you put money aside in.</li>
+    <li>Other: anything that does not fit the rest.</li>
+    <li>Credit card, Loan, Mortgage: enter what you still owe as a positive number. Lens knows these are debts from the type you picked, so it handles the minus sign for you.</li>
+  </ul>
+  <p>Current account, savings, cash, and pot are the four types Lens counts as spendable when it works out your runway.</p>
+  <p><strong>Which type should I pick?</strong></p>
+  <p>Pick the type that matches your real account. This affects how Lens groups things in your net worth breakdown. Current and savings accounts count as liquid assets. Credit cards, loans, and mortgages count as liabilities.</p>
+  <h3 id="multi-currency">Multi-currency accounts</h3>
+  <p><strong>How it works</strong></p>
+  <p>Lens supports multiple currencies. When you add an account, you can set its currency. Transactions in that account use the account's currency.</p>
+  <p>Your primary currency (set during onboarding) is used for totals and the Today screen.</p>
+  <p><strong>Tips</strong></p>
+  <p>Keep most accounts in your primary currency for the clearest picture. If you have foreign currency accounts, the balance displays in that currency on the account card.</p>
+  <p>Your primary currency lives on your profile. Tap your initials at the top of Today, then Currency.</p>
+  <h3 id="investing-accounts">Investing accounts: cash, holdings, buying and selling</h3>
+  <p><strong>Cash and holdings, side by side</strong></p>
+  <p>Investment, ISA and pension accounts hold two things: cash and holdings. Cash is money sitting in the account waiting to be invested, and holdings are the funds or shares you own. Lens shows both together, so uninvested cash never disappears from your net worth.</p>
+  <p><strong>Adding money and withdrawing</strong></p>
+  <p>Use Add money and Withdraw on the account screen. Both are recorded as transfers between your accounts, so you can always trace where the money went. Withdrawals are capped at the cash in the account, and a transfer can never take an account below zero.</p>
+  <p>Pensions have no Withdraw, since that money stays locked until pension age, but cash can still sit in the pot, just like a real SIPP.</p>
+  <p><strong>Buying and selling holdings</strong></p>
+  <p>When you add a holding, turn on Paid from this account's cash to record the purchase, so the cost moves out of cash. Leave it off for shares you already owned.</p>
+  <p>To sell, open the holding and tap Sell in the top corner. Choose the units and price, and the money lands back in the account's cash, ready to withdraw. Selling everything removes the holding.</p>
+  <p><strong>ISA and NISA allowances</strong></p>
+  <p>When a contribution into an ISA or NISA would go past this year's allowance, Lens shows a gentle amber note. It never blocks the payment, since over-paying is allowed, but it carries a tax consequence worth knowing about.</p>
+  <p>Buying and selling inside the wrapper neither uses nor restores your allowance.</p>
+  <h3 id="bank-sync-setup">Connecting your bank</h3>
+  <div class="highlight"><p>This feature is on iPhone only.</p></div>
+  <p><strong>It goes through Apple Wallet</strong></p>
+  <p>Lens does not connect to your bank. It reads what Apple already holds on your iPhone.</p>
+  <p>That means the bank has to be set up in the Apple Wallet app first, and only you can do that. Open Wallet, tap the + button, choose Add Card, then Connected Cards, and pick your bank. Once that is done, come back to Lens, open your profile, tap Bank Sync, then Connect Wallet. iOS will ask you to approve access, and nothing arrives until you say yes.</p>
+  <p>If your bank is not offered as a Connected Card, there is nothing Lens can add. That list is Apple's, not ours.</p>
+  <p><strong>What comes in, and when</strong></p>
+  <p>The first sync brings in about 12 months of history. After that Lens checks quietly when you open the app, at most once every few hours, and re-reads the last week or so, so a payment that was still pending last time gets picked up once it settles.</p>
+  <p>You can tap Sync now whenever you want it done immediately.</p>
+  <p>Only the accounts you connected in Wallet arrive this way. Everything else in Lens carries on exactly as before, added by hand or imported from a CSV, and the two sit alongside each other quite happily.</p>
+  <p><strong>Choosing where each account lands</strong></p>
+  <p>When you connect, Lens shows each account it found and asks what to do with it. Point it at an account you already keep in Lens, or let it start a new one. Worth getting right first time, since it decides where a year of history ends up.</p>
+  <p>After that, every linked account gets its own switch on the Bank Sync screen. Turn one off and Lens leaves that account alone without disconnecting any of the others.</p>
+  <p><strong>Where your data goes, and two honest limits</strong></p>
+  <p>Your data goes from your bank to Apple, and from Apple to Lens on your phone. That is the whole path. Nothing is sent to a server, we cannot see any of it, and there is no company sitting in the middle reading your transactions.</p>
+  <p>Two limits worth saying plainly. This works on iPhone only. And Connected Cards do not currently cover Japan, so if you bank in Japan, expect to keep adding transactions yourself or importing a CSV. Both work well and nothing else in Lens is affected.</p>
+  <h3 id="fx-and-rates">Exchange rates and converted totals</h3>
+  <p><strong>What the ≈ symbol means</strong></p>
+  <p>When you see a small &quot;≈ £24.10&quot; or &quot;≈ ¥3,800&quot; under an amount, that is Lens converting a foreign-currency figure into your base currency so you can compare it with everything else.</p>
+  <p>The ≈ is there on purpose. It is a converted estimate at a mid-market rate, not the rate your bank actually gave you. Your bank's own rate, plus any fee it charged, will be a little different. Use it to understand roughly what something cost you, not to reconcile to the penny.</p>
+  <p><strong>Keeping rates current</strong></p>
+  <p>Lens ships with a set of rates so it works offline from the first launch, and refreshes them when you ask it to. Until you refresh, converted figures are marked as indicative.</p>
+  <p>If you have been offline a while you may see the date the rates came from, or a note that a rate is unavailable for a particular currency. In that case a total that needs converting will tell you it is waiting rather than quietly showing you a wrong number. Refresh once you are back online and it fills in.</p>
+  <p><strong>Setting your own rate</strong></p>
+  <p>If you know the rate you actually got, you can pin it. When you add a transaction on an account held in another currency, a small row under the amount shows the rate being used. Tap it and you can type your own.</p>
+  <p>That rate is then used for this entry instead of the estimate, which is the honest way to record a holiday where your bank gave you a rate you can see on your statement. Clear the field to go back to the automatic one.</p>
+  <h2>Transactions</h2>
+  <h3 id="add-transaction">Adding a transaction</h3>
+  <p><strong>How to add</strong></p>
+  <p>Tap the + button in the bottom bar and choose the transaction type. Fill in the amount, pick a category, and optionally add a note.</p>
+  <p>The date defaults to today but you can change it.</p>
+  <p><strong>Transaction types</strong></p>
+  <ul>
+    <li>Expense: Money going out (groceries, bills, shopping).</li>
+    <li>Income: Money coming in (salary, refunds, gifts).</li>
+    <li>Transfer: Moving money between your own accounts.</li>
+  </ul>
+  <p>Transfers do not count as income or expense. They just move money around.</p>
+  <h3 id="edit-transaction">Editing and deleting transactions</h3>
+  <p><strong>How to edit or delete</strong></p>
+  <p>Tap any transaction in the Activity list to open it. You can change the amount, category, date, note, or account.</p>
+  <p>To delete, use the delete option in the menu. This updates your account balance and all related calculations immediately.</p>
+  <h3 id="transaction-categories">Transaction categories</h3>
+  <p><strong>What are categories?</strong></p>
+  <p>Categories help you see where your money goes. Every transaction gets one category (e.g. Food, Transport, Housing, Entertainment).</p>
+  <p>Lens uses categories to show spending breakdowns and to power budget tracking per category.</p>
+  <p><strong>Custom categories</strong></p>
+  <p>Go to Categories (from the More menu) to create, edit, or delete categories. You can set a monthly budget for each category to track how much you are spending in that area.</p>
+  <p>Default categories cover most common spending. Add custom ones for anything specific to you.</p>
+  <h3 id="search-transactions">Searching and filtering transactions</h3>
+  <p><strong>How to search</strong></p>
+  <p>On the Activity screen, use the search bar to find transactions by name, amount, or note. You can also filter by category, type (income/expense/transfer), and date range.</p>
+  <p>Results update as you type.</p>
+  <h3 id="import-csv">Importing bank statements (CSV)</h3>
+  <p><strong>How to import</strong></p>
+  <p>Open Profile, then Data &amp; backup, and tap &quot;Import from CSV&quot;. Pick your file and Lens adds the transactions straight away.</p>
+  <p>The first row has to be a header with Date, Type, Category, and Amount columns. Description and Notes are optional. Rows that do not fit are skipped without a warning, so have a look at your transaction list afterwards.</p>
+  <p><strong>Tips for a clean import</strong></p>
+  <p>This is Lens's own CSV layout rather than a raw bank statement. The quickest way to see it is to export your transactions first, because the export uses exactly the columns the import expects.</p>
+  <p>Type has to be income, expense, investment, or transfer. Dates can be DD/MM/YYYY or YYYY-MM-DD. If the file from your bank uses different headings, rename the columns in a spreadsheet before importing.</p>
+  <p>Exporting is a Pro feature. Importing is free on every tier.</p>
+  <h3 id="receipt-scanning">Receipt scanning</h3>
+  <p><strong>How to scan a receipt</strong></p>
+  <p>Tap the + button and choose &quot;Scan receipt&quot;. Point your camera at the receipt and take a photo.</p>
+  <p>Lens reads the total amount and merchant name. Review the details and save as a new transaction.</p>
+  <p><strong>Tips for better scans</strong></p>
+  <p>Make sure the receipt is flat and well-lit. The total amount should be clearly visible. If the scan misses something, you can always edit the transaction afterwards.</p>
+  <p>Basic scanning runs on your device and is free. AI-assisted parsing for tricky receipts is a Pro feature and needs no API key.</p>
+  <h3 id="moving-money">Moving money between your accounts</h3>
+  <p><strong>A transfer is not spending</strong></p>
+  <p>When money moves from one of your accounts to another, that is a transfer, and it is neither income nor an expense. Nothing left your hands.</p>
+  <p>So a transfer never reduces your safe to spend, never shows up in your category totals, and never makes a week look worse than it was. Moving £500 to savings or ¥50,000 into an investment account is you organising your own money, and Lens treats it that way.</p>
+  <p><strong>Money you set aside is saving</strong></p>
+  <p>Putting money into a goal, a pot, or an investment account counts as saving, not spending. It moves out of what you have to spend day to day, and it stays yours.</p>
+  <p>It is the same reason a bill does not read as overspending: money that was always going somewhere specific is handled separately from your everyday budget, so the one number you look at each day stays honest.</p>
+  <p><strong>Why a transfer sometimes gets blocked</strong></p>
+  <p>A transfer can only move money an account actually holds, so Lens will stop one that would push an account below zero and tell you which account it was. Credit cards and loans are the exception, since their balance is what you owe rather than what you have.</p>
+  <p>Investment, ISA and pension accounts are stricter still: their cash can never go below zero, whichever way you try it, so a withdrawal is capped at the cash sitting in the account.</p>
+  <p>Expenses are not blocked this way. An expense records something that already happened, and a current account going negative is exactly how an overdraft looks.</p>
+  <h2>Recurring</h2>
+  <h3 id="add-recurring">Adding a recurring item</h3>
+  <p><strong>How to add</strong></p>
+  <p>Go to Recurring and tap the + button. Enter the name, amount, and how often it repeats (weekly, monthly, yearly, etc.).</p>
+  <p>Set the start date to when the first payment happens.</p>
+  <p><strong>Fixed cost and essential toggles</strong></p>
+  <p>Fixed cost: Turn this on for bills that are the same amount every time (rent, subscriptions). These show as &quot;Fixed&quot; on the Today screen.</p>
+  <p>Essential: Mark items you cannot skip (rent, utilities). This helps Lens understand your spending flexibility.</p>
+  <p>Recurring items with &quot;Fixed cost&quot; on are included in the fixed vs discretionary split on your Today screen.</p>
+  <h3 id="edit-recurring">Editing and managing recurring items</h3>
+  <p><strong>How to edit</strong></p>
+  <p>Tap any recurring item to edit its amount, frequency, name, or toggles. You can also pause or delete it.</p>
+  <p>Pausing a recurring item stops it from being included in calculations without deleting it. Useful for seasonal subscriptions or items you might restart.</p>
+  <h3 id="recurring-vs-one-time">Recurring vs one-time transactions</h3>
+  <p><strong>When to use which</strong></p>
+  <p>Use recurring for anything that repeats on a schedule: rent, salary, subscriptions, regular savings transfers.</p>
+  <p>Use one-time transactions for everything else: a shop, a meal out, a one-off purchase.</p>
+  <p>Recurring items feed into your Today screen calculations (fixed costs, budget splits). One-time transactions count as actual spending.</p>
+  <h2>Budget</h2>
+  <h3 id="monthly-plan">Your monthly plan</h3>
+  <p><strong>Income, Budget, Saved and Everyday</strong></p>
+  <p>Your monthly plan splits your income four ways.</p>
+  <p>Income is what comes in. It is taken from your recurring income, like your salary, so add your pay as a recurring item and the plan always reflects real money.</p>
+  <p>Budget is your bills: the recurring costs you have marked as fixed, like rent, mortgage and subscriptions. It is locked because your bills decide it.</p>
+  <p>Saved is money heading to your goals, plus any extra cushion you choose to set aside.</p>
+  <p>Everyday is what is left for day to day spending. Budget, Saved and Everyday always add up to your income.</p>
+  <p><strong>Moving money with the slider</strong></p>
+  <p>Open More, then Monthly plan. Budget sits on the left of the bar and stays locked, because your bills set it. Drag the handle to move money between Saved (green) and Everyday (blue): drag towards everyday to spend more, towards saved to save more.</p>
+  <p>You can also tap the Saved amount and type an exact figure. When it looks right, tap Save plan.</p>
+  <p><strong>Safe to spend and the weekly bars</strong></p>
+  <p>Your Everyday amount becomes a daily allowance, shown on Today as &quot;Safe to spend today&quot;. Your bills are set aside first, so this is genuinely yours to spend.</p>
+  <p>The This week chart shows each day against that allowance. The bar fills up to the dashed budget line as you spend (blue for today, dark blue for past days) and turns red above the line if you go over the day's allowance. A small grey cap means a bill landed that day. Bills do not count against your everyday spending, so a bill day never reads as overspending.</p>
+  <p><strong>Goal money is saving, not spending</strong></p>
+  <p>Moving money into a goal is saving, not spending. It never shows on the weekly spending bars and never lowers your safe to spend. Your bills work the same way: they are handled separately, so paying rent never looks like you blew your everyday budget.</p>
+  <h3 id="setup-budget">Setting up your plan</h3>
+  <p><strong>How your budget works</strong></p>
+  <p>Your plan starts from your income and your bills. Add your income as a recurring item and mark your bills as fixed costs. Lens then works out what is left for everyday spending.</p>
+  <p>It uses that everyday amount to set your daily &quot;safe to spend&quot;, track your pace, and show whether you are ahead or behind.</p>
+  <p><strong>Changing your budget</strong></p>
+  <p>Open More, then Monthly plan, to change how your income splits between saving and everyday spending at any time. The change takes effect immediately and every Today number recalculates.</p>
+  <h3 id="understanding-budget-split">Fixed vs discretionary spending</h3>
+  <p><strong>What is the split?</strong></p>
+  <p>Fixed (your Budget) is the total of all recurring items marked as a fixed cost, converted to a monthly amount. This is money already committed to bills.</p>
+  <p>Everyday (discretionary) is what is left after your bills and your savings. This is the money you actually have flexibility over.</p>
+  <p><strong>How Lens calculates it</strong></p>
+  <p>Fixed = sum of recurring items with &quot;Fixed cost&quot; turned on (converted to monthly if weekly or yearly).</p>
+  <p>Everyday = income - bills - savings.</p>
+  <p>Example: income 2,000. Rent (800) + subscriptions (100) = 900 of bills. Set aside 500 to savings, and 600 is left for everyday.</p>
+  <h3 id="category-budgets">How category budgets work</h3>
+  <p><strong>Are budgets monthly or weekly?</strong></p>
+  <p>Budgets are monthly only. You set a target for each spending category for the whole month, and Lens tracks how much you have spent against that monthly amount.</p>
+  <p>If you want to limit spending in a category, think about your average monthly spend and set a monthly budget from there.</p>
+  <p><strong>Where can I see my category budgets?</strong></p>
+  <p>Go to Settings &gt; Categories. You can set a monthly budget for each category on this screen. The Categories tab also shows your spend for each category this month and how close you are to your monthly limit.</p>
+  <p><strong>When do I get alerted about budgets?</strong></p>
+  <p>On the Today screen, the &quot;Watch this week&quot; card appears when any of your categories reaches 90% or more of its monthly budget. Tapping it takes you to the Categories tab so you can see which ones are close to their limit.</p>
+  <h2>Goals</h2>
+  <h3 id="create-goal">Creating a savings goal</h3>
+  <p><strong>How to create a goal</strong></p>
+  <p>Open More, then Goals, and tap the + button. Pick a type, then give it a name, a target amount, and optionally a target date. You can enter how much you have already put aside too.</p>
+  <p>The same step has a slider for the amount you want to put in each month. As you move it, Lens works out when you would reach the target at that rate, and if you have set a target date it tells you how much you would need per month to make it.</p>
+  <p><strong>Goal types</strong></p>
+  <p>Emergency fund, house deposit, holiday, car, wedding, education, retirement, or custom. The type is just a label to help you organise. It does not change how the goal works.</p>
+  <h3 id="track-goal">Tracking goal progress</h3>
+  <p><strong>How progress works</strong></p>
+  <p>Open a goal to see your progress bar, current amount, and how much is left. If you set a target date, Lens shows whether you are on track.</p>
+  <p>The goal detail screen also shows your contribution history.</p>
+  <p><strong>Adding money to a goal</strong></p>
+  <p>A contribution is simply a transaction tagged with the goal. Tap the + button, choose Expense, then set the category to Goals, Investment, or Pension. A Goal row appears, and picking your goal there links the money to it.</p>
+  <p>For something regular, add a recurring item with one of those categories and choose the goal on the form. Every time it runs, the contribution is counted.</p>
+  <p>Money you put toward a goal does not come out of your safe to spend. Lens treats it as saving rather than spending, so a big contribution never reads as an overspend.</p>
+  <h3 id="edit-goal">Editing and managing goals</h3>
+  <p><strong>How to edit</strong></p>
+  <p>Tap a goal to open it, then use the menu to edit, pause, complete, or delete it.</p>
+  <p>Editing lets you change the name, target amount, target date, current amount, and the monthly amount you are putting in. Completing a goal moves it to your completed list.</p>
+  <p>Pausing is for when you want to step back from a goal without losing it. A paused goal moves into its own section on the Goals list, stops being marked as ahead or behind, and stops turning up in your insights. Everything you have already saved stays exactly as it is, and the same menu unpauses it.</p>
+  <h3 id="card-snapshot">Paying off a credit card</h3>
+  <p><strong>Start with the goal</strong></p>
+  <p>Choose &quot;Pay off a credit card&quot; when you create a goal and it works like any other goal: a target, a ring that fills as you pay it down, and an estimate of when you will be clear.</p>
+  <p>That is the whole feature if you want it to be. Everything below is optional, and only worth adding if you care about what your card looks like on your credit report.</p>
+  <p><strong>The closing day is not the due day</strong></p>
+  <p>These two dates get mixed up constantly, and the difference is the whole point of this feature.</p>
+  <p>Your payment due day is when the money has to reach the card. Your statement closing day is when the bank takes a snapshot of the balance and reports that number. They are usually a couple of weeks apart.</p>
+  <p>Paying after the closing day still avoids interest, and it still counts as paying on time. It just does not change the number that was already written down.</p>
+  <p><strong>What adding the details turns on</strong></p>
+  <p>Add your credit limit and your statement closing day to the goal and Lens can start showing you the timing.</p>
+  <p>You get a cycle timeline, a projection of what will be reported on the closing day, and a slider to try a paydown: drag to a target balance and Lens tells you what would be reported and how much you would need to pay to land there. After each close it records what was actually reported, so you build up a history.</p>
+  <p>You will also get a heads-up on Today as the closing day approaches. Bank transfers can take a day or two to land, so the reminder comes early enough to act on.</p>
+  <p><strong>Where this applies, and what it is not</strong></p>
+  <p>This one is built around how UK credit reporting works. Experian, Equifax and TransUnion each record one balance per card per month, taken on the closing day, and a smaller recorded balance tends to support a higher score. If you are not building a UK credit file, the goal still works normally, but the reporting projection will not mean much.</p>
+  <p>Lens shows you the arithmetic and where the numbers come from. It does not tell you what to do with your money. Decisions about paying down a card are yours.</p>
+  <h2>Today screen</h2>
+  <h3 id="how-today-screen-works">How the Today screen works</h3>
+  <p><strong>Daily budget (&quot;Safe to spend today&quot;)</strong></p>
+  <p>This is how much you can spend today and still finish the month on plan. It is your remaining budget for the month, spread across the days that are left.</p>
+  <p>Every transaction you log updates it, so if you overspend one day, tomorrow's figure dips a little to keep you on track.</p>
+  <p><strong>Why the number barely moves when you spend</strong></p>
+  <p>When you log a spend, the cost spreads across every day left in the month instead of coming off today alone. Spend £5.50 with 25 days to go and today's number drops by about 22p, because each remaining day absorbs a small share.</p>
+  <p>Your transaction is always recorded in full. The spreading only changes how the headline number reacts, and the closer you get to the end of the month, the more each spend moves it.</p>
+  <p>This is deliberate: one expensive day never wrecks the rest of your month, and the number you see is always a plan you can still hit.</p>
+  <p><strong>Ahead or behind</strong></p>
+  <p>This compares where you should be vs where you actually are.</p>
+  <ul>
+    <li>Expected spend = (monthly budget / total days in month) x day of month.</li>
+    <li>Ahead or behind = expected spend - actual spend.</li>
+  </ul>
+  <p>Positive means you have spent less than the even pace. Negative means you have spent more.</p>
+  <p>Example: Budget 1,500 on day 20 of a 31-day month. Expected spend = 1,500 x 20 / 31 = 967.74. Actual spend = 50. You are 917.74 ahead.</p>
+  <p><strong>Fixed and discretionary</strong></p>
+  <ul>
+    <li>Fixed = sum of recurring items marked as a fixed cost (converted to monthly).</li>
+    <li>Everyday = income - bills - savings.</li>
+  </ul>
+  <p>Example: income 2,000. Rent (800/month, fixed) plus 500 to savings leaves 700 for everyday.</p>
+  <p><strong>This month's stats</strong></p>
+  <ul>
+    <li>Income = total income transactions this month.</li>
+    <li>Expenses = total expense transactions this month.</li>
+    <li>Saved = income - expenses.</li>
+  </ul>
+  <p>If you have not added any income transactions, income shows as 0 and saved will be negative (equal to your expenses).</p>
+  <p><strong>Financial runway</strong></p>
+  <p>How long your savings would last if income stopped.</p>
+  <ul>
+    <li>Liquid savings = total positive balances across current and savings accounts.</li>
+    <li>Monthly burn rate = average expenses over the last 3 months (or your budget if there is not enough history yet).</li>
+    <li>Runway = liquid savings / monthly burn rate.</li>
+  </ul>
+  <p>Example: 2,950 in savings, 1,500/month burn rate = 1 month and 29 days runway.</p>
+  <p>The runway updates as you add transactions and your spending patterns become clearer.</p>
+  <h3 id="safe-to-spend">Safe to spend today: how it works</h3>
+  <p><strong>What is safe to spend?</strong></p>
+  <p>Safe to spend is your daily budget for today. Stick to this number and you will finish the month on plan.</p>
+  <p>It updates every time you log a transaction, so if you spend more one day you will see tomorrow's figure adjust to compensate.</p>
+  <p><strong>What does EST mean?</strong></p>
+  <p>EST means estimate. When you first set up Lens, safe to spend is an estimate because we do not yet know your true spending patterns.</p>
+  <p>As you add transactions over time, Lens learns how much you actually spend each month. Once we have enough data, the estimate badge disappears and your runway becomes confirmed.</p>
+  <p><strong>What is the pace dot?</strong></p>
+  <p>The pace dot shows where you are in the month and how you are tracking against your budget.</p>
+  <p>Green = you are on pace or ahead. Amber = you are over pace. The pace dot appears in the footer of the hero card along with your days to payday.</p>
+  <p><strong>What happens when the monthly pot runs out?</strong></p>
+  <p>If you overspend your monthly budget, the hero card switches from showing safe to spend each day to showing your total monthly overage. This way you can see at a glance how much over you are for the entire month.</p>
+  <h3 id="watch-this-week">Watch this week (monthly alerts)</h3>
+  <p><strong>What triggers the &quot;Watch this week&quot; card?</strong></p>
+  <p>This card appears on your Today screen when any spending category reaches 90% or more of its monthly budget.</p>
+  <p>It reminds you to check that category and decide if you want to slow down spending there or adjust your monthly budget.</p>
+  <p><strong>Is this weekly or monthly?</strong></p>
+  <p>It is monthly. The card tracks your spending against your monthly budget targets, not a rolling weekly calculation.</p>
+  <p>Each month resets, and the card reappears if any category hits 90% again.</p>
+  <h2>Reports</h2>
+  <h3 id="understanding-net-worth">Understanding net worth</h3>
+  <p><strong>What is net worth?</strong></p>
+  <p>Net worth = total assets - total liabilities.</p>
+  <ul>
+    <li>Assets are what you own: current accounts, savings, ISAs, pensions, investments, cash, crypto.</li>
+    <li>Liabilities are what you owe: credit cards, loans, mortgages. An overdrawn current account is also a liability.</li>
+  </ul>
+  <p>Lens calculates this from all your accounts.</p>
+  <p><strong>How to see it</strong></p>
+  <p>Go to Reports (from the More menu) and choose Net Worth. You will see a breakdown by account type, your total assets, total liabilities, and overall net worth.</p>
+  <h3 id="monthly-report">Monthly report</h3>
+  <p><strong>What the report shows</strong></p>
+  <p>The monthly report summarises your income, expenses, and savings for a given month. It breaks down spending by category so you can see where your money went.</p>
+  <p>Swipe between months to compare. The report updates in real time as you add transactions.</p>
+  <h3 id="reports-tab">Reports: your monthly overview</h3>
+  <p><strong>What is the Reports tab?</strong></p>
+  <p>Reports answers one question about a period: how did it go, and what is worth acting on?</p>
+  <p>Three views sit across the top, Spending, Income, and Net worth, and under them you choose This month, Last month, or Year to date.</p>
+  <p>A lot of it is free. Income and Net worth are open in full, and This month's hero, with the verdict, what came in, what went out, what you kept, and the flow bar, is there on every tier. On Spending you get a peek at your top three categories.</p>
+  <p>Pro opens the Spending view properly: the full category breakdown, what changed against the period before, and the smart insights card. It also unlocks the hero on Last month and Year to date, so you can look back at finished periods.</p>
+  <p><strong>The verdict</strong></p>
+  <p>At the top of Reports, Lens composes a sentence about your month based on whether you had a surplus, deficit, or broke even, and whether your runway and goals improved.</p>
+  <ul>
+    <li>Example verdicts:</li>
+    <li>&quot;A surplus month. You saved £400, runway grew, and your goals moved forward.&quot;</li>
+    <li>&quot;You overspent by ¥30,000, but runway still holds at 2 months.&quot;</li>
+    <li>&quot;A challenging month. Overspend and runway shortened. Worth a look at categories.&quot;</li>
+  </ul>
+  <p><strong>Period comparisons</strong></p>
+  <p>Reports shows how this month compares to last month and this quarter to last quarter. You can see if your income, expenses, and savings rate are trending up or down.</p>
+  <p>Comparison rows only appear if there is data to compare against. In your first month, there are no prior months, so the comparisons are hidden.</p>
+  <p><strong>Charts and progress</strong></p>
+  <p>The Net worth section carries a trend line of your net worth over time, with 1M, 3M, 6M, 1Y, and All chips underneath so you can change the window. It needs at least two points of history before it draws anything.</p>
+  <p>Below that, the goals card lists up to three goals with what you have saved against the target and a progress bar. Tap one to open it. If you have more than three, an All goals link takes you to the rest. For a completion estimate, open the goal itself.</p>
+  <p>The category donut in Spending is interactive. Tap a slice to highlight it and read the category, the amount, and its share in the middle. Tap it again, or the empty centre, to clear it. The donut is part of the Pro Spending view.</p>
+  <p><strong>Smart insights in Reports</strong></p>
+  <p>Each month Lens looks across your spending, goals, and runway to surface a handful of personalised observations. Things like which category has grown fastest, how many no-spend days you have had, whether your savings rate has improved, how your subscriptions add up, or how much of this tax year's ISA or NISA allowance you have left.</p>
+  <p>A green dot is a win. Blue is something worth noting. Red is something worth a closer look.</p>
+  <h2>Insights</h2>
+  <h3 id="understanding-insights">Understanding insights</h3>
+  <p><strong>What are insights?</strong></p>
+  <p>Insights are automatic observations about your finances. Lens analyses your spending, subscriptions, goals, and budget to surface things you might miss.</p>
+  <p>They appear on the Today screen and in the dedicated Insights tab.</p>
+  <p><strong>Types of insights</strong></p>
+  <ul>
+    <li>Spending anomalies: Flags when a category is significantly up or down vs your average.</li>
+    <li>Recurring items: Reviews your recurring expenses and highlights ones worth a look.</li>
+    <li>Budget optimisation: Suggests reallocating from overspent categories to goals.</li>
+    <li>Goal progress: Shows how your savings goals are tracking.</li>
+    <li>Milestones: Celebrates savings achievements (like hitting an ISA target or improving your savings rate).</li>
+  </ul>
+  <p><strong>Free vs Pro</strong></p>
+  <p>Free gives you one insight a day: the Insight of the Day card on Today. The Insights tab shows that same one, alongside a card explaining what Pro adds. Swiping an insight away works on every tier.</p>
+  <p>Pro opens the full feed, so every insight Lens has worked out for you is listed and you can read through them and clear them as you go.</p>
+  <h3 id="insights-tab">The Insights tab explained</h3>
+  <p><strong>What is the Insights tab?</strong></p>
+  <p>The Insights tab is a dedicated space to see your financial story across multiple dimensions. It includes your runway progression over time, a breakdown of your monthly spending, and smart observations about your finances.</p>
+  <p><strong>Runway breakdown</strong></p>
+  <p>Tap the runway card to expand it and see the numbers behind your runway: your income, monthly budget, what you have spent so far, what is left, and how much cash you have to draw on.</p>
+  <p>Lens remembers whether you had it open, so next time you come back it will be just as you left it. Some rows have a small info icon you can tap for a plain-English explanation.</p>
+  <p><strong>Spending sparkline</strong></p>
+  <p>The sparkline shows your daily spending pattern for the current month. It helps you spot unusual days or trends in your spending behaviour.</p>
+  <p><strong>Insights feed</strong></p>
+  <p>Below the breakdown is a feed of Smart Insights rules that have fired based on your data. You can mark insights as read or dismiss them. The bottom nav shows a dot when you have unread insights.</p>
+  <h3 id="financial-runway">Understanding your financial runway</h3>
+  <p><strong>What is runway?</strong></p>
+  <p>Runway tells you how many months your cash would last if your income stopped tomorrow. It is a quick read on your financial safety net.</p>
+  <p>The more you use Lens, the more accurate this number becomes.</p>
+  <p><strong>Why is my runway card an amber colour?</strong></p>
+  <p>An amber border means the runway is still an estimate based on the spending figure you told Lens during onboarding.</p>
+  <p>Once you have logged enough transactions for Lens to see your real spending pattern, the border turns blue and the number reflects your actual habits, not an estimate.</p>
+  <h3 id="weekly-briefing">Your weekly briefing</h3>
+  <p><strong>What it tells you</strong></p>
+  <p>The briefing is a short read on how the week actually went, written in plain sentences rather than left for you to work out from charts.</p>
+  <p>It covers whether you came in under or over for the week and how that compares to the week before, how many days you stayed on track, what you spent most on, the category that moved the most, what you kept as a share of what came in, bills landing in the next 30 days, and how much of your net worth is invested.</p>
+  <p>Once a month it changes to a longer &quot;Month in review&quot; version.</p>
+  <p><strong>Where to find it</strong></p>
+  <p>It sits near the top of your Today screen. If you would rather not see this week's, you can dismiss it and it will be back with next week's.</p>
+  <p>The briefing is part of Pro. On the free tier the card shows what it is, and the content unlocks when you upgrade.</p>
+  <p><strong>It does not use your AI allowance</strong></p>
+  <p>The briefing is written once per period and then kept, so opening it again costs nothing and it does not touch the allowance that Ask AI and AI receipt scanning share.</p>
+  <p>That is also why the wording stays the same when you reopen it. Change the assistant's personality in your profile and it will write that period once more in the new voice.</p>
+  <h2>Ask ai</h2>
+  <h3 id="ask-ai">Ask AI</h3>
+  <p><strong>What is Ask AI?</strong></p>
+  <p>Ask AI lets you ask questions about your finances in plain language. It sees a summary of your accounts, spending, goals, and budget, then answers based on your actual data.</p>
+  <p>Examples: &quot;Am I on track for my emergency fund?&quot; or &quot;Where am I overspending?&quot;</p>
+  <p><strong>Using Ask AI</strong></p>
+  <p>Ask AI is a Pro feature. There is no API key to set up. Once you have Pro, open Ask AI from the Insights tab and start asking about your spending, budget, or goals.</p>
+  <p>Your question and a snapshot of your numbers go through Lens's secure service to Google's Gemini to answer, and are never stored. Ask AI and receipt scanning share a fair-use allowance of 20 a day and 100 a month.</p>
+  <p><strong>Daily and monthly limits</strong></p>
+  <p>Ask AI and AI receipt scanning share one allowance on Pro: up to 20 actions a day and 100 a month. The daily count resets at midnight (UTC) and the monthly count on the 1st. Your Weekly briefing is separate and does not use this allowance.</p>
+  <h2>Security</h2>
+  <h3 id="pin-biometric">PIN and biometric lock</h3>
+  <p><strong>Setting up a lock</strong></p>
+  <p>Open Profile from the avatar at the top of Today, then tap Screen lock. You can set a 6-digit PIN, and turn on Face ID or fingerprint unlock with the toggle above it.</p>
+  <p>With either one on, Lens locks itself whenever you leave the app and asks you to unlock when you come back.</p>
+  <p><strong>Changing or removing</strong></p>
+  <p>To change your PIN, go to Security and choose &quot;Change PIN&quot;. You will need to enter your current PIN first.</p>
+  <p>To remove the lock entirely, choose &quot;Remove PIN&quot;. Biometric unlock is automatically disabled when the PIN is removed.</p>
+  <h2>Data &amp; privacy</h2>
+  <h3 id="data-privacy">Data privacy</h3>
+  <p><strong>Where is my data?</strong></p>
+  <p>All your financial data is stored locally on your device using an on-device database. Lens has no cloud database of your finances and no user accounts.</p>
+  <p>The only time data leaves your phone is when you choose to use the optional Pro AI features (Ask AI and receipt scanning). See &quot;No cloud, no tracking&quot; below for the detail.</p>
+  <p><strong>No cloud, no tracking</strong></p>
+  <p>Lens is designed to be privacy-first. There is no cloud sync for your financial data. No one at Lens can see your accounts, transactions, or balances.</p>
+  <p>Data leaves your device only for features you choose. Ask AI and receipt scanning go through Lens's secure Cloud Function to Google's paid Gemini API, which Google states does not use prompts to train its models. Live investment prices send only ticker symbols, never your amounts or identity, through the same kind of Lens-operated function. Lens never stores what you send.</p>
+  <h3 id="privacy-and-services">Privacy and data: where does my data go?</h3>
+  <p><strong>Where is my data stored?</strong></p>
+  <p>All your personal financial data, your transactions, accounts, balances, goals, budgets, everything, is stored in a local database on your phone. Lens has no cloud database of it and cannot see it.</p>
+  <p>The one exception is the optional Pro AI features: if you use Ask AI or receipt scanning, what you send goes through Lens's secure service to Google's Gemini to answer, and is never stored.</p>
+  <p><strong>What about Firebase and RevenueCat?</strong></p>
+  <p>Lens uses two services for technical reasons:</p>
+  <p>Firebase: Only to deliver push notifications to your phone. We never send it your financial data.</p>
+  <p>RevenueCat: Only for managing subscriptions. It sees your subscription status but not your financial information.</p>
+  <h3 id="backup-restore">Backup and restore</h3>
+  <p><strong>How to back up</strong></p>
+  <p>Open Profile, then Data &amp; backup. Tap &quot;Create backup&quot; to save a copy of all your data as a file.</p>
+  <p>Store the backup somewhere safe (e.g. Files app, iCloud Drive, or email it to yourself). This is your safety net if you switch devices or need to reset.</p>
+  <p><strong>How to restore</strong></p>
+  <p>On the Backup screen, tap &quot;Restore from backup&quot; and pick your backup file. Lens will load all your data from the backup.</p>
+  <p>Restoring replaces your current data, so make sure you want to overwrite what is currently in the app.</p>
+  <h2>Troubleshooting</h2>
+  <h3 id="balance-not-matching">Balance not matching your bank</h3>
+  <p><strong>Why balances might differ</strong></p>
+  <p>The most common reason is a missing transaction. If you spent money but did not log it in Lens, the balance will be off.</p>
+  <p>Other causes: wrong starting balance, duplicate transactions, or a pending bank transaction that has not cleared yet.</p>
+  <p><strong>How to fix it</strong></p>
+  <ul>
+    <li>Compare your bank statement with your Lens transactions for the same period.</li>
+    <li>Look for missing or duplicate entries.</li>
+    <li>If you find the gap, add the missing transaction or delete the duplicate.</li>
+    <li>If the difference is old and hard to trace, you can edit the account's starting balance to match your real bank balance. This resets the baseline.</li>
+  </ul>
+  <h3 id="bank-sync-troubleshooting">When synced transactions look wrong</h3>
+  <div class="highlight"><p>This feature is on iPhone only.</p></div>
+  <p><strong>The same payment twice</strong></p>
+  <p>A payment often reaches your bank twice: once while it is still pending, then again when it settles. The settled version can arrive with a different reference and a tidier shop name, so it can look like a separate charge.</p>
+  <p>Lens works out that the two are the same payment and keeps one. If you are looking at a duplicate from before this was fixed, you can leave it alone. It clears itself on the next sync.</p>
+  <p><strong>A charge that never really happened</strong></p>
+  <p>Some card payments are only ever a hold. A petrol pump reserves an amount before you fill up, a hotel holds a deposit, a Transport for London touch-in sits there until the day's travel is added up. Sometimes the bank drops the hold and never turns it into a real payment.</p>
+  <p>Lens clears those, so you are not left with money missing that you never actually spent. It only does this when it can see your bank is reporting properly, so a patchy connection is never mistaken for a pile of cancelled payments.</p>
+  <p><strong>The balance does not match my bank</strong></p>
+  <p>On a synced account, your bank owns the balance. Every sync takes the bank's own figure and lines Lens up with it, so if the number ever drifts it puts itself right the next time you sync.</p>
+  <p>Because of that, do not edit the starting balance on a synced account. That is the right fix for an account you keep by hand, but here it will just be overwritten. If the balance still looks wrong after a sync, that one is worth telling us about.</p>
+  <p><strong>What you can and cannot change</strong></p>
+  <p>Transactions that came from your bank cannot be deleted, because the next sync would bring them straight back. The amount, the date and the bank's own description stay as the bank reported them.</p>
+  <p>Everything that is yours stays yours. Change the category, add a note, link it to a goal. All of that works exactly as it does on a transaction you added yourself.</p>
+  <h3 id="locked-items">Why is there a padlock on this?</h3>
+  <p><strong>Nothing has been deleted</strong></p>
+  <p>If your Pro subscription ends, nothing you created is removed. Anything over the free limit is locked instead, which means set aside rather than deleted. While it is locked it stops counting towards your totals and your budget, and it sits there untouched.</p>
+  <p>So a padlock is never bad news about your data. All of it is still there, exactly as you left it.</p>
+  <p><strong>Which ones lock, and why those</strong></p>
+  <p>The rule is simple and it is not random: the oldest stays unlocked.</p>
+  <p>Lens sorts by the date you created each one and keeps the earliest ones active, up to the free limit. Three things are counted this way: your first 3 goals, your first 3 accounts, and your first 3 custom categories carry on as normal. The ones you added most recently are the ones that lock. Your longest-running goal is never the one taken away from you.</p>
+  <p>Your recurring bills are not touched at all. However many you have set up, every one of them keeps working, keeps landing on your Today screen, and keeps counting towards your budget. Going back to Free returns you to the free tier, it does not put you below it, and a budget that quietly forgot half your bills would be worse than no budget.</p>
+  <p><strong>Getting everything back</strong></p>
+  <p>Subscribe again and it all unlocks straight away, exactly as you left it. There is nothing to restore by hand and nothing to rebuild.</p>
+  <p>If you are already on Pro you should not be seeing a padlock at all. If one turns up anyway, it is a leftover marker rather than anything real, and it clears itself next time you open the app. Restoring purchases from your profile sorts it too.</p>
+
+  <div class="contact-card">
+    <h2>Still stuck?</h2>
+    <p>Email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> and tell us what you were doing, what you expected, and what actually happened. We read every message.</p>
+  </div>
+
+  <p><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+
+  <footer>
+    <p>© 2026 Edniroya Ltd · Registered in England and Wales · Company number 09367944</p>
+  </footer>
+</div>
+</body>
+</html>

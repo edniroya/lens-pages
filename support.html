@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support — Lens Finance</title>
+<title>Support · Lens Finance</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -134,43 +134,76 @@
   <div class="contact-card">
     <h2>Get in touch</h2>
     <p>Email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> for anything Lens-related. Bug reports, feature requests, billing questions, or just to say hello.</p>
-    <p>You can also tap Settings → Support → Share Feedback inside the app to send a message.</p>
+    <p>You can also tap More → Support → Share feedback inside the app to send a message.</p>
   </div>
 
   <h2>Common questions</h2>
 
   <h3>How is "Safe to spend today" calculated?</h3>
-  <p>Lens takes your current available balance, subtracts the bills and recurring expenses still due before your next payday, subtracts any scheduled goal contributions, then divides what is left by the days remaining in your pay cycle. The number recalculates with every transaction you log, so it always reflects what is actually left for today rather than what you planned at the start of the month.</p>
+  <p>It runs on the calendar month, not your pay cycle. Lens starts from your monthly spending budget and reserves your fixed outgoings off the top, so rent, bills and subscriptions are already set aside before you see a daily number. Bills that only land quarterly or yearly are spread across the months they cover, so one annual invoice doesn't flatten a single month.</p>
+  <p>What is left is your day-to-day pot. Lens subtracts the day-to-day spending you have already done this month, then divides by the days left in the month, counting today. Anything you earn above your monthly budget is treated as savings you are protecting, so it never quietly turns into spending money. Money you move into a goal is left out, and so is anything moving in or out of an investment, ISA or pension account, because shifting your own wealth around is not spending. The number recalculates every time you log a transaction.</p>
 
   <h3>What is runway?</h3>
-  <p>Runway is how many months your current cash will last if you keep spending at your current pace. It is the same idea startups use to track how long they can operate before running out of money, applied to your personal finances. Lens shows your runway on the Insights screen so you can see whether your current pace is sustainable. The number gets more accurate the more you log, because Lens learns from your real spending pattern rather than an assumed budget.</p>
+  <p>Runway is how long you could go without income. Lens takes the money you could actually reach today (current accounts, savings, cash and pots) and divides it by what you spend in an average month. Investments, ISAs and pensions are deliberately left out, because that is long-term wealth rather than money for next month's shopping, and an overdrawn account pulls the number down, as it should.</p>
+  <p>You will find it on the Insights tab with the full breakdown, and Reports tells you whether it grew or shrank over the period. Early on the card sits in amber, because the figure is still based on the spending you described during setup. Once you have logged enough for Lens to see your real pattern, it turns blue.</p>
+
+  <h3>Can I track accounts in more than one currency?</h3>
+  <p>Yes. Every account carries its own currency and its transactions use it, so a yen account stays in ¥ and a sterling account stays in £. You choose a primary currency when you set Lens up, and that is what totals, the Today screen and reports are shown in.</p>
+  <p>Accounts in other currencies are converted into your primary currency using mid-market rates, and anything converted is marked with ≈ so you always know when you are looking at an estimate rather than a bank quote. Rates refresh when you are online. To change your primary currency, tap your initials on the Today screen, then Preferences → Currency.</p>
+
+  <h3>Investments, ISAs and pensions</h3>
+  <p>These accounts hold two things: cash sitting there waiting to be invested, and the holdings you own. Lens adds them together, so uninvested cash never disappears from your net worth.</p>
+  <p>Add a holding with its quantity and price per unit. If you are recording a purchase you just made, switch on "Paid from this account's cash" and the cost comes out of that account's cash. Leave it off when you are simply recording shares you already owned. To sell, open the holding, tap Sell, and choose the units and price; the proceeds land back in the account's cash. Selling every unit removes the holding.</p>
+  <p>Add money and Withdraw move cash in and out of the account itself. None of this touches safe to spend, because moving your own money between pots is not spending.</p>
+
+  <h3>How does Lens get my bank transactions?</h3>
+  <p>Lens does not connect to banks. It reads what Apple already holds on your iPhone, and only if you have set that up yourself and given Lens permission. Three things have to be true: you are on iPhone, your bank is added inside Apple Wallet as a Connected Card, and you have allowed Lens access when iOS asks. Accounts that meet all three appear in Lens. Everything else stays manual, and manual works perfectly well.</p>
+  <p>Whether your bank can be a Connected Card is Apple's side of things, and it is answered in the Wallet app rather than in Lens. Connected Cards is not offered in every country. It is not available in Japan today, so manual entry and CSV import are the way in there. If your bank does not appear in Wallet, there is nothing Lens can add to make it appear, and nothing you are missing out on inside the app.</p>
+
+  <h3>How do I set up bank sync?</h3>
+  <p>Start in Wallet, since that part happens outside Lens. Open the Wallet app, tap +, choose Add Card, then Connected Cards, pick your bank and approve it. Lens cannot do this step for you and cannot add a bank itself. Then come back to Lens, tap your initials on the Today screen, and open Connections → Bank Sync. iOS asks whether to give Lens access to that Wallet data, and once you allow it you can match each account to an existing Lens account or start a new one. Roughly 12 months of history comes in on the first sync. Bank sync is part of Pro.</p>
+  <p>The data goes from Wallet's on-device store straight into the app. No aggregator, no server, nothing leaves your phone. Synced transactions are read-only where it counts: the amount, date and details stay exactly as your bank reported them, and they cannot be deleted, because the next sync would bring them straight back. Category, notes and any linked goal are still yours to change.</p>
 
   <h3>Where is my data stored?</h3>
   <p>On your device, in a local database. Lens has no cloud backend for your financial data. If you delete the app without backing up, the data is gone. See the <a href="privacy.html">Privacy Policy</a> for the architecture details.</p>
 
   <h3>How do I back up my data?</h3>
-  <p>Settings → Data &amp; backup → Export. Choose a location (iCloud Drive recommended). The file is your snapshot. To restore, install Lens on a new device and use Settings → Data &amp; backup → Restore.</p>
+  <p>Tap your initials on the Today screen, then Preferences → Data &amp; backup → Back up your data → Create backup. Pick where to save it (iCloud Drive is a sensible default). That file is your snapshot. To restore, install Lens on the new device, open the same screen and use Restore from backup → Choose backup file. Restoring replaces what is currently in the app, so it is a fresh-device move rather than a merge.</p>
+  <p>Backup and restore are free on every tier. CSV export is a separate thing and part of Pro; it is for getting your transactions into a spreadsheet, not for moving between devices.</p>
+
+  <h3>What does Pro cost, and what does it unlock?</h3>
+  <p>Prices come live from the App Store or Google Play, so the paywall inside the app always shows the current price in your own currency. There are three ways in: monthly, annual, or a one-off Lifetime purchase. The monthly and annual plans start with a 7-day free trial the first time you subscribe. Lifetime is a single payment, so no trial applies.</p>
+  <p>The free tier is meant to be genuinely usable: the Today screen and safe to spend, unlimited transactions, unlimited bills and recurring items, net worth, CSV import, plus 3 goals, 3 accounts and budgets on up to 5 categories.</p>
+  <p>Pro lifts those caps and adds custom categories, the full Spending reports, the complete insights feed, CSV export, bank sync on iPhone, and the AI features (Ask AI and AI receipt parsing).</p>
+
+  <h3>Reports: what is free and what is Pro?</h3>
+  <p>Income and Net worth are free in full. Spending, the deep dive with category breakdowns, comparisons and trends, is Pro.</p>
+  <p>The summary at the top of Reports is free for This month, because knowing how you are doing right now is table stakes. Looking back at Last month or the year to date is Pro.</p>
 
   <h3>How do I cancel my Pro subscription?</h3>
-  <p>Subscriptions are billed by Apple, so cancellation happens in your Apple ID settings, not in Lens. iPhone: Settings → tap your name at the top → Subscriptions → Lens Pro → Cancel. Cancellation takes effect at the end of the current billing period.</p>
+  <p>Subscriptions are billed by Apple or Google rather than by Lens, so cancelling happens in your store account.</p>
+  <p>iPhone: Settings → tap your name at the top → Subscriptions → Lens → Cancel.</p>
+  <p>Android: open the Play Store → tap your profile picture → Payments and subscriptions → Subscriptions → Lens → Cancel subscription.</p>
+  <p>Either way, cancelling takes effect at the end of the period you have already paid for, and Pro stays on until then. Lifetime is not a subscription, so there is nothing to cancel.</p>
 
   <h3>I bought Lifetime. Why does the app still show the upgrade prompt?</h3>
-  <p>Open the paywall and tap Restore Purchases at the bottom. Apple sometimes takes a moment to propagate the entitlement, especially if you switched devices. If it still doesn't unlock after 5 minutes, email us with your Apple ID purchase receipt.</p>
+  <p>Open the paywall and tap Restore purchases at the bottom. The store sometimes takes a moment to propagate the purchase, especially if you have switched devices. If it still hasn't unlocked after 5 minutes, email us with your purchase receipt.</p>
 
   <h3>How does Ask AI work?</h3>
-  <p>Ask AI is a Pro feature. After you upgrade in the App Store, you can ask questions about your money and the AI answers using only the data already on your device. The model is Google Gemini 2.5 Flash, called directly from your device using a key bundled inside the app. Your questions and the financial snapshot are sent to Google's API and never to a Lens server.</p>
+  <p>Ask AI is a Pro feature. You ask a question about your money, and the answer is built from a snapshot of the data already on your phone.</p>
+  <p>Your question and that snapshot go to a Lens-operated Firebase Cloud Function in Google's europe-west2 region. It checks that you are signed in, that your Pro subscription is active and that you have allowance left, then forwards the request to Google's Gemini API and returns the answer. The model is Gemini 2.5 Flash. The Gemini key is held server-side in Secret Manager and is not in the app you download. Lens does not log your question, your snapshot, or the answer. The <a href="privacy.html">Privacy Policy</a> sets out the full path.</p>
 
   <h3>How many AI actions can I use?</h3>
-  <p>Pro includes 100 AI actions per month, covering both Ask AI messages and AI-assisted receipt parsing. Your allowance refreshes on the 1st of each month. On-device receipt OCR is unlimited and doesn't count toward this allowance.</p>
+  <p>Pro includes 100 AI actions a month, with a ceiling of 20 in any single day. Ask AI messages and AI receipt parsing draw on the same pot. The daily count resets at midnight UTC and the monthly one on the 1st. The daily figure is a brake against runaway usage rather than a real restriction; 20 in one day is far beyond normal use.</p>
+  <p>The weekly briefing does not spend your allowance at all, and on-device receipt OCR is unlimited and never counted.</p>
 
   <h3>How does receipt scanning work?</h3>
-  <p>Two paths. The first uses on-device OCR built into iOS, with no internet required. This is available on the free tier and pulls amount, merchant, and date out of most receipts using local pattern matching. The second is AI-assisted parsing for more complex receipts, available to Pro subscribers, which sends only the OCR text or the receipt image to Google Gemini for structured extraction. Which path runs depends on your tier and on how clean the receipt is.</p>
-
-  <h3>Why does Lens not connect to my bank?</h3>
-  <p>Lens uses manual entry and CSV import. You add transactions yourself, or import a CSV file from your bank. This keeps your financial data entirely on your device, with no third-party bank connection.</p>
+  <p>It is layered. First your phone reads the text off the photo by itself, with no internet needed. That step is free on every tier, and plain receipts are often handled entirely by local pattern matching.</p>
+  <p>If the receipt is more awkward, Pro subscribers get an AI pass. The OCR text goes to the same Lens Cloud Function that handles Ask AI, which checks your Pro status and your allowance before forwarding it to Gemini. If key details are still missing, a downscaled image of the receipt takes the same route. Neither layer talks to Google directly from your phone, and the API key is never in the app.</p>
 
   <h3>I found a bug. What do I do?</h3>
-  <p>Email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> with what you were doing, what you expected, and what actually happened. A screenshot helps. We read every message and reply within a few days.</p>
+  <p>The quickest route is More → Support → Share feedback in the app. It opens an email with your support code already filled in, which is how we find your account, so please leave that line alone.</p>
+  <p>You can also email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> directly. Tell us what you were doing, what you expected, and what actually happened. A screenshot helps. We read every message and reply within a few days.</p>
 
   <h3>Where can I read the privacy policy?</h3>
   <p><a href="privacy.html">privacy.html</a>. Short version: your financial data never leaves your device.</p>
