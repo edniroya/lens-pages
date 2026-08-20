@@ -144,7 +144,7 @@
   </ul>
   <h2>4. Third-Party Services</h2>
   <p>While Lens itself does not collect your data, the App uses a small number of third-party services that process limited, non-financial information to function.</p>
-  <p>RevenueCat: Subscription and in-app purchase management. Receives a pseudonymous device ID and your App Store purchase receipt. No financial data. No name or email.</p>
+  <p>RevenueCat: Subscription and in-app purchase management. Receives a pseudonymous device ID and your App Store or Google Play purchase receipt. No financial data. No name or email.</p>
   <p>Firebase (Google): Push notifications for bill reminders (if you opt in). Receives a pseudonymous device notification token. No financial data. Notifications are off by default.</p>
   <p>Google Gemini API: AI receipt parsing and Ask AI (Pro only). Receives only receipt OCR text or a downscaled image bytes for parsing, or your Ask AI question and the financial snapshot for answering. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models.</p>
   <p>Firebase Cloud Functions (Google): All AI requests (both Ask AI and AI receipt parsing) are sent first to a Lens-operated Cloud Function which verifies your Pro entitlement, counts your monthly AI usage, and forwards the request to the Gemini API on your behalf. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log prompt content, image bytes, or responses.</p>
@@ -153,7 +153,7 @@
   <p>Finnhub: Live investment prices and stock search (optional, off by default). When you search for a stock in the holding form or turn live prices on for an investment account, only ticker symbols and your search text are sent through a Lens-operated Cloud Function to Finnhub to fetch prices. Your quantities, holdings values, account names, and identity never leave the device. The Finnhub API key is held server-side, and Lens caches prices for up to a day so symbols are requested at most once per day.</p>
   <p>Yahoo Finance: The same optional feature, for markets outside the United States. Here the App queries Yahoo directly from your device rather than through the Cloud Function, so your device IP address reaches Yahoo for that request. Only the ticker symbol or your search text is sent. Amounts, quantities, and your identity are not.</p>
   <p>Frankfurter: Published European Central Bank reference exchange rates, used to show a converted estimate when you hold accounts in more than one currency. The App requests the current rate table for your base currency directly from your device. No amounts, balances, or personal data are sent.</p>
-  <p>Apple: App distribution and in-app purchases. Governed by Apple's own terms. Lens receives only subscription entitlement status.</p>
+  <p>Apple and Google: App distribution and in-app purchases, through the App Store on iPhone and Google Play on Android. Governed by their own terms. Lens receives only subscription entitlement status.</p>
   <p>Lens does not sell, rent, or share any data with third parties for advertising or marketing purposes.</p>
   <h2>5. Bank Sync (Apple Wallet)</h2>
   <p>Bank Sync is optional, iPhone only, and off until you turn it on. It does not connect Lens to your bank. Lens reads bank data that Apple already holds on your device, using Apple's FinanceKit.</p>
@@ -171,8 +171,8 @@
   <h2>7. Biometric Authentication</h2>
   <p>If you enable Face ID, Touch ID, or fingerprint lock, all authentication is handled by your device's operating system. Lens does not have access to your biometric data. The App receives only a pass or fail result from the OS.</p>
   <h2>8. Backup and Restore</h2>
-  <p>The backup feature exports a file of your App data to a location you choose (typically iCloud Drive on iOS). This file is transferred directly between your device and your chosen storage service. Lens does not receive or store copies of your backups.</p>
-  <p>Your Pro entitlement status is excluded from backups; it is restored from your App Store purchase history when you re-install the App. The security of your backup depends on the security of your chosen cloud storage account; iCloud Drive encrypts files at rest by default.</p>
+  <p>The backup feature exports a file of your App data to a location you choose (typically iCloud Drive on iPhone, or Google Drive on Android). This file is transferred directly between your device and your chosen storage service. Lens does not receive or store copies of your backups.</p>
+  <p>Your Pro entitlement status is excluded from backups; it is restored from your App Store or Google Play purchase history when you re-install the App. The security of your backup depends on the security of your chosen cloud storage account; iCloud Drive encrypts files at rest by default.</p>
   <h2>9. CSV Import and Export</h2>
   <p>CSV files are processed entirely on your device. Exported CSV files are shared via your device's native share sheet to wherever you choose to send them. Lens does not receive copies.</p>
   <h2>10. Receipt Scanning and Ask AI</h2>
