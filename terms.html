@@ -132,10 +132,12 @@
     <li>Set and monitor financial goals</li>
     <li>Track recurring bills and income</li>
     <li>See a daily budget based on your inputs</li>
-    <li>See income and net worth reports, with the full spending reports on Pro</li>
+    <li>See this month's report, including a current net worth total, free; Last month and Year to date, with the income and net worth strips inside them, are Pro</li>
     <li>Import transactions as CSV, and export them on Pro</li>
     <li>Scan receipts to pre-fill transaction details (free tier: on-device OCR; Pro: AI-assisted parsing)</li>
     <li>Ask questions about your finances via Ask AI (Pro)</li>
+    <li>Read a short written briefing on your own figures each week, and at month end (Pro)</li>
+    <li>Bring in bank transactions and balances that Apple Wallet already holds on your iPhone (Bank Sync, Pro, iPhone only)</li>
   </ul>
   <div class="highlight">
     <p>NOT FINANCIAL ADVICE: The App works from data you enter yourself, together with any data you explicitly connect: bank transactions you authorise through Apple Wallet, and live market prices you switch on. Lens does not act on your behalf, does not transact, and does not seek out financial data you have not connected. Numbers, summaries, and projections are for your personal reference only. They are not regulated financial advice. Lens is not authorised by the FCA.</p>
@@ -145,7 +147,7 @@
   <p>You are responsible for:</p>
   <ul>
     <li>The accuracy of data you enter</li>
-    <li>Creating and maintaining your own backups (Settings &gt; Backup)</li>
+    <li>Creating and maintaining your own backups (Settings &gt; Privacy &gt; Data &amp; backup)</li>
     <li>Keeping your device and backup files secure</li>
     <li>Data loss resulting from device failure, App deletion, or failure to back up</li>
   </ul>
@@ -153,12 +155,14 @@
     <p>Lens does not hold server-side copies of your data. If you delete the App without backing up, your financial data cannot be recovered. Back up regularly.</p>
   </div>
   <h2>5. Subscriptions and Pricing</h2>
-  <p>Free: No charge. 3 goals, 3 accounts, unlimited recurring bills, daily budget, manual transactions, CSV import, a report for this month including income and net worth, a preview of the spending breakdown, one insight per day, the default categories, and a budget on up to 5 categories.</p>
-  <p>Pro Monthly: £4.99/month. Unlimited goals, accounts, and category budgets, custom categories, the full spending reports and earlier periods, the full insights feed, CSV export, and AI (receipt parsing and Ask AI, 100 credits per month).</p>
-  <p>Pro Annual: £39.99/year. Same as Pro Monthly. Saves 33% vs monthly.</p>
-  <p>Pro Lifetime: £89.99. Same as Pro, for life. Excludes any future add-ons with ongoing running costs.</p>
+  <p>Free: No charge. 3 goals, 3 accounts, unlimited recurring bills, daily budget, manual transactions, CSV import, this month's report, including a current net worth total, one insight per day, the default categories, and a budget on up to 5 categories.</p>
+  <p>Pro Monthly: Unlimited goals, accounts, and category budgets, custom categories, the Last month and Year to date reports, including the income and net worth strips inside them, the full what-changed list and the whole month story, the full insights feed, CSV export, Bank Sync on iPhone, the weekly briefing, and AI (receipt parsing and Ask AI, 100 actions a month and no more than 20 in a day).</p>
+  <p>Pro Annual: Same as Pro Monthly, billed once a year and cheaper than paying monthly.</p>
+  <p>Pro Lifetime: A one-time purchase. Same as Pro, for life. Excludes any future add-ons with ongoing running costs.</p>
+  <p>Prices are set per store and per country and can change. The price that applies to you, in your currency, is shown in the App before you buy and on the store's product page. Nothing in these Terms sets a price.</p>
   <h2>5.1 Pro Subscriptions</h2>
   <p>Charged through the Apple App Store (iOS) or Google Play Store (Android). Subscriptions renew automatically at the end of each billing period unless cancelled at least 24 hours before renewal.</p>
+  <p>Where a free trial is offered, its length and the price that follows are shown before you confirm the purchase. A trial turns into a paid subscription automatically when it ends, unless you cancel at least 24 hours before that. Whether a trial is available to you is decided by the store.</p>
   <p>To cancel: manage your subscription through your Apple ID settings (iOS) or Google Play account (Android). Access continues until the end of the current billing period. Cancelling does not trigger a refund of the current period.</p>
   <h2>5.2 Pro Lifetime</h2>
   <p>A one-time purchase granting Pro features for the lifetime of the App. No recurring charge.</p>
@@ -170,10 +174,10 @@
   <h2>5.3 Refunds</h2>
   <p>All purchases are processed through the Apple App Store or Google Play Store. Refund requests are handled by Apple or Google under their respective refund policies. Lens cannot process refunds directly.</p>
   <h2>6. AI Features</h2>
-  <p>Pro users have access to AI receipt parsing and Ask AI. The AI provider is Google Gemini.</p>
+  <p>Pro users have access to AI receipt parsing, Ask AI, and the weekly briefing. The AI provider is Google Gemini.</p>
   <p>By using AI features, you acknowledge that:</p>
   <ul>
-    <li>All AI requests (Ask AI and AI receipt parsing) are routed through a Lens-operated Firebase Cloud Function which verifies your Pro entitlement, counts your monthly usage, and forwards the request to Google's Gemini API. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log prompt content, image bytes, or responses.</li>
+    <li>All AI requests (Ask AI, AI receipt parsing, and the weekly briefing) are routed through a Lens-operated Firebase Cloud Function which verifies your Pro entitlement, counts your usage, and forwards the request to Google's Gemini API. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log or store your questions, your receipt text, your receipt images, or Ask AI answers. The wording of your current weekly briefing is held against your anonymous sign-in id until the next period.</li>
     <li>Google's privacy policy governs how Google handles the data in those requests.</li>
     <li>AI output is generated by a language model and may be inaccurate. Lens does not provide financial advice or specific recommendations through AI.</li>
     <li>AI features are a Pro entitlement and require an active Pro subscription or Lifetime purchase.</li>
@@ -185,7 +189,7 @@
   <p>Importing is available on every tier; exporting is a Pro feature. CSV files are processed on your device. By importing data, you confirm you have the right to use it. Exported files are shared via your device's share sheet to a destination you choose. Lens is not responsible for data shared to insecure destinations.</p>
   <h2>9. Receipt Scanning</h2>
   <p>Receipt scanning attempts to extract transaction data from a receipt image to pre-fill a transaction form. It is not guaranteed to be accurate. Always review scanned results before saving.</p>
-  <p>Free tier users get on-device OCR via Apple Vision; no data leaves the device. Pro users additionally get AI parsing for complex receipts, where the OCR text or a downscaled image is sent from your device through the Lens-operated Cloud Function to Google's Gemini API. Receipt images are not stored after processing.</p>
+  <p>Free tier users get on-device OCR, using Apple Vision on iPhone and Google ML Kit on Android; no data leaves the device. Pro users additionally get AI parsing for complex receipts, where the OCR text or a downscaled image is sent from your device through the Lens-operated Cloud Function to Google's Gemini API. Receipt images are never stored on a Lens server.</p>
   <h2>10. Intellectual Property</h2>
   <p>The App and all its content (design, code, brand, copy) are owned by Edniroya Ltd and protected by applicable intellectual property law.</p>
   <p>You are granted a limited, non-exclusive, non-transferable licence to use the App on your personal devices in line with these Terms. You may not copy, modify, distribute, reverse engineer, or use the App commercially without written consent.</p>
@@ -215,7 +219,7 @@
   <p>Severability: If any provision is found unenforceable, the remaining provisions continue in full effect.</p>
   <p>Governing law: England and Wales. The courts of England and Wales have non-exclusive jurisdiction, subject to your rights as a UK consumer.</p>
   <h2>17. Contact</h2>
-  <p>Questions about these Terms? Email us at hello@edniroya.com or use the Share Feedback option in More &gt; Support.</p>
+  <p>Questions about these Terms? Email us at hello@edniroya.com or use the Share Feedback option in Settings, under Support.</p>
 
   <p><a href="privacy.html">Privacy Policy</a> · <a href="support.html">Support</a></p>
 

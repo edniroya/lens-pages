@@ -115,18 +115,19 @@
 
   <div class="highlight">
     <p>The core of this policy in one sentence:</p>
-    <p>Your financial data stays on your device. Lens has no cloud database, does not sell it, and does not share it for advertising. It leaves your phone only when you choose features that need it: the optional Pro AI features (Ask AI and AI receipt parsing), which send what you ask through Lens to Google's paid Gemini API to answer, and optional live investment prices, which send only ticker symbols (never amounts, quantities, or your identity) through Lens to a market data service. Bank Sync, if you turn it on, brings data the other way: it reads bank data Apple already holds on your device and sends nothing out. Details in sections 4, 5 and 10.</p>
+    <p>Your financial data stays on your device. There is no Lens cloud database holding it, we do not sell it, and we do not share it for advertising. It leaves your phone only for features that need it: the Pro AI features (Ask AI, AI receipt parsing, and the weekly briefing Pro shows on Today), which send your question, your receipt, or a few lines of your own figures through Lens to Google's paid Gemini API, and optional live investment prices, which send only ticker symbols (never amounts, quantities, or your identity) through Lens to a market data service. Bank Sync, if you turn it on, brings data the other way: it reads bank data Apple already holds on your device and sends nothing out. Details in sections 4, 5 and 10.</p>
   </div>
   <h2>1. Who We Are</h2>
   <p>Edniroya Ltd (&quot;Lens&quot;, &quot;we&quot;, &quot;us&quot;) operates the Lens Finance mobile application (the &quot;App&quot;).</p>
-  <p>To contact us, use the Share Feedback option in More &gt; Support.</p>
+  <p>To contact us, email hello@edniroya.com or use the Share Feedback option in Settings, under Support.</p>
   <h2>2. Privacy by Architecture</h2>
-  <p>Lens is engineered so that your financial data never reaches a Lens server. There is no Lens cloud database. All financial information is stored in a local database on your device only, protected by iOS Data Protection at rest.</p>
+  <p>Lens is engineered so that your financial records are not copied to a Lens server. There is no Lens cloud database holding your transactions, accounts, goals, or budgets. All of it is stored in a local database on your device only, protected by the operating system at rest: iOS Data Protection on iPhone, app-private storage on Android.</p>
+  <p>The AI features are the exception, and only while a request is in flight. What you send to Ask AI, to AI receipt parsing, or to the weekly briefing passes through a Lens-operated Cloud Function on its way to Google, and is not stored there. Sections 4 and 10 set out exactly what is sent and what is kept.</p>
   <p>This means:</p>
   <ul>
     <li>Lens has no record of your transactions, accounts, goals, or budgets.</li>
     <li>Lens cannot see your financial data.</li>
-    <li>Lens cannot be compelled to hand over your financial data because we do not hold it.</li>
+    <li>Lens cannot be compelled to hand over financial records we do not hold.</li>
     <li>If you delete the App, your financial data is gone (unless you created a backup).</li>
   </ul>
   <h2>3. Data Stored on Your Device</h2>
@@ -145,12 +146,14 @@
   <h2>4. Third-Party Services</h2>
   <p>While Lens itself does not collect your data, the App uses a small number of third-party services that process limited, non-financial information to function.</p>
   <p>RevenueCat: Subscription and in-app purchase management. Receives a pseudonymous device ID and your App Store or Google Play purchase receipt. No financial data. No name or email.</p>
-  <p>Firebase (Google): Push notifications for bill reminders (if you opt in). Receives a pseudonymous device notification token. No financial data. Notifications are off by default.</p>
-  <p>Google Gemini API: AI receipt parsing and Ask AI (Pro only). Receives only receipt OCR text or a downscaled image bytes for parsing, or your Ask AI question and the financial snapshot for answering. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models.</p>
-  <p>Firebase Cloud Functions (Google): All AI requests (both Ask AI and AI receipt parsing) are sent first to a Lens-operated Cloud Function which verifies your Pro entitlement, counts your monthly AI usage, and forwards the request to the Gemini API on your behalf. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log prompt content, image bytes, or responses.</p>
-  <p>Firebase Authentication (Google): Anonymous sign-in. The App signs in without a name, email, or password, purely so the Cloud Function above can tell one device from another when checking your Pro entitlement and counting AI usage. No personal identifier is collected.</p>
+  <p>Firebase Cloud Messaging (Google): Push notifications sent by Lens (if you allow notifications). Receives a pseudonymous device notification token. No financial data. Bill reminders are scheduled by your own device and do not go through Firebase. Notifications are off by default.</p>
+  <p>Google Gemini API: AI receipt parsing, Ask AI, and the weekly briefing (Pro only). Receives only receipt OCR text or downscaled image bytes for parsing, your Ask AI question and the financial snapshot for answering, or, for the weekly briefing, a few lines of your own figures for the period: what you spent against your budget, how that compares with the period before, how many days you were on track, and the name of your biggest everyday category. Lens uses the paid Gemini tier. Google states that prompts and responses submitted through the paid Gemini API are not used to train Google's models.</p>
+  <p>Firebase Cloud Functions and Cloud Firestore (Google): All AI requests (Ask AI, AI receipt parsing, and the weekly briefing) are sent first to a Lens-operated Cloud Function which verifies your Pro entitlement, counts your AI usage, and forwards the request to the Gemini API on your behalf. The Gemini API key is held server-side; it does not exist in the app binary. Lens does not log or store your questions, your receipt text, your receipt images, or Ask AI answers.</p>
+  <p>Three things are kept on the server against your anonymous sign-in id: how many AI actions you have used this month and today, your Pro status as reported by RevenueCat, and, on Pro, the wording of your current weekly briefing so that reopening Today does not generate it again. None of them contain your transactions, balances, or account details.</p>
+  <p>Firebase Authentication (Google): Anonymous sign-in. The App signs in without a name, email, or password, so the Cloud Function above can tell one device from another when checking your Pro entitlement and counting AI usage. The same id is what you see as your support code if you contact us, and it is passed to RevenueCat so your purchases and your usage line up. No personal identifier is collected.</p>
   <p>Firebase Crashlytics (Google): Crash reporting, enabled in release builds. Receives crash stack traces plus device model and OS version. It does not receive your transactions, balances, or any other financial data.</p>
-  <p>Firebase Analytics (Google): Anonymous product analytics, on by default and switchable off in More, Privacy. Receives counts and fixed labels describing which screens were opened and where people stop, for example that an onboarding step was viewed or that the Pro screen was shown. It never receives your amounts, balances, transactions, or the names of accounts, goals, categories, or merchants, and it never receives anything you typed. Lens does not collect an advertising identifier, does not ask for tracking permission, and does not link your activity across apps or devices. Turning the switch off stops collection immediately.</p>
+  <p>Firebase App Check (Google): Abuse protection for the Lens-operated Cloud Functions, so the AI and price endpoints only answer a genuine copy of the App. Before a request, your device asks Apple (App Attest on iPhone) or Google (Play Integrity on Android) for a token showing the App has not been tampered with. The token says nothing about you and carries no financial data.</p>
+  <p>Firebase Analytics (Google): Anonymous product analytics, on by default and switchable off in Settings, under Privacy. Receives bucketed counts and fixed labels describing which screens were opened and where people stop, for example that an onboarding step was viewed or that the Pro screen was shown, together with your platform, app version, app language, and whether you are on Pro. It never receives your amounts, balances, transactions, or the names of accounts, goals, categories, or merchants, and it never receives anything you typed. Lens does not collect an advertising identifier, does not ask for tracking permission, and does not link your activity across apps or devices. Turning the switch off stops collection immediately.</p>
   <p>Finnhub: Live investment prices and stock search (optional, off by default). When you search for a stock in the holding form or turn live prices on for an investment account, only ticker symbols and your search text are sent through a Lens-operated Cloud Function to Finnhub to fetch prices. Your quantities, holdings values, account names, and identity never leave the device. The Finnhub API key is held server-side, and Lens caches prices for up to a day so symbols are requested at most once per day.</p>
   <p>Yahoo Finance: The same optional feature, for markets outside the United States. Here the App queries Yahoo directly from your device rather than through the Cloud Function, so your device IP address reaches Yahoo for that request. Only the ticker symbol or your search text is sent. Amounts, quantities, and your identity are not.</p>
   <p>Frankfurter: Published European Central Bank reference exchange rates, used to show a converted estimate when you hold accounts in more than one currency. The App requests the current rate table for your base currency directly from your device. No amounts, balances, or personal data are sent.</p>
@@ -176,26 +179,27 @@
   <p>Your Pro entitlement status is excluded from backups; it is restored from your App Store or Google Play purchase history when you re-install the App. The security of your backup depends on the security of your chosen cloud storage account; iCloud Drive encrypts files at rest by default.</p>
   <h2>9. CSV Import and Export</h2>
   <p>CSV files are processed entirely on your device. Exported CSV files are shared via your device's native share sheet to wherever you choose to send them. Lens does not receive copies.</p>
-  <h2>10. Receipt Scanning and Ask AI</h2>
+  <h2>10. Receipt Scanning, Ask AI, and the Weekly Briefing</h2>
   <p>Receipt scanning uses two paths depending on your tier:</p>
   <ul>
-    <li>On-device OCR (free tier and Pro): text recognition runs entirely on your device using Apple Vision. No data leaves the device for this step.</li>
+    <li>On-device OCR (free tier and Pro): text recognition runs entirely on your device, using Apple Vision on iPhone and Google ML Kit on Android. No data leaves the device for this step.</li>
     <li>AI parsing (Pro only): for complex receipts, the extracted OCR text or a downscaled receipt image is sent from your device through a Lens-operated Cloud Function, which verifies your Pro entitlement and counts your monthly usage before forwarding the request to Google's Gemini API.</li>
   </ul>
   <p>Ask AI (Pro only) follows the same routing: your question and a snapshot of your financial data are sent through the same Lens-operated Cloud Function to Google's Gemini API. Lens does not log prompt content, image bytes, or responses. The snapshot includes only the data needed to answer your question.</p>
-  <p>Pro includes a fair-use monthly allowance of 100 AI actions, covering both Ask AI and AI receipt parsing. The allowance refreshes on the 1st of each month. On-device OCR has no limit.</p>
-  <p>Receipt images are not stored after processing.</p>
+  <p>The weekly briefing (Pro only) is the one AI feature you do not trigger yourself. On Pro, the Today screen shows a short written check-in once a week, and a month-end edition at the end of each month. To write it, Lens sends a few lines of your own figures for the period through the same Cloud Function to Gemini. The wording that comes back is stored against your anonymous sign-in id until the next period, so that reopening Today does not generate it again. You can dismiss the card for the period.</p>
+  <p>Pro includes a fair-use allowance of 100 AI actions a month, and no more than 20 in any one day, covering both Ask AI and AI receipt parsing. The allowance refreshes on the 1st of each month. The weekly briefing does not count against it, because it is already capped at one generation per period. On-device OCR has no limit.</p>
+  <p>Receipt images are never stored on a Lens server. Any copy stays on your device.</p>
   <h2>11. Children</h2>
   <p>Lens Finance is not directed at children under 13. If you believe a child under 13 has provided data through the App, please contact us via hello@edniroya.com and we will address it promptly.</p>
   <h2>12. Financial Information</h2>
   <p>Lens is a tracking tool, not a financial adviser. The data displayed in the App reflects only what you have entered. It is not financial advice. See the Terms of Service for more detail.</p>
   <h2>13. Your Rights (UK GDPR and Equivalents)</h2>
-  <p>Because Lens does not collect or hold your financial data, most data subject rights (access, deletion, rectification) are exercised directly on your device by editing your data or deleting the App. For data held by our third-party processors (RevenueCat, Firebase, including Firebase Analytics), please refer to their respective privacy policies. To exercise rights regarding any limited data we may hold, contact hello@edniroya.com.</p>
+  <p>Because Lens does not collect or hold your financial data, most data subject rights (access, deletion, rectification) are exercised directly on your device by editing your data or deleting the App. For data held by our third-party processors (RevenueCat, Firebase, including Firebase Analytics, and Google Gemini), please refer to their respective privacy policies. To exercise rights regarding any limited data we may hold, contact hello@edniroya.com.</p>
   <h2>14. Changes to This Policy</h2>
   <p>We will update this policy if our practices change. Material changes will be notified within the App.</p>
   <p>The &quot;Last updated&quot; date at the top reflects the most recent version.</p>
   <h2>15. Contact</h2>
-  <p>Questions about this policy? Email us at hello@edniroya.com or use the Share Feedback option in More &gt; Support.</p>
+  <p>Questions about this policy? Email us at hello@edniroya.com or use the Share Feedback option in Settings, under Support.</p>
 
   <p><a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></p>
 
