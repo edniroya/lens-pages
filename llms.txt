@@ -1,0 +1,21 @@
+# Lens
+
+> Lens is a privacy-first personal finance app for iPhone and Android by Edniroya Ltd. It tells you one number: what you can safely spend today, after your bills, savings and goals are covered.
+
+Key facts:
+
+- Safe-to-spend for today is calculated after bills, savings and goals are funded, then frozen each morning so the figure does not move during the day.
+- On iPhone, optional bank sync (Pro) reads Wallet-connected accounts through Apple's FinanceKit, on the device. No aggregator and no Lens server sees the transactions. Requires iPhone, iOS 17.4 or later (UK connected cards 18.4 or later), cards connected in Apple Wallet, and it is not available in every country.
+- Data lives in a local database on the device. There is no Lens cloud database of your finances, no account, no sign-up and no login. No ads, data is not sold, no advertising identifier, no cross-app tracking. One exception: the optional AI features send your question and a financial snapshot to Google Gemini to answer it.
+- Free forever: 3 accounts, 3 goals, 5 category budgets, unlimited recurring bills, the whole daily number, the whole of This month in Reports, net worth, an insight a day, and CSV import with bank-format detection.
+- Pro from £4.99/month (yearly and lifetime options in the store), 7-day free trial. Adds unlimited accounts, goals and budgets, bank sync on iPhone, receipt scanning, AI (100 credits a month), CSV export, custom categories, Last month and Year to date reports, weekly briefing and the full insights feed.
+- English (en-GB) and Japanese (ja), multi-currency with live ECB exchange rates.
+- Lens is informational and does not provide financial advice.
+
+Pages:
+
+- [Home](https://lens.edniroya.com/): what safe-to-spend is, how bank sync works without an aggregator, the full feature list, pricing and FAQ.
+- [Support](https://lens.edniroya.com/support.html): contact and help.
+- [Help](https://lens.edniroya.com/help.html): how-to guides.
+- [Privacy policy](https://lens.edniroya.com/privacy.html)
+- [Terms](https://lens.edniroya.com/terms.html)

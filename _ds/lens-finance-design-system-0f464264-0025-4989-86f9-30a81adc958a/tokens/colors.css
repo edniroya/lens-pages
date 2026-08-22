@@ -1,0 +1,77 @@
+/* Lens Finance colour system.
+   Two modes share the same semantic roles. Colour on text is the exception,
+   not the rule: text is near-black / near-white by default; colour appears
+   only where it carries financial meaning (income, over-budget, links, Pro).
+
+   :root  = Light mode (default)
+   .dark  = Dark mode (deep blue-black ramp, same hue family as the hero) */
+
+:root {
+  /* ---- Brand anchor — immutable, identical in both modes ---- */
+  --lens-deep-space:      #1D3557; /* Deep Space Blue — hero top, buttons, FAB */
+  --lens-deep-space-btm:  #0D1B2A; /* Hero gradient bottom */
+  --lens-frosted-mint:    #A8DADC; /* Logo line, win-card border, dark primary */
+
+  /* ---- Semantic palette (LIGHT) ---- */
+  --primary:      #2563EB; /* Rich Sky Blue — CTAs, links, active nav, progress */
+  --accent:       #E63946; /* Strawberry Red — over-budget, destructive, errors */
+  --success:      #166534; /* Deep Green — income, on-track, positive */
+  --warning:      #B45309; /* Deep Amber — behind-pace, caution */
+  --premium:      #7C3AED; /* Deep Violet — Pro / Lifetime labels only */
+  --neutral:      #444444; /* Dark Grey — inactive nav, expense amounts */
+
+  --background:   #F2F2F7; /* iOS Gray 6 — page scaffold */
+  --card:         #FFFFFF; /* Card surface */
+  --card-raised:  #F2F2F7; /* Nested surfaces, transaction icon dots */
+  --border:       #E5E5EA; /* iOS Gray 5 — borders, dividers */
+  --nav-bg:       #FFFFFF; /* Bottom nav background */
+
+  /* ---- Text ---- */
+  --text-primary:   #000000; /* Titles, body, transaction names */
+  --text-secondary: #444444; /* Category labels, dates, expense amounts */
+  --text-muted:     #888888; /* Timestamps, footnotes, eyebrows */
+  --text-on-brand:  #FFFFFF; /* Text on Deep Space / filled buttons */
+
+  /* ---- Hero card (fixed, both modes) ---- */
+  --hero-top:       #1D3557;
+  --hero-bottom:    #1D3557; /* flat — hero is a solid Deep Space Blue, no gradient */
+  --hero-text:      #FFFFFF;
+  --hero-subtext:   rgba(255,255,255,0.62);
+  --hero-track:     rgba(255,255,255,0.18);
+  --hero-fill:      rgba(255,255,255,0.80);
+  --hero-pill-bg:   rgba(255,255,255,0.12);
+  --hero-dot-ok:    #86EFAC; /* on-track dot */
+  --hero-positive:  #4ADE80;
+  --hero-negative:  #FF6B6B;
+  --hero-behind:    #FBBF24; /* amber, behind pace */
+  --hero-lock:      #EAB308; /* Pro lock on hero */
+
+  /* ---- FAB (fixed, both modes) ---- */
+  --fab-bg: #1D3557;
+  --fab-fg: #FFFFFF;
+
+  /* ---- Focus ---- */
+  --focus-ring: #2563EB;
+}
+
+.dark, [data-theme="dark"] {
+  --primary:      #60A5FA; /* Sky Blue */
+  --accent:       #FF6B6B; /* Softened Red */
+  --success:      #34D399; /* Soft Mint */
+  --warning:      #FCD34D; /* Pale Amber */
+  --premium:      #C084FC; /* Soft Violet */
+  --neutral:      #8B96B0; /* Cool Gray */
+
+  --background:   #10101A; /* Blue-Black */
+  --card:         #16192A; /* Deep Slate */
+  --card-raised:  #1E2340; /* Slate — nested cards, dots */
+  --border:       #252D4A; /* Slate Line */
+  --nav-bg:       #0C0D16; /* Ink */
+
+  --text-primary:   rgba(255,255,255,0.92);
+  --text-secondary: #8B96B0;
+  --text-muted:     #7B879E;
+  --text-on-brand:  #FFFFFF;
+
+  --focus-ring: #60A5FA;
+}
