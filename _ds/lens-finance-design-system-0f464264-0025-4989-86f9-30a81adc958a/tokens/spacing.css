@@ -1,0 +1,39 @@
+/* Lens Finance spacing, radii, shadows, motion.
+   8px base grid. Flat cards with hairline borders — shadows are subtle in
+   light mode only, never on dark surfaces. */
+
+:root {
+  /* ---- Spacing (8px base grid) ---- */
+  --space-xs:  4px;  /* icon-to-text gaps, chip padding */
+  --space-sm:  8px;  /* tight internal padding, badge padding */
+  --space-md:  12px; /* standard component padding */
+  --space-lg:  16px; /* screen edges, card padding, section gaps */
+  --space-xl:  24px; /* between major sections in a card */
+  --space-xxl: 32px; /* bottom safe area, large section gaps */
+
+  /* ---- Corner radii ---- */
+  --radius-card:     16px; /* cards, dialogs, bottom sheets */
+  --radius-button:   14px; /* buttons, input fields */
+  --radius-small:    10px; /* chips, badges, tags, icon dots */
+  --radius-progress: 6px;  /* linear progress bars */
+  --radius-pill:     999px;/* status pills */
+
+  /* ---- Borders ---- */
+  --border-hairline: 0.5px; /* light-mode card border */
+  --border-solid:    1px;   /* dark-mode card border, dividers */
+
+  /* ---- Shadows (light mode only) ---- */
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+  --shadow-none: none;
+
+  /* ---- Motion ---- */
+  --motion-duration: 250ms; /* @kind other */
+  --motion-ease:     cubic-bezier(0.215, 0.61, 0.355, 1); /* @kind other */
+  --motion-press:    0.98; /* @kind other */
+  --motion-countup-duration: 1400ms; /* @kind other */
+  --motion-countup-ease: cubic-bezier(0.165, 0.84, 0.44, 1); /* @kind other */
+}
+
+.dark, [data-theme="dark"] {
+  --shadow-card: none; /* flat on dark surfaces */
+}

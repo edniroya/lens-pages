@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://lens.edniroya.com/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lens.edniroya.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lens.edniroya.com/ja/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lens.edniroya.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://lens.edniroya.com/help.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/help.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/help.html"/><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lens.edniroya.com/ja/help.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/help.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/help.html"/><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://lens.edniroya.com/support.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/support.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/support.html"/><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://lens.edniroya.com/ja/support.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/support.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/support.html"/><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://lens.edniroya.com/privacy.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/privacy.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/privacy.html"/><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://lens.edniroya.com/ja/privacy.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/privacy.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/privacy.html"/><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://lens.edniroya.com/terms.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/terms.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/terms.html"/><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://lens.edniroya.com/ja/terms.html</loc><xhtml:link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/terms.html"/><xhtml:link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/terms.html"/><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
