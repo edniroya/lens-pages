@@ -101,7 +101,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script src="/support.js"></script>
-<style>@media (max-width:767px){.lp-pill{display:none!important}}</style>
+<style>@media (max-width:767px){.lp-pill{display:none!important}}@media (max-width:767px){.lp-badges{flex-wrap:nowrap!important;gap:12px!important}.lp-badges img{height:42px!important}}</style>
 </head>
 <body>
 <style>x-dc{display:none!important}html,body{height:100%;margin:0}</style>
@@ -185,7 +185,7 @@
         </div>
       <button data-dc-tpl="58" type="button" aria-label="次のスライド" class="scp2" style="appearance: none; cursor: pointer; width: 38px; height: 38px; flex: 0 0 auto; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.06); color: rgb(255, 255, 255); font-size: 17px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 250ms;">›</button>
       </div>
-      <div data-dc-tpl="59" style="display: flex; gap: 14px; flex-wrap: wrap; margin: clamp(28px, 3.5vw, 40px) 0px 0px; align-items: center; justify-content: center;">
+      <div class="lp-badges" data-dc-tpl="59" style="display: flex; gap: 14px; flex-wrap: wrap; margin: clamp(28px, 3.5vw, 40px) 0px 0px; align-items: center; justify-content: center;">
         <a data-dc-tpl="60" href="https://apps.apple.com/app/id6764731647" target="_blank" rel="noopener" class="scp3 scp4" style="display: inline-flex; border-radius: 13px; transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), opacity 250ms;">
           <img data-dc-tpl="61" src="/assets/badges/app-store-ja.svg" alt="App Storeでダウンロード" style="height: 50px; display: block;">
         </a>
@@ -700,7 +700,7 @@
       <img data-dc-tpl="462" src="/assets/logo.svg" alt="Lensのマーク。円の中心に1本の線" style="width: 56px; height: 56px; margin: 0px auto; display: block;">
       <h2 data-dc-tpl="463" style="margin: 28px 0px 0px; font-size: clamp(30px, 4.4vw, 52px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance;">今日は、いくら使える？</h2>
       <p data-dc-tpl="464" style="margin: 18px 0px 0px; font-size: 17px; color: rgba(255, 255, 255, 0.72);">明日の朝には分かります。無料、アカウント登録なし。</p>
-      <div data-dc-tpl="465" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 36px; align-items: center;">
+      <div class="lp-badges" data-dc-tpl="465" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 36px; align-items: center;">
         <a data-dc-tpl="466" href="https://apps.apple.com/app/id6764731647" target="_blank" rel="noopener" class="scp3 scp4" style="display: inline-flex; border-radius: 13px; transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), opacity 250ms;">
           <img data-dc-tpl="467" src="/assets/badges/app-store-ja.svg" alt="App Storeでダウンロード" style="height: 54px; display: block;">
         </a>
@@ -820,7 +820,7 @@
         </div>
       <button type="button" onClick="{{ nextHero }}" aria-label="次のスライド" style="appearance:none;cursor:pointer;width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,0.22);background:rgba(255,255,255,0.06);color:#FFFFFF;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background 250ms" style-hover="background:rgba(255,255,255,0.16)">›</button>
       </div>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;margin:clamp(28px,3.5vw,40px) 0 0;align-items:center;justify-content:center">
+      <div class="lp-badges" style="display:flex;gap:14px;flex-wrap:wrap;margin:clamp(28px,3.5vw,40px) 0 0;align-items:center;justify-content:center">
         <a href="{{ appStoreUrl }}" target="_blank" rel="noopener" style="display:inline-flex;border-radius:13px;transition:transform 250ms cubic-bezier(0.33,1,0.68,1),opacity 250ms" style-hover="opacity:0.85" style-active="transform:scale(0.97)">
           <img src="/assets/badges/app-store-ja.svg" alt="App Storeでダウンロード" style="height:50px;display:block">
         </a>
@@ -1335,7 +1335,7 @@
       <img src="/assets/logo.svg" alt="Lensのマーク。円の中心に1本の線" style="width:56px;height:56px;margin:0 auto;display:block">
       <h2 style="margin:28px 0 0;font-size:clamp(30px,4.4vw,52px);font-weight:700;letter-spacing:-0.02em;line-height:1.2;text-wrap:balance">今日は、いくら使える？</h2>
       <p style="margin:18px 0 0;font-size:17px;color:rgba(255,255,255,0.72)">明日の朝には分かります。無料、アカウント登録なし。</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px;align-items:center">
+      <div class="lp-badges" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px;align-items:center">
         <a href="{{ appStoreUrl }}" target="_blank" rel="noopener" style="display:inline-flex;border-radius:13px;transition:transform 250ms cubic-bezier(0.33,1,0.68,1),opacity 250ms" style-hover="opacity:0.85" style-active="transform:scale(0.97)">
           <img src="/assets/badges/app-store-ja.svg" alt="App Storeでダウンロード" style="height:54px;display:block">
         </a>
