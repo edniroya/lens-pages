@@ -1842,7 +1842,7 @@ class Component extends DCLogic {
       document.querySelectorAll('main > section:not([aria-label="Introduction"])').forEach((sec) => this._revealIO.observe(sec));
     }
     this._onScroll = () => {
-      const on = window.scrollY > 520;
+      const dl = document.getElementById("download"); const on = window.scrollY > 520 && (!dl || dl.getBoundingClientRect().top > window.innerHeight);
       if (on !== this.state.pillOn) this.setState({ pillOn: on });
       if (this._hdr) this._hdr.style.boxShadow = (document.scrollingElement.scrollTop > 8) ? "0 2px 8px rgba(0,0,0,0.08)" : "none";
     };
