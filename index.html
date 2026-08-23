@@ -119,7 +119,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <script src="/support.js"></script>
-<style>@media (max-width:767px){.lp-pill{display:none!important}}</style>
+<style>@media (max-width:767px){.lp-pill{display:none!important}}@media (max-width:767px){.lp-badges{flex-wrap:nowrap!important;gap:12px!important}.lp-badges img{height:42px!important}}</style>
 </head>
 <body>
 <style>x-dc{display:none!important}html,body{height:100%;margin:0}</style>
@@ -212,7 +212,7 @@
         </div>
       <button data-dc-tpl="65" type="button" aria-label="Next slide" class="scp2" style="appearance: none; cursor: pointer; width: 38px; height: 38px; flex: 0 0 auto; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.22); background: rgba(255, 255, 255, 0.06); color: rgb(255, 255, 255); font-size: 17px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 250ms;">›</button>
       </div>
-      <div data-dc-tpl="66" style="display: flex; gap: 14px; flex-wrap: wrap; margin: clamp(28px, 3.5vw, 40px) 0px 0px; align-items: center; justify-content: center;">
+      <div class="lp-badges" data-dc-tpl="66" style="display: flex; gap: 14px; flex-wrap: wrap; margin: clamp(28px, 3.5vw, 40px) 0px 0px; align-items: center; justify-content: center;">
         <a data-dc-tpl="67" href="https://apps.apple.com/app/id6764731647" target="_blank" rel="noopener" class="scp3 scp4" style="display: inline-flex; border-radius: 13px; transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), opacity 250ms;">
           <img data-dc-tpl="68" src="/assets/badges/app-store-en.svg" alt="Download on the App Store" style="height: 48px; display: block;">
         </a>
@@ -675,7 +675,7 @@
           <p data-dc-tpl="435" style="margin: 22px 0px 0px; font-size: 14.5px; line-height: 1.6; color: var(--lp-muted);">Monthly, yearly and lifetime options, priced in your own currency. The store is the source of truth. Lens keeps growing, and lifetime includes Pro features that do not exist yet.</p>
         </div>
       </div>
-      <div data-dc-tpl="436" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 48px; align-items: center;">
+      <div class="lp-badges" data-dc-tpl="436" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 48px; align-items: center;">
         <a data-dc-tpl="437" href="https://apps.apple.com/app/id6764731647" target="_blank" rel="noopener" class="scp3 scp4" style="display: inline-flex; border-radius: 13px; transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), opacity 250ms;">
           <img data-dc-tpl="438" src="/assets/badges/app-store-en.svg" alt="Download on the App Store" style="height: 50px; display: block;">
         </a>
@@ -759,7 +759,7 @@
       <h2 data-dc-tpl="491" style="margin: 28px 0px 0px; font-size: clamp(31px, 4.2vw, 50px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.07; text-wrap: balance;">How much can you spend today?</h2>
       <p data-dc-tpl="492" style="margin: 18px 0px 0px; font-size: 18px; color: rgba(255, 255, 255, 0.72);">Find out this morning. Free, no account, no sign-up.</p>
       <p data-dc-tpl="493" style="margin: 22px 0px 0px; font-size: 16px; color: rgb(168, 218, 220);"><span data-dc-tpl="494" aria-hidden="true" style="font-family: &quot;Material Symbols Rounded&quot;; font-size: 18px; vertical-align: -3px;">mic</span> <span class="sc-interp">“Check my number in Lens” · just ask Siri</span></p>
-      <div data-dc-tpl="495" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 36px; align-items: center;">
+      <div class="lp-badges" data-dc-tpl="495" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 36px; align-items: center;">
         <a data-dc-tpl="496" href="https://apps.apple.com/app/id6764731647" target="_blank" rel="noopener" class="scp3 scp4" style="display: inline-flex; border-radius: 13px; transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), opacity 250ms;">
           <img data-dc-tpl="497" src="/assets/badges/app-store-en.svg" alt="Download on the App Store" style="height: 54px; display: block;">
         </a>
@@ -887,7 +887,7 @@
         </div>
       <button type="button" onClick="{{ nextHero }}" aria-label="Next slide" style="appearance:none;cursor:pointer;width:38px;height:38px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,0.22);background:rgba(255,255,255,0.06);color:#FFFFFF;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background 250ms" style-hover="background:rgba(255,255,255,0.16)">›</button>
       </div>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;margin:clamp(28px,3.5vw,40px) 0 0;align-items:center;justify-content:center">
+      <div class="lp-badges" style="display:flex;gap:14px;flex-wrap:wrap;margin:clamp(28px,3.5vw,40px) 0 0;align-items:center;justify-content:center">
         <a href="{{ appStoreUrl }}" target="_blank" rel="noopener" style="display:inline-flex;border-radius:13px;transition:transform 250ms cubic-bezier(0.33,1,0.68,1),opacity 250ms" style-hover="opacity:0.85" style-active="transform:scale(0.97)">
           <img src="/assets/badges/app-store-en.svg" alt="Download on the App Store" style="height:48px;display:block">
         </a>
@@ -1350,7 +1350,7 @@
           <p style="margin:22px 0 0;font-size:14.5px;line-height:1.6;color:var(--lp-muted)">Monthly, yearly and lifetime options, priced in your own currency. The store is the source of truth. Lens keeps growing, and lifetime includes Pro features that do not exist yet.</p>
         </div>
       </div>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:48px;align-items:center">
+      <div class="lp-badges" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:48px;align-items:center">
         <a href="{{ appStoreUrl }}" target="_blank" rel="noopener" style="display:inline-flex;border-radius:13px;transition:transform 250ms cubic-bezier(0.33,1,0.68,1),opacity 250ms" style-hover="opacity:0.85" style-active="transform:scale(0.97)">
           <img src="/assets/badges/app-store-en.svg" alt="Download on the App Store" style="height:50px;display:block">
         </a>
@@ -1434,7 +1434,7 @@
       <h2 style="margin:28px 0 0;font-size:clamp(31px,4.2vw,50px);font-weight:700;letter-spacing:-0.025em;line-height:1.07;text-wrap:balance">How much can you spend today?</h2>
       <p style="margin:18px 0 0;font-size:18px;color:rgba(255,255,255,0.72)">Find out this morning. Free, no account, no sign-up.</p>
       <p style="margin:22px 0 0;font-size:16px;color:#A8DADC"><span style="font-family:'Material Symbols Rounded';font-size:18px;vertical-align:-3px" aria-hidden="true">mic</span> {{ siriLine }}</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px;align-items:center">
+      <div class="lp-badges" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px;align-items:center">
         <a href="{{ appStoreUrl }}" target="_blank" rel="noopener" style="display:inline-flex;border-radius:13px;transition:transform 250ms cubic-bezier(0.33,1,0.68,1),opacity 250ms" style-hover="opacity:0.85" style-active="transform:scale(0.97)">
           <img src="/assets/badges/app-store-en.svg" alt="Download on the App Store" style="height:54px;display:block">
         </a>
