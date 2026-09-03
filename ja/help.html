@@ -130,46 +130,283 @@
     font-size: 14px;
     color: var(--muted);
   }
-  .brand a {
-    color: inherit;
+  :root {
+    --lp-bg: #F2F2F7;
+    --lp-surface: #FFFFFF;
+    --lp-ink: #0D1B2A;
+    --lp-body: #3F4A59;
+    --lp-muted: #5B6572;
+    --lp-hair: rgba(13, 27, 42, 0.14);
+    --lp-link: #2563EB;
+    --lp-navy: #1D3557;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --lp-bg: #10101A;
+      --lp-surface: #16192A;
+      --lp-ink: rgba(255, 255, 255, 0.92);
+      --lp-body: #AEB7C8;
+      --lp-muted: #8B96B0;
+      --lp-hair: rgba(255, 255, 255, 0.14);
+      --lp-link: #60A5FA;
+    }
+  }
+  :root[data-theme="dark"] {
+    --lp-bg: #10101A;
+    --lp-surface: #16192A;
+    --lp-ink: rgba(255, 255, 255, 0.92);
+    --lp-body: #AEB7C8;
+    --lp-muted: #8B96B0;
+    --lp-hair: rgba(255, 255, 255, 0.14);
+    --lp-link: #60A5FA;
+  }
+  /* The generators style bare `header` and `footer` for the old chrome.
+     Those rules still apply to these elements, so they are overridden here
+     with element+class specificity rather than edited out of two files. */
+  header.lp-head {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--lp-hair);
+  }
+  footer.lp-foot {
+    padding-top: 0;
+    border-top: 1px solid var(--lp-hair);
+    font-size: inherit;
+    color: var(--lp-ink);
+  }
+  .lp-head {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--lp-bg);
+    border-bottom: 1px solid var(--lp-hair);
+  }
+  .lp-head-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 1.6vw, 24px);
+    min-width: 0;
+  }
+  .lp-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
+    color: var(--lp-ink);
+    flex: 0 0 auto;
   }
-  .brand a:hover,
-  .brand a:focus-visible {
-    color: var(--navy);
+  .lp-mark {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: var(--lp-navy);
+    align-items: center;
+    justify-content: center;
   }
-  .site-nav {
+  .lp-mark-sm {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+  }
+  .lp-word {
+    font-weight: 700;
+    font-size: 20.5px;
+    letter-spacing: -0.01em;
+  }
+  .lp-word-sm {
+    font-size: 17px;
+  }
+  .lp-nav {
+    display: flex;
+    gap: clamp(8px, 1.2vw, 18px);
+    margin-left: auto;
+    align-items: center;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .lp-nav::-webkit-scrollbar { display: none; }
+  .lp-nav-link {
+    color: var(--lp-ink);
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    border-radius: 999px;
+    transition: color 250ms, background 250ms;
+  }
+  .lp-nav-link:hover,
+  .lp-nav-link:focus-visible {
+    background: var(--lp-surface);
+  }
+  .lp-pill {
+    background: var(--lp-navy);
+    color: #FFFFFF;
+  }
+  .lp-pill:hover,
+  .lp-pill:focus-visible {
+    background: var(--lp-navy);
+    color: #FFFFFF;
+  }
+  .lp-lang { color: var(--lp-muted); }
+  .lp-cta {
+    background: var(--lp-navy);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+  }
+  .lp-page-head {
+    border-bottom: 1px solid var(--lp-hair);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .lp-foot {
+    border-top: 1px solid var(--lp-hair);
+    margin-top: 3rem;
+  }
+  .lp-foot-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 48px 24px 56px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .lp-foot-brand { max-width: 420px; }
+  .lp-foot-blurb {
+    margin: 16px 0 0;
     font-size: 14px;
-    color: var(--muted);
-    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    color: var(--lp-muted);
   }
-  .site-nav a {
-    color: var(--muted);
+  .lp-foot-note {
+    margin: 10px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--lp-muted);
+  }
+  .lp-foot-side {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .lp-theme {
+    display: inline-flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 999px;
+    border: 1px solid var(--lp-hair);
+  }
+  .lp-theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--lp-muted);
+    background: transparent;
+    transition: background 250ms, color 250ms;
+  }
+  .lp-theme-btn[aria-pressed="true"] {
+    color: var(--lp-ink);
+    background: var(--lp-surface);
+    box-shadow: 0 1px 3px rgba(13, 27, 42, 0.12);
+  }
+  .lp-ico {
+    font-family: "Material Symbols Rounded";
+    font-size: 16px;
+    line-height: 1;
+  }
+  .lp-foot-nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+  .lp-foot-nav a {
+    color: var(--lp-ink);
     text-decoration: none;
   }
-  .site-nav a:hover,
-  .site-nav a:focus-visible {
-    color: var(--navy);
-    text-decoration: underline;
-  }
-  .site-nav [aria-current="page"] {
-    color: var(--text);
+  .lp-foot-nav a:hover,
+  .lp-foot-nav a:focus-visible { text-decoration: underline; }
+  .lp-foot-nav [aria-current="page"] {
+    color: var(--lp-muted);
     font-weight: 600;
   }
-  footer .site-nav {
-    margin: 0 0 0.75rem;
+  .lp-head-inner,
+  .lp-foot-inner { box-sizing: border-box; }
+  @media (max-width: 860px) {
+    .lp-nav-link:not(.lp-pill):not(.lp-lang) { display: none; }
   }
+
+  /* The content tokens, redefined from the landing's, so the body themes
+     with the chrome instead of staying white under a dark header. */
+  :root {
+    --bg: var(--lp-bg);
+    --text: var(--lp-ink);
+    --muted: var(--lp-muted);
+    --border: var(--lp-hair);
+    --navy: var(--lp-link);
+  }
+  body { background: var(--lp-bg); color: var(--lp-ink); }
+  .container { max-width: 720px; }
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap">
+<script>
+  // Applied before first paint so a dark reader never sees a white flash.
+  (function () {
+    try {
+      var t = localStorage.getItem('lens-lp-theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
+  <header class="lp-head">
+    <div class="lp-head-inner">
+      <a class="lp-brand" href="index.html" aria-label="Lensのホーム">
+        <span class="lp-mark"><img src="/assets/logo.svg" alt="" width="27" height="27"></span>
+        <span class="lp-word">Lens</span>
+      </a>
+      <nav class="lp-nav" aria-label="セクション">
+        <a class="lp-nav-link" href="index.html#the-number">今日の数字</a>
+        <a class="lp-nav-link" href="index.html#how-it-works">使い方</a>
+        <a class="lp-nav-link" href="index.html#siri">Siri</a>
+        <a class="lp-nav-link" href="index.html#bank-sync">銀行同期</a>
+        <a class="lp-nav-link" href="index.html#insights">ランウェイ</a>
+        <a class="lp-nav-link" href="index.html#features">機能</a>
+        <a class="lp-nav-link lp-pill" href="index.html#pricing">料金</a>
+        <a class="lp-nav-link lp-lang" href="../help.html">English</a>
+        <a class="lp-cta" href="index.html#download">アプリを入手</a>
+      </nav>
+    </div>
+  </header>
 <div class="container">
-  <p class="lang-switch"><a href="../help.html">English</a></p>
-  <header>
-    <p class="brand"><a href="index.html" aria-label="ホーム">Lens</a></p>
-    <nav class="site-nav"><a href="index.html">ホーム</a> · <span aria-current="page">ヘルプ</span> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシー</a> · <a href="terms.html">利用規約</a></nav>
+  <div class="lp-page-head">
     <h1>ヘルプ</h1>
     <p class="meta">Lensの使い方と、うまくいかないときの対処法。</p>
-  </header>
+  </div>
 
   <div class="highlight">
     <p>このページはiPhone版のLensアプリについて説明しています。「タップ」や画面の名前が出てくる場合は、アプリ内での操作を指しています。</p>
@@ -714,10 +951,54 @@
     <p><a href="mailto:hello@edniroya.com">hello@edniroya.com</a> までご連絡ください。何をしていて、どうなると思っていて、実際にはどうなったかを教えていただけると助かります。いただいたメッセージにはすべて目を通しています。</p>
   </div>
 
-  <footer>
-    <nav class="site-nav"><a href="index.html">ホーム</a> · <span aria-current="page">ヘルプ</span> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシー</a> · <a href="terms.html">利用規約</a></nav>
-    <p>© 2026 Edniroya Ltd · イングランド・ウェールズで登記 · 会社番号 09367944</p>
-  </footer>
 </div>
+  <footer class="lp-foot">
+    <div class="lp-foot-inner">
+      <div class="lp-foot-brand">
+        <a class="lp-brand" href="index.html">
+          <span class="lp-mark lp-mark-sm"><img src="/assets/logo.svg" alt="" width="19" height="19"></span>
+          <span class="lp-word lp-word-sm">Lens</span>
+        </a>
+        <p class="lp-foot-blurb">© 2026 Edniroya Ltd。日本語（ja）と英語（en-GB）に対応。ECBのライブ為替レートによるマルチ通貨対応。</p>
+        <p class="lp-foot-note">Lensは情報提供のためのアプリで、金融アドバイスは行いません。</p>
+      </div>
+      <div class="lp-foot-side">
+        <div class="lp-theme" role="group" aria-label="表示"><button type="button" class="lp-theme-btn" data-theme-choice="light" aria-pressed="false"><span class="lp-ico" aria-hidden="true">light_mode</span>ライト</button><button type="button" class="lp-theme-btn" data-theme-choice="dark" aria-pressed="false"><span class="lp-ico" aria-hidden="true">dark_mode</span>ダーク</button><button type="button" class="lp-theme-btn" data-theme-choice="auto" aria-pressed="false"><span class="lp-ico" aria-hidden="true">contrast</span>自動</button></div>
+        <nav class="lp-foot-nav" aria-label="規約とサポート">
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="support.html">サポート</a>
+        <span aria-current="page">ヘルプ</span>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btns = Array.prototype.slice.call(
+        document.querySelectorAll('[data-theme-choice]'));
+      function current() {
+        try { return localStorage.getItem('lens-lp-theme') || 'auto'; }
+        catch (e) { return 'auto'; }
+      }
+      function paint(mode) {
+        if (mode === 'auto') root.removeAttribute('data-theme');
+        else root.setAttribute('data-theme', mode);
+        btns.forEach(function (b) {
+          b.setAttribute('aria-pressed',
+            String(b.getAttribute('data-theme-choice') === mode));
+        });
+      }
+      btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          var mode = b.getAttribute('data-theme-choice');
+          try { localStorage.setItem('lens-lp-theme', mode); } catch (e) {}
+          paint(mode);
+        });
+      });
+      paint(current());
+    })();
+  </script>
 </body>
 </html>
