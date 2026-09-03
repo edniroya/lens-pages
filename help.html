@@ -130,13 +130,43 @@
     font-size: 14px;
     color: var(--muted);
   }
+  .brand a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .brand a:hover,
+  .brand a:focus-visible {
+    color: var(--navy);
+  }
+  .site-nav {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+  }
+  .site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .site-nav a:hover,
+  .site-nav a:focus-visible {
+    color: var(--navy);
+    text-decoration: underline;
+  }
+  .site-nav [aria-current="page"] {
+    color: var(--text);
+    font-weight: 600;
+  }
+  footer .site-nav {
+    margin: 0 0 0.75rem;
+  }
 </style>
 </head>
 <body>
 <div class="container">
   <p class="lang-switch"><a href="ja/help.html">日本語</a></p>
   <header>
-    <p class="brand">Lens Finance</p>
+    <p class="brand"><a href="index.html" aria-label="Home">Lens</a></p>
+    <nav class="site-nav"><a href="index.html">Home</a> · <span aria-current="page">Help</span> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></nav>
     <h1>Help</h1>
     <p class="meta">How Lens works, and what to do when something looks wrong.</p>
   </header>
@@ -684,9 +714,8 @@
     <p>Email <a href="mailto:hello@edniroya.com">hello@edniroya.com</a> and tell us what you were doing, what you expected, and what actually happened. We read every message.</p>
   </div>
 
-  <p><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
-
   <footer>
+    <nav class="site-nav"><a href="index.html">Home</a> · <span aria-current="page">Help</span> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></nav>
     <p>© 2026 Edniroya Ltd · Registered in England and Wales · Company number 09367944</p>
   </footer>
 </div>

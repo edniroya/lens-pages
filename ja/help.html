@@ -130,13 +130,43 @@
     font-size: 14px;
     color: var(--muted);
   }
+  .brand a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .brand a:hover,
+  .brand a:focus-visible {
+    color: var(--navy);
+  }
+  .site-nav {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+  }
+  .site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .site-nav a:hover,
+  .site-nav a:focus-visible {
+    color: var(--navy);
+    text-decoration: underline;
+  }
+  .site-nav [aria-current="page"] {
+    color: var(--text);
+    font-weight: 600;
+  }
+  footer .site-nav {
+    margin: 0 0 0.75rem;
+  }
 </style>
 </head>
 <body>
 <div class="container">
   <p class="lang-switch"><a href="../help.html">English</a></p>
   <header>
-    <p class="brand">Lens Finance</p>
+    <p class="brand"><a href="index.html" aria-label="ホーム">Lens</a></p>
+    <nav class="site-nav"><a href="index.html">ホーム</a> · <span aria-current="page">ヘルプ</span> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシー</a> · <a href="terms.html">利用規約</a></nav>
     <h1>ヘルプ</h1>
     <p class="meta">Lensの使い方と、うまくいかないときの対処法。</p>
   </header>
@@ -684,10 +714,9 @@
     <p><a href="mailto:hello@edniroya.com">hello@edniroya.com</a> までご連絡ください。何をしていて、どうなると思っていて、実際にはどうなったかを教えていただけると助かります。いただいたメッセージにはすべて目を通しています。</p>
   </div>
 
-  <p><a href="support.html">サポート</a> · <a href="privacy.html">プライバシーポリシー</a></p>
-
   <footer>
-    <p>© 2026 Edniroya Ltd · Registered in England and Wales · Company number 09367944</p>
+    <nav class="site-nav"><a href="index.html">ホーム</a> · <span aria-current="page">ヘルプ</span> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシー</a> · <a href="terms.html">利用規約</a></nav>
+    <p>© 2026 Edniroya Ltd · イングランド・ウェールズで登記 · 会社番号 09367944</p>
   </footer>
 </div>
 </body>
