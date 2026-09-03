@@ -353,8 +353,14 @@
   }
   .lp-head-inner,
   .lp-foot-inner { box-sizing: border-box; }
+  /* The landing page's nav scrolls sideways on a narrow screen rather
+     than dropping links, so this does the same. Hiding them made the
+     header on a phone look nothing like the landing's, which is the
+     opposite of the point. */
   @media (max-width: 860px) {
-    .lp-nav-link:not(.lp-pill):not(.lp-lang) { display: none; }
+    .lp-head-inner { gap: 10px; }
+    .lp-nav { gap: 6px; }
+    .lp-nav-link { padding: 6px 9px; }
   }
 
   /* The content tokens, redefined from the landing's, so the body themes
