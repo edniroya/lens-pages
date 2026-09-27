@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lens（レンズ）｜今日いくら使えるか。プライバシー重視の家計簿アプリ</title>
-  <meta name="description" content="Lensが毎朝教えてくれるのは、ひとつの数字だけ。固定費・貯金・目標を先に確保して、今日安心して使える金額を出す家計簿アプリです。アカウント不要、広告なし、データはすべて端末の中。iPhoneとAndroidで無料で使えます。">
+  <meta name="description" content="Lensが毎朝教えてくれるのは、ひとつの数字だけ。固定費・貯金・目標を先に確保して、今日安心して使える金額を出す家計簿アプリです。アカウント不要、広告なし、データはすべて端末の中。iPhoneとAndroidで、30日間無料で試せます。">
   <link rel="canonical" href="https://lens.edniroya.com/ja/">
   <link rel="alternate" hreflang="en-GB" href="https://lens.edniroya.com/">
   <link rel="alternate" hreflang="ja" href="https://lens.edniroya.com/ja/">
@@ -31,7 +31,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"HowTo","name":"インストールから最初の数字まで","description":"Lensを入れてから、最初の「今日使えるお金」が出るまでの手順です。","totalTime":"PT5M","step":[
     {"@type":"HowToStep","position":1,"name":"入れて、開く","text":"アカウントも登録もログインもいりません。通貨と給料日を選ぶだけで、すぐ始められます。"},
-    {"@type":"HowToStep","position":2,"name":"口座と固定費を登録","text":"手入力でも、銀行アプリから書き出したCSVの取り込み（銀行のフォーマットは自動判別）でも。定期的な支払いは、どのプランでも無制限です。"},
+    {"@type":"HowToStep","position":2,"name":"口座と固定費を登録","text":"手入力でも、Lens独自の形式（Date、Type、Category、Amount、Description、Notes）のCSVの取り込みでも。家賃、通信費、サブスクといった定期的な支払いは、件数無制限。固定費がすべて入っていてこそ、数字が正しくなるからです。"},
     {"@type":"HowToStep","position":3,"name":"数字を見る","text":"固定費・貯金・目標を先に確保して、今日安心して使える金額を出します。"}
   ]}
   </script>
@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="/_ds/lens-finance-design-system-0f464264-0025-4989-86f9-30a81adc958a/styles.css">
   <script src="/_ds/lens-finance-design-system-0f464264-0025-4989-86f9-30a81adc958a/_ds_bundle.js"></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lens","url":"https://lens.edniroya.com/ja/","applicationCategory":"FinanceApplication","operatingSystem":"iOS, Android","description":"今日安心して使える金額を、毎朝ひとつの数字で教えてくれる家計簿アプリ。固定費・貯金・目標を先に確保してから計算します。データは端末内のローカルデータベースに保存され、アカウント登録は不要です。","offers":[{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"ずっと無料：口座3件、目標3件、カテゴリ予算5件、定期的な支払いは無制限、毎日の数字、今月のレポート、純資産、1日1件のインサイト、CSVインポート。"},{"@type":"Offer","price":"800","priceCurrency":"JPY","description":"Lens Proは月額¥800から。年額と買い切りもあり、価格は日本のストアでは日本円で表示されます。7日間の無料トライアル付き。"}],"publisher":{"@type":"Organization","name":"Edniroya Ltd"},"inLanguage":["ja","en-GB"]}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lens","url":"https://lens.edniroya.com/ja/","applicationCategory":"FinanceApplication","operatingSystem":"iOS, Android","description":"今日安心して使える金額を、毎朝ひとつの数字で教えてくれる家計簿アプリ。固定費・貯金・目標を先に確保してから計算します。データは端末内のローカルデータベースに保存され、アカウント登録は不要です。","offers":[{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"月額プランと年額プランは、Lens Proを30日間無料で試せます。"},{"@type":"Offer","price":"800","priceCurrency":"JPY","description":"Lens Proは月額¥800から。年額と買い切りもあり、価格は日本のストアでは日本円で表示されます。月額と年額は30日間の無料トライアル付き。"}],"publisher":{"@type":"Organization","name":"Edniroya Ltd"},"inLanguage":["ja","en-GB"]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Edniroya Ltd","url":"https://lens.edniroya.com/","logo":"https://lens.edniroya.com/assets/logo.svg"}
@@ -50,13 +50,13 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"銀行のログイン情報は必要？","acceptedAnswer":{"@type":"Answer","text":"いいえ。Lensが銀行のログイン情報やパスワードを聞くことはありません。口座連携サービス（アグリゲーター）も使っていません。iPhoneの銀行同期は、Apple FinanceKitが端末の中で読み取る仕組みで、対応している国でだけ使えます。"}},
-    {"@type":"Question","name":"Androidでも使える？","acceptedAnswer":{"@type":"Answer","text":"はい。iPhoneでもAndroidでも使えます。銀行同期はApple FinanceKitを使うのでiPhoneだけですが、Androidでは無料のCSVインポート、かんたん入力、自動カテゴリ分けで同じことができます。"}},
+    {"@type":"Question","name":"Androidでも使える？","acceptedAnswer":{"@type":"Answer","text":"はい。iPhoneでもAndroidでも使えます。銀行同期はApple FinanceKitを使うのでiPhoneだけですが、AndroidではCSVインポート、かんたん入力、自動カテゴリ分けで同じことができます。"}},
     {"@type":"Question","name":"データは暗号化されている？","acceptedAnswer":{"@type":"Answer","text":"データは端末内のローカルデータベースに保存され、Lensがあなたの家計をクラウドに持つことはありません。アプリはFace ID・Touch ID・PINでロックできます。なお、オプションのAI機能を使ったときだけ、質問の内容と家計のスナップショットが回答のためにGoogle Geminiに送られます。"}},
     {"@type":"Question","name":"AIには何が送られる？","acceptedAnswer":{"@type":"Answer","text":"AIに質問すると、質問の内容と家計データのスナップショットが回答のためにGoogle Geminiに送られます。AIはProの機能で、月100クレジットまで。リクエストは、APIキーをサーバー側で管理するLens Cloud Functionを経由します。AIを使わなければ、何も送られません。"}},
-    {"@type":"Question","name":"Proをやめたらどうなる？","acceptedAnswer":{"@type":"Answer","text":"データは端末に残ったまま、無料プランとしてそのまま使い続けられます。上限は無料プランのもの（口座3件、目標3件、カテゴリ予算5件）に戻りますが、定期的な支払いは変わらず無制限。毎日の数字、今月のレポート、純資産、CSVインポートもそのまま使えます。"}},
-    {"@type":"Question","name":"データを書き出せる？","acceptedAnswer":{"@type":"Answer","text":"はい。Proなら取引をCSVに書き出せます。ローカルのバックアップと復元はどのプランでも使えて、CSVの取り込みもどのプランでも無料です。"}},
-    {"@type":"Question","name":"料金は？","acceptedAnswer":{"@type":"Answer","text":"Lensはずっと無料で使えます。Proは月額¥800からで、7日間の無料トライアル付き。月額・年額・買い切りがあり、価格は日本のストアでは日本円で表示されます。"}},
-    {"@type":"Question","name":"銀行同期は日本で使える？","acceptedAnswer":{"@type":"Answer","text":"銀行同期は、Apple FinanceKitが提供されている国・地域のiPhone（iOS 17.4以降）でだけ使えます。対応国はまだ限られていて、日本は対象外です。日本の銀行なら、無料のCSVインポート、レシートスキャン（Pro）、Siriの音声入力で同じことができます。"}}
+    {"@type":"Question","name":"Proをやめたらどうなる？","acceptedAnswer":{"@type":"Answer","text":"消えるものはありません。データは端末に残り、Lensは閲覧専用になります。開いてすべて見ること、バックアップやCSVでの書き出し、削除はそのままできます。予算や定期項目もふくめて、追加や編集にはProが必要で、銀行同期は登録するまで止まります。トライアルが始まる前からLensを使っていた方は、終了日までは以前からの無料プラン（口座3件、目標3件、カテゴリ予算5件）に戻ります。"}},
+    {"@type":"Question","name":"データを書き出せる？","acceptedAnswer":{"@type":"Answer","text":"はい。Proのときと閲覧専用のときは、取引をCSVに書き出せます。ローカルのバックアップと復元は、Proがなくても使えます。CSVの取り込みは、Proと以前からの無料プランで使えます。"}},
+    {"@type":"Question","name":"料金は？","acceptedAnswer":{"@type":"Answer","text":"Proは月額¥800からです。月額と年額は30日間の無料トライアルから始まり、一度きりの買い切りもあります。正確な価格はストアでご確認ください。"}},
+    {"@type":"Question","name":"銀行同期は日本で使える？","acceptedAnswer":{"@type":"Answer","text":"銀行同期は、Apple FinanceKitが提供されている国・地域のiPhone（iOS 17.4以降）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、CSVインポート、レシートスキャン（AIでの読み取りはPro）、Siriの音声入力で同じことができます。"}}
   ]}
   </script>
   <style>
@@ -192,8 +192,8 @@
           <img data-dc-tpl="63" src="/assets/badges/google-play-ja.png" alt="Google Playで手に入れよう" style="height: 50px; display: block;">
         </a>
       </div>
-      <p data-dc-tpl="64" style="margin: 16px auto 0px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; letter-spacing: 0.04em; color: rgb(168, 218, 220); text-align: center;">無料。アカウント登録なし。</p>
-      <p data-dc-tpl="65" style="margin: 20px auto 0px; font-size: 13px; line-height: 1.8; color: rgba(255, 255, 255, 0.45); max-width: 44em; text-align: center;">銀行同期（Pro）は、Apple FinanceKit対応国のiPhone（iOS 17.4以降、Apple Walletにカードを接続）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、無料のCSVインポート、レシートスキャン（Pro）、Siriの音声入力で同じことができます。</p>
+      <p data-dc-tpl="64" style="margin: 16px auto 0px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; letter-spacing: 0.04em; color: rgb(168, 218, 220); text-align: center;">30日間無料。アカウント登録なし。</p>
+      <p data-dc-tpl="65" style="margin: 20px auto 0px; font-size: 13px; line-height: 1.8; color: rgba(255, 255, 255, 0.45); max-width: 44em; text-align: center;">銀行同期（Pro）は、Apple FinanceKit対応国のiPhone（iOS 17.4以降、Apple Walletにカードを接続）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、CSVインポート、レシートスキャン（AIでの読み取りはPro）、Siriの音声入力で同じことができます。</p>
     </div>
   </section>
 
@@ -253,7 +253,7 @@
         <div data-dc-tpl="108" style="max-width: 60em; padding-bottom: clamp(32px, 4vw, 52px);">
           <p data-dc-tpl="109" style="margin: 0px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 15px; color: var(--lp-muted); animation: 400ms cubic-bezier(0.33, 1, 0.68, 1) 1420ms 1 normal both paused jaLabelOn;">02</p>
           <h3 data-dc-tpl="110" style="margin: 12px 0px 0px; font-size: 22px; font-weight: 600; line-height: 1.4;">口座と固定費を登録</h3>
-          <p data-dc-tpl="111" style="margin: 12px 0px 0px; font-size: 16px; line-height: 1.95; color: var(--lp-body);">手入力でも、銀行アプリから書き出したCSVの取り込みでも（どのプランでも無料、銀行のフォーマットは自動判別）。家賃、通信費、サブスクといった定期的な支払いは、どのプランでも件数無制限。固定費がすべて入っていてこそ、数字が正しくなるからです。</p>
+          <p data-dc-tpl="111" style="margin: 12px 0px 0px; font-size: 16px; line-height: 1.95; color: var(--lp-body);">手入力でも、Lens独自の形式（Date、Type、Category、Amount、Description、Notes）のCSVの取り込みでも。家賃、通信費、サブスクといった定期的な支払いは、件数無制限。固定費がすべて入っていてこそ、数字が正しくなるからです。</p>
         </div>
         <div data-dc-tpl="112" style="position: relative; place-self: stretch center; width: 3px; border-radius: 2px; background: var(--lp-hair);">
           <span data-dc-tpl="113" aria-hidden="true" style="position: absolute; inset: 0px; border-radius: 2px; background: var(--lp-link); transform-origin: center top; animation: 900ms cubic-bezier(0.33, 1, 0.68, 1) 1800ms 1 normal both paused jaSpineFill;"></span>
@@ -306,7 +306,7 @@
         <p data-dc-tpl="146" style="margin: 0px 0px 16px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; color: var(--lp-link);">BANK SYNC</p>
         <h2 data-dc-tpl="147" style="margin: 0px; font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.22; text-wrap: balance;">口座連携サービスを使わない、という<em data-dc-tpl="148" style="font-style: normal; color: var(--lp-link);">設計</em></h2>
         <p data-dc-tpl="149" style="margin: 24px 0px 0px; font-size: 16.5px; line-height: 1.95; color: var(--lp-body);">多くの家計簿アプリは、口座連携サービス（アグリゲーター）に取引履歴を預けることで自動化しています。Lensは違います。iPhoneの銀行同期は、AppleのFinanceKitがWalletに接続した口座を端末の中で読み取る仕組み。取引がLensや第三者に送られることはありません。残高の照合と重複チェックで数字を正確に保ち、引っぱって更新すれば最新になります。銀行同期は<span data-dc-tpl="150" style="color: var(--lp-pro); font-weight: 600;">Pro</span>の機能です。</p>
-        <p data-dc-tpl="151" style="margin: 24px 0px 0px; border-top: 1px solid var(--lp-hair); border-bottom: 1px solid var(--lp-hair); padding: 18px 0px; font-size: 14.5px; line-height: 1.9; color: var(--lp-muted);"><strong data-dc-tpl="152" style="color: var(--lp-ink);">先に知っておいてほしいこと：</strong>銀行同期は、FinanceKit対応国のiPhone（iOS 17.4以降、英国の接続カードは18.4以降）で、Apple Walletにカードを接続している場合だけ使えます。対応国はまだ限られていて、日本の銀行は対象外です。ただしこれは国の話で、言語の話ではありません。英国や米国など対応国に口座があれば、アプリを日本語で使いながら銀行同期もできます。日本の銀行なら、月に1回CSVを書き出して取り込むだけで同じことができます。CSVインポートはどのプランでも無料です。</p>
+        <p data-dc-tpl="151" style="margin: 24px 0px 0px; border-top: 1px solid var(--lp-hair); border-bottom: 1px solid var(--lp-hair); padding: 18px 0px; font-size: 14.5px; line-height: 1.9; color: var(--lp-muted);"><strong data-dc-tpl="152" style="color: var(--lp-ink);">先に知っておいてほしいこと：</strong>銀行同期は、FinanceKit対応国のiPhone（iOS 17.4以降、英国の接続カードは18.4以降）で、Apple Walletにカードを接続している場合だけ使えます。対応国はまだ限られていて、日本の銀行は対象外です。ただしこれは国の話で、言語の話ではありません。英国や米国など対応国に口座があれば、アプリを日本語で使いながら銀行同期もできます。日本の銀行なら、月に1回CSVを書き出し、列名をLensの形式に合わせてから取り込めば同じことができます。CSVの取り込みは、Proと以前からの無料プランで使えます。</p>
       </div>
       <div data-dc-tpl="153" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 4vw, 56px); margin-top: clamp(40px, 5vw, 60px); align-items: center;">
         <div data-dc-tpl="154" style="justify-self: center; width: min(360px, 100%);">
@@ -493,13 +493,13 @@
         <button data-dc-tpl="290" type="button" aria-pressed="false" style="appearance: none; cursor: pointer; font-family: inherit; font-size: 14.5px; font-weight: 600; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--lp-hair); background: var(--lp-surface); color: var(--lp-body);">差分だけ表示</button>
         <span data-dc-tpl="291" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; color: var(--lp-muted);"><span class="sc-interp">15 行</span></span>
       </div>
-      <p data-dc-tpl="292" style="margin: 20px 0px 0px; font-size: 16.5px; line-height: 1.9; color: var(--lp-body); max-width: 40em;">無料プランの上限は本当の上限で、お試し期間ではありません。<span data-dc-tpl="293" style="color: var(--lp-pro); font-weight: 600;">Pro</span>の印がついた機能は、Proプランで使えます。</p>
+      <p data-dc-tpl="292" style="margin: 20px 0px 0px; font-size: 16.5px; line-height: 1.9; color: var(--lp-body); max-width: 40em;">30日間の無料トライアルでは、Proのすべてが使えます。「以前からの無料プラン」は、トライアルが始まる前からLensを使っていた方が終了日まで使えるプランです。<span data-dc-tpl="293" style="color: var(--lp-pro); font-weight: 600;">Pro</span>の印がついた機能は、Proプランで使えます。</p>
       <div data-dc-tpl="294" style="margin-top: 52px; overflow-x: auto;">
         <table data-dc-tpl="295" style="width: 100%; border-collapse: collapse; min-width: 640px;">
           <thead data-dc-tpl="296">
             <tr data-dc-tpl="297">
               <th data-dc-tpl="298" scope="col" style="padding: 0px 20px 14px 0px; border-bottom: 1px solid var(--lp-ink); text-align: left; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; color: var(--lp-muted);">機能</th>
-              <th data-dc-tpl="299" scope="col" style="padding: 0px 20px 14px; border-bottom: 1px solid var(--lp-ink); text-align: left; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; color: var(--lp-muted);">無料</th>
+              <th data-dc-tpl="299" scope="col" style="padding: 0px 20px 14px; border-bottom: 1px solid var(--lp-ink); text-align: left; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; color: var(--lp-muted);white-space:nowrap;">以前からの無料プラン</th>
               <th data-dc-tpl="300" scope="col" style="padding: 0px 0px 14px 20px; border-bottom: 1px solid var(--lp-ink); text-align: left; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em; color: var(--lp-pro);">Pro</th>
             </tr>
           </thead>
@@ -510,7 +510,7 @@
               <td data-dc-tpl="306" style="padding: 16px 0px 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">すべて</td>
             </tr>
             <tr data-dc-tpl="307" class="scp6" style="transition: background 250ms; display: table-row;">
-              <th data-dc-tpl="308" scope="row" style="padding: 16px 20px 16px 0px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; text-align: left; font-weight: 600; color: var(--lp-ink);">定期的な支払い<span data-dc-tpl="309" style="display: block; margin-top: 4px; font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--lp-muted);">どのプランでも無制限。毎朝自動で処理</span></th>
+              <th data-dc-tpl="308" scope="row" style="padding: 16px 20px 16px 0px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; text-align: left; font-weight: 600; color: var(--lp-ink);">定期的な支払い<span data-dc-tpl="309" style="display: block; margin-top: 4px; font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--lp-muted);">件数の上限なし。毎朝自動で処理</span></th>
               <td data-dc-tpl="310" style="padding: 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">無制限</td>
               <td data-dc-tpl="311" style="padding: 16px 0px 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">無制限</td>
             </tr>
@@ -530,13 +530,13 @@
               <td data-dc-tpl="326" style="padding: 16px 0px 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">無制限</td>
             </tr>
             <tr data-dc-tpl="327" class="scp6" style="transition: background 250ms; display: table-row;">
-              <th data-dc-tpl="328" scope="row" style="padding: 16px 20px 16px 0px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; text-align: left; font-weight: 600; color: var(--lp-ink);">取引の入力<span data-dc-tpl="329" style="display: block; margin-top: 4px; font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--lp-muted);">手入力、音声、Siri、CSVインポート（銀行フォーマット自動判別）</span></th>
+              <th data-dc-tpl="328" scope="row" style="padding: 16px 20px 16px 0px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; text-align: left; font-weight: 600; color: var(--lp-ink);">取引の入力<span data-dc-tpl="329" style="display: block; margin-top: 4px; font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--lp-muted);">手入力、音声、Siri、Lens独自形式のCSVインポート</span></th>
               <td data-dc-tpl="330" style="padding: 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">あり</td>
               <td data-dc-tpl="331" style="padding: 16px 0px 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">あり</td>
             </tr>
             <tr data-dc-tpl="332" class="scp6" style="transition: background 250ms;">
               <th data-dc-tpl="333" scope="row" style="padding: 16px 20px 16px 0px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; text-align: left; font-weight: 600; color: var(--lp-ink);">レシートスキャン<span data-dc-tpl="334" style="display: block; margin-top: 4px; font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--lp-muted);">撮って読み取り、自動で分類</span></th>
-              <td data-dc-tpl="335" style="padding: 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">なし</td>
+              <td data-dc-tpl="335" style="padding: 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">端末内で読み取り</td>
               <td data-dc-tpl="336" style="padding: 16px 0px 16px 20px; border-bottom: 1px solid var(--lp-hair); vertical-align: top; font-size: 15px; color: var(--lp-body);">月100クレジット</td>
             </tr>
             <tr data-dc-tpl="337" class="scp6" style="transition: background 250ms;">
@@ -589,7 +589,7 @@
     <div data-dc-tpl="378" style="max-width: 1160px; margin: 0px auto; padding: clamp(72px, 8vw, 112px) 24px;">
       <p data-dc-tpl="379" style="margin: 0px 0px 16px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; color: var(--lp-link); text-align: center;">PRICING</p>
       <h2 data-dc-tpl="380" style="margin: 0px; font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.22; text-align: center;">Lensの<em data-dc-tpl="381" style="font-style: normal; color: var(--lp-link);">料金</em>は？</h2>
-      <p data-dc-tpl="382" style="margin: 20px auto 0px; font-size: 16.5px; line-height: 1.9; color: var(--lp-body); max-width: 40em; text-align: center;">Lensはずっと無料で使えます。無料の上限は本当の上限です。Proは月額¥800から、7日間の無料トライアル付き。</p>
+      <p data-dc-tpl="382" style="margin: 20px auto 0px; font-size: 16.5px; line-height: 1.9; color: var(--lp-body); max-width: 40em; text-align: center;">Proは月額¥800から。月額と年額は、30日間の無料トライアルから始まります。</p>
       <div data-dc-tpl="383" style="display: flex; justify-content: center; margin-top: 28px;">
       <div data-dc-tpl="384" role="tablist" aria-label="支払いプラン" style="display: inline-flex; gap: 6px; padding: 5px; border-radius: 14px; background: var(--lp-surface); border: 1px solid var(--lp-hair);">
         <button data-dc-tpl="385" type="button" role="tab" aria-selected="true" style="appearance: none; cursor: pointer; font-family: inherit; font-size: 14.5px; font-weight: 600; padding: 9px 18px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 10px; background: rgb(29, 53, 87); color: rgb(255, 255, 255); box-shadow: rgba(13, 27, 42, 0.2) 0px 1px 3px;">月額</button>
@@ -599,25 +599,25 @@
       </div>
       <div data-dc-tpl="389" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; margin: 52px auto 0px; max-width: 900px;">
         <div data-dc-tpl="390" style="border-top: 1px solid var(--lp-ink); padding-top: 24px;">
-          <h3 data-dc-tpl="391" style="margin: 0px; font-size: 19px; font-weight: 600;">無料プラン</h3>
+          <h3 data-dc-tpl="391" style="margin: 0px; font-size: 19px; font-weight: 600;">30日間の無料トライアル</h3>
           <p data-dc-tpl="392" style="margin: 14px 0px 0px; font-family: &quot;JetBrains Mono&quot;, monospace; font-variant-numeric: tabular-nums; font-size: 34px; font-weight: 700; letter-spacing: -1px;">¥0</p>
           <ul data-dc-tpl="393" style="display: grid; gap: 9px; margin: 22px 0px 0px; padding: 0px 0px 0px 18px; font-size: 15px; line-height: 1.8; color: var(--lp-body);">
-            <li data-dc-tpl="394">毎日の数字を、毎朝まるごと</li>
-            <li data-dc-tpl="395">口座3件、目標3件、カテゴリ予算5件</li>
-            <li data-dc-tpl="396">定期的な支払いは無制限</li>
-            <li data-dc-tpl="397">「今月」のレポート全部と、純資産</li>
-            <li data-dc-tpl="398">インサイト1日1件</li>
-            <li data-dc-tpl="399">CSVインポート（銀行フォーマット自動判別）</li>
+            <li data-dc-tpl="394">Proのすべてを、月額か年額のプランで</li>
+            <li data-dc-tpl="395">終わる前にお知らせ</li>
+            <li data-dc-tpl="396">終わる前に解約すれば、料金はかかりません</li>
+            <li data-dc-tpl="397">続けなければ、閲覧専用に</li>
+            <li data-dc-tpl="398">入力したものが消えることはありません</li>
+            <li data-dc-tpl="399">買い切りは一度きりのお支払いで、トライアルなし</li>
           </ul>
         </div>
         <div data-dc-tpl="400" style="border-top: 1px solid var(--lp-ink); padding-top: 24px;">
           <h3 data-dc-tpl="401" style="margin: 0px; font-size: 19px; font-weight: 600;">Pro</h3>
           <p data-dc-tpl="402" style="margin: 14px 0px 0px; font-family: &quot;JetBrains Mono&quot;, monospace; font-variant-numeric: tabular-nums; font-size: 34px; font-weight: 700; letter-spacing: -1px;"><span class="sc-interp">¥800</span><span data-dc-tpl="403" style="font-size: 16px; font-weight: 400; letter-spacing: 0px; color: var(--lp-muted);"><span class="sc-interp">/月</span></span></p>
-          <p class="lp-price-note" data-dc-tpl="404" style="margin: 10px 0px 0px; font-size: 14.5px; line-height: 1.8; color: var(--lp-muted);"><span class="sc-interp">年額 ¥6,000、買い切り ¥15,000。7日間の無料トライアル付き。</span></p>
+          <p class="lp-price-note" data-dc-tpl="404" style="margin: 10px 0px 0px; font-size: 14.5px; line-height: 1.8; color: var(--lp-muted);"><span class="sc-interp">年額 ¥6,000、買い切り ¥15,000。月額と年額は30日間の無料トライアル付き。</span></p>
           <ul data-dc-tpl="405" style="display: grid; gap: 9px; margin: 22px 0px 0px; padding: 0px 0px 0px 18px; font-size: 15px; line-height: 1.8; color: var(--lp-body);">
             <li data-dc-tpl="406">口座・目標・予算が無制限</li>
             <li data-dc-tpl="407">銀行同期（FinanceKit対応国のiPhoneのみ、日本は未対応）</li>
-            <li data-dc-tpl="408">レシートスキャンとAI（月100クレジット）</li>
+            <li data-dc-tpl="408">AIレシート読み取りとAsk AI（月100クレジット）</li>
             <li data-dc-tpl="409">CSVエクスポートとカスタムカテゴリ</li>
             <li data-dc-tpl="410">「先月」と「年初来」のレポート</li>
             <li data-dc-tpl="411">週次ブリーフィングとインサイト全件</li>
@@ -646,7 +646,7 @@
             <span data-dc-tpl="427" style="flex: 1 1 0%; text-wrap: pretty;">Androidでも使える？</span>
             <span data-dc-tpl="428" class="faq-chev" aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--lp-hair); display: inline-flex; align-items: center; justify-content: center; font-size: 17px; line-height: 1; color: var(--lp-muted); transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1);">+</span>
           </summary>
-          <p data-dc-tpl="429" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">はい。iPhoneでもAndroidでも使えます。銀行同期はApple FinanceKitを使うのでiPhoneだけですが、Androidでは無料のCSVインポート、かんたん入力、自動カテゴリ分けで同じことができます。</p>
+          <p data-dc-tpl="429" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">はい。iPhoneでもAndroidでも使えます。銀行同期はApple FinanceKitを使うのでiPhoneだけですが、AndroidではCSVインポート、かんたん入力、自動カテゴリ分けで同じことができます。</p>
         </details>
         <details data-dc-tpl="430" style="border-bottom: 1px solid var(--lp-hair); background: transparent;">
           <summary data-dc-tpl="431" class="scp0" style="display: flex; align-items: flex-start; gap: 20px; cursor: pointer; padding: 22px 4px; font-size: 17.5px; font-weight: 600; color: var(--lp-ink); line-height: 1.6;">
@@ -667,28 +667,28 @@
             <span data-dc-tpl="442" style="flex: 1 1 0%; text-wrap: pretty;">Proをやめたらどうなる？</span>
             <span data-dc-tpl="443" class="faq-chev" aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--lp-hair); display: inline-flex; align-items: center; justify-content: center; font-size: 17px; line-height: 1; color: var(--lp-muted); transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1);">+</span>
           </summary>
-          <p data-dc-tpl="444" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">データは端末に残ったまま、無料プランとしてそのまま使い続けられます。上限は無料プランのもの（口座3件、目標3件、カテゴリ予算5件）に戻りますが、定期的な支払いは変わらず無制限。毎日の数字、今月のレポート、純資産、CSVインポートもそのまま使えます。</p>
+          <p data-dc-tpl="444" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">消えるものはありません。データは端末に残り、Lensは閲覧専用になります。開いてすべて見ること、バックアップやCSVでの書き出し、削除はそのままできます。予算や定期項目もふくめて、追加や編集にはProが必要で、銀行同期は登録するまで止まります。トライアルが始まる前からLensを使っていた方は、終了日までは以前からの無料プラン（口座3件、目標3件、カテゴリ予算5件）に戻ります。</p>
         </details>
         <details data-dc-tpl="445" style="border-bottom: 1px solid var(--lp-hair); background: transparent;">
           <summary data-dc-tpl="446" class="scp0" style="display: flex; align-items: flex-start; gap: 20px; cursor: pointer; padding: 22px 4px; font-size: 17.5px; font-weight: 600; color: var(--lp-ink); line-height: 1.6;">
             <span data-dc-tpl="447" style="flex: 1 1 0%; text-wrap: pretty;">データを書き出せる？</span>
             <span data-dc-tpl="448" class="faq-chev" aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--lp-hair); display: inline-flex; align-items: center; justify-content: center; font-size: 17px; line-height: 1; color: var(--lp-muted); transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1);">+</span>
           </summary>
-          <p data-dc-tpl="449" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">はい。Proなら取引をCSVに書き出せます。ローカルのバックアップと復元はどのプランでも使えて、CSVの取り込みもどのプランでも無料です。</p>
+          <p data-dc-tpl="449" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">はい。Proのときと閲覧専用のときは、取引をCSVに書き出せます。ローカルのバックアップと復元は、Proがなくても使えます。CSVの取り込みは、Proと以前からの無料プランで使えます。</p>
         </details>
         <details data-dc-tpl="450" style="border-bottom: 1px solid var(--lp-hair); background: transparent;">
           <summary data-dc-tpl="451" class="scp0" style="display: flex; align-items: flex-start; gap: 20px; cursor: pointer; padding: 22px 4px; font-size: 17.5px; font-weight: 600; color: var(--lp-ink); line-height: 1.6;">
             <span data-dc-tpl="452" style="flex: 1 1 0%; text-wrap: pretty;">料金は？</span>
             <span data-dc-tpl="453" class="faq-chev" aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--lp-hair); display: inline-flex; align-items: center; justify-content: center; font-size: 17px; line-height: 1; color: var(--lp-muted); transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1);">+</span>
           </summary>
-          <p data-dc-tpl="454" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">Lensはずっと無料で使えます。Proは月額¥800からで、7日間の無料トライアル付き。月額・年額・買い切りがあり、正確な価格はストアでご確認ください。</p>
+          <p data-dc-tpl="454" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">Proは月額¥800からです。月額と年額は30日間の無料トライアルから始まり、一度きりの買い切りもあります。正確な価格はストアでご確認ください。</p>
         </details>
         <details data-dc-tpl="455" style="border-bottom: 1px solid var(--lp-hair); background: transparent;">
           <summary data-dc-tpl="456" class="scp0" style="display: flex; align-items: flex-start; gap: 20px; cursor: pointer; padding: 22px 4px; font-size: 17.5px; font-weight: 600; color: var(--lp-ink); line-height: 1.6;">
             <span data-dc-tpl="457" style="flex: 1 1 0%; text-wrap: pretty;">銀行同期は日本で使える？</span>
             <span data-dc-tpl="458" class="faq-chev" aria-hidden="true" style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--lp-hair); display: inline-flex; align-items: center; justify-content: center; font-size: 17px; line-height: 1; color: var(--lp-muted); transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1);">+</span>
           </summary>
-          <p data-dc-tpl="459" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">銀行同期は、Apple FinanceKitが提供されている国・地域のiPhone（iOS 17.4以降）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、無料のCSVインポート、レシートスキャン（Pro）、Siriの音声入力で同じことができます。</p>
+          <p data-dc-tpl="459" class="faq-a" style="margin: 0px; padding: 0px 60px 26px 4px; font-size: 15.5px; line-height: 1.95; color: var(--lp-body); text-wrap: pretty;">銀行同期は、Apple FinanceKitが提供されている国・地域のiPhone（iOS 17.4以降）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、CSVインポート、レシートスキャン（AIでの読み取りはPro）、Siriの音声入力で同じことができます。</p>
         </details>
       </div>
     </div>
@@ -698,7 +698,7 @@
     <div data-dc-tpl="461" style="max-width: 1160px; margin: 0px auto; padding: clamp(80px, 9vw, 128px) 24px; text-align: center;">
       <img data-dc-tpl="462" src="/assets/logo.svg" alt="Lensのロゴ。円の中心に1本の線" style="width: 56px; height: 56px; margin: 0px auto; display: block;">
       <h2 data-dc-tpl="463" style="margin: 28px 0px 0px; font-size: clamp(30px, 4.4vw, 52px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance;">今日は、いくら使える？</h2>
-      <p data-dc-tpl="464" style="margin: 18px 0px 0px; font-size: 17px; color: rgba(255, 255, 255, 0.72);">明日の朝には、分かります。無料で、アカウント登録もいりません。</p>
+      <p data-dc-tpl="464" style="margin: 18px 0px 0px; font-size: 17px; color: rgba(255, 255, 255, 0.72);">明日の朝には、分かります。30日間無料で、アカウント登録もいりません。</p>
       <div class="lp-badges" data-dc-tpl="465" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 36px; align-items: center;">
         <a data-dc-tpl="466" href="https://apps.apple.com/app/id6764731647" target="_blank" rel="noopener" class="scp3 scp4" style="display: inline-flex; border-radius: 13px; transition: transform 250ms cubic-bezier(0.33, 1, 0.68, 1), opacity 250ms;">
           <img data-dc-tpl="467" src="/assets/badges/app-store-ja.svg" alt="App Storeでダウンロード" style="height: 54px; display: block;">
@@ -826,8 +826,8 @@
           <img src="/assets/badges/google-play-ja.png" alt="Google Playで手に入れよう" style="height:50px;display:block">
         </a>
       </div>
-      <p style="margin:16px auto 0;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;color:#A8DADC;text-align:center">無料。アカウント登録なし。</p>
-      <p style="margin:20px auto 0;font-size:13px;line-height:1.8;color:rgba(255,255,255,0.45);max-width:44em;text-align:center">銀行同期（Pro）は、Apple FinanceKit対応国のiPhone（iOS 17.4以降、Apple Walletにカードを接続）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、無料のCSVインポート、レシートスキャン（Pro）、Siriの音声入力で同じことができます。</p>
+      <p style="margin:16px auto 0;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;color:#A8DADC;text-align:center">30日間無料。アカウント登録なし。</p>
+      <p style="margin:20px auto 0;font-size:13px;line-height:1.8;color:rgba(255,255,255,0.45);max-width:44em;text-align:center">銀行同期（Pro）は、Apple FinanceKit対応国のiPhone（iOS 17.4以降、Apple Walletにカードを接続）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、CSVインポート、レシートスキャン（AIでの読み取りはPro）、Siriの音声入力で同じことができます。</p>
     </div>
   </section>
 
@@ -887,7 +887,7 @@
         <div style="max-width:60em;padding-bottom:clamp(32px,4vw,52px)">
           <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--lp-muted);animation:jaLabelOn 400ms cubic-bezier(0.33,1,0.68,1) 1420ms both;animation-play-state:{{ howPlay }}">02</p>
           <h3 style="margin:12px 0 0;font-size:22px;font-weight:600;line-height:1.4">口座と固定費を登録</h3>
-          <p style="margin:12px 0 0;font-size:16px;line-height:1.95;color:var(--lp-body)">手入力でも、銀行アプリから書き出したCSVの取り込みでも（どのプランでも無料、銀行のフォーマットは自動判別）。家賃、通信費、サブスクといった定期的な支払いは、どのプランでも件数無制限。固定費がすべて入っていてこそ、数字が正しくなるからです。</p>
+          <p style="margin:12px 0 0;font-size:16px;line-height:1.95;color:var(--lp-body)">手入力でも、Lens独自の形式（Date、Type、Category、Amount、Description、Notes）のCSVの取り込みでも。家賃、通信費、サブスクといった定期的な支払いは、件数無制限。固定費がすべて入っていてこそ、数字が正しくなるからです。</p>
         </div>
         <div style="position:relative;justify-self:center;width:3px;border-radius:2px;background:var(--lp-hair);align-self:stretch">
           <span style="position:absolute;inset:0;border-radius:2px;background:var(--lp-link);transform-origin:top center;animation:jaSpineFill 900ms cubic-bezier(0.33,1,0.68,1) 1800ms both;animation-play-state:{{ howPlay }}" aria-hidden="true"></span>
@@ -940,7 +940,7 @@
         <p style="margin:0 0 16px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.14em;color:var(--lp-link)">BANK SYNC</p>
         <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;letter-spacing:-0.025em;line-height:1.22;text-wrap:balance">口座連携サービスを使わない、という<em style="font-style:normal;color:var(--lp-link)">設計</em></h2>
         <p style="margin:24px 0 0;font-size:16.5px;line-height:1.95;color:var(--lp-body)">多くの家計簿アプリは、口座連携サービス（アグリゲーター）に取引履歴を預けることで自動化しています。Lensは違います。iPhoneの銀行同期は、AppleのFinanceKitがWalletに接続した口座を端末の中で読み取る仕組み。取引がLensや第三者に送られることはありません。残高の照合と重複チェックで数字を正確に保ち、引っぱって更新すれば最新になります。銀行同期は<span style="color:var(--lp-pro);font-weight:600">Pro</span>の機能です。</p>
-        <p style="margin:24px 0 0;border-top:1px solid var(--lp-hair);border-bottom:1px solid var(--lp-hair);padding:18px 0;font-size:14.5px;line-height:1.9;color:var(--lp-muted)"><strong style="color:var(--lp-ink)">先に知っておいてほしいこと：</strong>銀行同期は、FinanceKit対応国のiPhone（iOS 17.4以降、英国の接続カードは18.4以降）で、Apple Walletにカードを接続している場合だけ使えます。対応国はまだ限られていて、日本の銀行は対象外です。ただしこれは国の話で、言語の話ではありません。英国や米国など対応国に口座があれば、アプリを日本語で使いながら銀行同期もできます。日本の銀行なら、月に1回CSVを書き出して取り込むだけで同じことができます。CSVインポートはどのプランでも無料です。</p>
+        <p style="margin:24px 0 0;border-top:1px solid var(--lp-hair);border-bottom:1px solid var(--lp-hair);padding:18px 0;font-size:14.5px;line-height:1.9;color:var(--lp-muted)"><strong style="color:var(--lp-ink)">先に知っておいてほしいこと：</strong>銀行同期は、FinanceKit対応国のiPhone（iOS 17.4以降、英国の接続カードは18.4以降）で、Apple Walletにカードを接続している場合だけ使えます。対応国はまだ限られていて、日本の銀行は対象外です。ただしこれは国の話で、言語の話ではありません。英国や米国など対応国に口座があれば、アプリを日本語で使いながら銀行同期もできます。日本の銀行なら、月に1回CSVを書き出し、列名をLensの形式に合わせてから取り込めば同じことができます。CSVの取り込みは、Proと以前からの無料プランで使えます。</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,4vw,56px);margin-top:clamp(40px,5vw,60px);align-items:center">
         <div style="justify-self:center;width:min(360px,100%)">
@@ -1127,13 +1127,13 @@
         <button type="button" onClick="{{ toggleDiff }}" aria-pressed="{{ diffPressed }}" style="appearance:none;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:600;padding:10px 18px;border-radius:999px;border:1px solid {{ diffBorder }};background:{{ diffBg }};color:{{ diffFg }}">差分だけ表示</button>
         <span style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--lp-muted)">{{ diffCount }}</span>
       </div>
-      <p style="margin:20px 0 0;font-size:16.5px;line-height:1.9;color:var(--lp-body);max-width:40em">無料プランの上限は本当の上限で、お試し期間ではありません。<span style="color:var(--lp-pro);font-weight:600">Pro</span>の印がついた機能は、Proプランで使えます。</p>
+      <p style="margin:20px 0 0;font-size:16.5px;line-height:1.9;color:var(--lp-body);max-width:40em">30日間の無料トライアルでは、Proのすべてが使えます。「以前からの無料プラン」は、トライアルが始まる前からLensを使っていた方が終了日まで使えるプランです。<span style="color:var(--lp-pro);font-weight:600">Pro</span>の印がついた機能は、Proプランで使えます。</p>
       <div style="margin-top:52px;overflow-x:auto">
         <table style="width:100%;border-collapse:collapse;min-width:640px">
           <thead>
             <tr>
               <th scope="col" style="padding:0 20px 14px 0;border-bottom:1px solid var(--lp-ink);text-align:left;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.1em;color:var(--lp-muted)">機能</th>
-              <th scope="col" style="padding:0 20px 14px;border-bottom:1px solid var(--lp-ink);text-align:left;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.1em;color:var(--lp-muted)">無料</th>
+              <th scope="col" style="padding:0 20px 14px;border-bottom:1px solid var(--lp-ink);text-align:left;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.1em;color:var(--lp-muted);white-space:nowrap;">以前からの無料プラン</th>
               <th scope="col" style="padding:0 0 14px 20px;border-bottom:1px solid var(--lp-ink);text-align:left;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.1em;color:var(--lp-pro)">Pro</th>
             </tr>
           </thead>
@@ -1144,7 +1144,7 @@
               <td style="padding:16px 0 16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">すべて</td>
             </tr>
             <tr style="transition:background 250ms;display:{{ sameRow }}" style-hover="background:rgba(37,99,235,0.05)">
-              <th scope="row" style="padding:16px 20px 16px 0;border-bottom:1px solid var(--lp-hair);vertical-align:top;text-align:left;font-weight:600;color:var(--lp-ink)">定期的な支払い<span style="display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.7;color:var(--lp-muted)">どのプランでも無制限。毎朝自動で処理</span></th>
+              <th scope="row" style="padding:16px 20px 16px 0;border-bottom:1px solid var(--lp-hair);vertical-align:top;text-align:left;font-weight:600;color:var(--lp-ink)">定期的な支払い<span style="display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.7;color:var(--lp-muted)">件数の上限なし。毎朝自動で処理</span></th>
               <td style="padding:16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">無制限</td>
               <td style="padding:16px 0 16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">無制限</td>
             </tr>
@@ -1164,13 +1164,13 @@
               <td style="padding:16px 0 16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">無制限</td>
             </tr>
             <tr style="transition:background 250ms;display:{{ sameRow }}" style-hover="background:rgba(37,99,235,0.05)">
-              <th scope="row" style="padding:16px 20px 16px 0;border-bottom:1px solid var(--lp-hair);vertical-align:top;text-align:left;font-weight:600;color:var(--lp-ink)">取引の入力<span style="display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.7;color:var(--lp-muted)">手入力、音声、Siri、CSVインポート（銀行フォーマット自動判別）</span></th>
+              <th scope="row" style="padding:16px 20px 16px 0;border-bottom:1px solid var(--lp-hair);vertical-align:top;text-align:left;font-weight:600;color:var(--lp-ink)">取引の入力<span style="display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.7;color:var(--lp-muted)">手入力、音声、Siri、Lens独自形式のCSVインポート</span></th>
               <td style="padding:16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">あり</td>
               <td style="padding:16px 0 16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">あり</td>
             </tr>
             <tr style="transition:background 250ms" style-hover="background:rgba(37,99,235,0.05)">
               <th scope="row" style="padding:16px 20px 16px 0;border-bottom:1px solid var(--lp-hair);vertical-align:top;text-align:left;font-weight:600;color:var(--lp-ink)">レシートスキャン<span style="display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.7;color:var(--lp-muted)">撮って読み取り、自動で分類</span></th>
-              <td style="padding:16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">なし</td>
+              <td style="padding:16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">端末内で読み取り</td>
               <td style="padding:16px 0 16px 20px;border-bottom:1px solid var(--lp-hair);vertical-align:top;font-size:15px;color:var(--lp-body)">月100クレジット</td>
             </tr>
             <tr style="transition:background 250ms" style-hover="background:rgba(37,99,235,0.05)">
@@ -1223,7 +1223,7 @@
     <div style="max-width:1160px;margin:0 auto;padding:clamp(72px,8vw,112px) 24px">
       <p style="margin:0 0 16px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:0.14em;color:var(--lp-link);text-align:center">PRICING</p>
       <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;letter-spacing:-0.025em;line-height:1.22;text-align:center">Lensの<em style="font-style:normal;color:var(--lp-link)">料金</em>は？</h2>
-      <p style="margin:20px auto 0;font-size:16.5px;line-height:1.9;color:var(--lp-body);max-width:40em;text-align:center">Lensはずっと無料で使えます。無料の上限は本当の上限です。Proは月額¥800から、7日間の無料トライアル付き。</p>
+      <p style="margin:20px auto 0;font-size:16.5px;line-height:1.9;color:var(--lp-body);max-width:40em;text-align:center">Proは月額¥800から。月額と年額は、30日間の無料トライアルから始まります。</p>
       <div style="display:flex;justify-content:center;margin-top:28px">
       <div role="tablist" aria-label="支払いプラン" style="display:inline-flex;gap:6px;padding:5px;border-radius:14px;background:var(--lp-surface);border:1px solid var(--lp-hair)">
         <button type="button" role="tab" aria-selected="{{ p0s }}" onClick="{{ plan0 }}" style="appearance:none;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:600;padding:9px 18px;border:none;border-radius:10px;background:{{ p0g }};color:{{ p0f }};box-shadow:{{ p0sh }}">月額</button>
@@ -1233,15 +1233,15 @@
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;margin:52px auto 0;max-width:900px">
         <div style="border-top:1px solid var(--lp-ink);padding-top:24px">
-          <h3 style="margin:0;font-size:19px;font-weight:600">無料プラン</h3>
+          <h3 style="margin:0;font-size:19px;font-weight:600">30日間の無料トライアル</h3>
           <p style="margin:14px 0 0;font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;font-size:34px;font-weight:700;letter-spacing:-1px">¥0</p>
           <ul style="display:grid;gap:9px;margin:22px 0 0;padding:0 0 0 18px;font-size:15px;line-height:1.8;color:var(--lp-body)">
-            <li>毎日の数字を、毎朝まるごと</li>
-            <li>口座3件、目標3件、カテゴリ予算5件</li>
-            <li>定期的な支払いは無制限</li>
-            <li>「今月」のレポート全部と、純資産</li>
-            <li>インサイト1日1件</li>
-            <li>CSVインポート（銀行フォーマット自動判別）</li>
+            <li>Proのすべてを、月額か年額のプランで</li>
+            <li>終わる前にお知らせ</li>
+            <li>終わる前に解約すれば、料金はかかりません</li>
+            <li>続けなければ、閲覧専用に</li>
+            <li>入力したものが消えることはありません</li>
+            <li>買い切りは一度きりのお支払いで、トライアルなし</li>
           </ul>
         </div>
         <div style="border-top:1px solid var(--lp-ink);padding-top:24px">
@@ -1251,7 +1251,7 @@
           <ul style="display:grid;gap:9px;margin:22px 0 0;padding:0 0 0 18px;font-size:15px;line-height:1.8;color:var(--lp-body)">
             <li>口座・目標・予算が無制限</li>
             <li>銀行同期（FinanceKit対応国のiPhoneのみ、日本は未対応）</li>
-            <li>レシートスキャンとAI（月100クレジット）</li>
+            <li>AIレシート読み取りとAsk AI（月100クレジット）</li>
             <li>CSVエクスポートとカスタムカテゴリ</li>
             <li>「先月」と「年初来」のレポート</li>
             <li>週次ブリーフィングとインサイト全件</li>
@@ -1280,7 +1280,7 @@
             <span style="flex:1;text-wrap:pretty">Androidでも使える？</span>
             <span class="faq-chev" aria-hidden="true" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--lp-hair);display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1;color:var(--lp-muted);transition:transform 250ms cubic-bezier(0.33,1,0.68,1)">+</span>
           </summary>
-          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">はい。iPhoneでもAndroidでも使えます。銀行同期はApple FinanceKitを使うのでiPhoneだけですが、Androidでは無料のCSVインポート、かんたん入力、自動カテゴリ分けで同じことができます。</p>
+          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">はい。iPhoneでもAndroidでも使えます。銀行同期はApple FinanceKitを使うのでiPhoneだけですが、AndroidではCSVインポート、かんたん入力、自動カテゴリ分けで同じことができます。</p>
         </details>
         <details style="border-bottom:1px solid var(--lp-hair);background:transparent">
           <summary style="display:flex;align-items:flex-start;gap:20px;cursor:pointer;padding:22px 4px;font-size:17.5px;font-weight:600;color:var(--lp-ink);line-height:1.6" style-hover="color:var(--lp-link)">
@@ -1301,28 +1301,28 @@
             <span style="flex:1;text-wrap:pretty">Proをやめたらどうなる？</span>
             <span class="faq-chev" aria-hidden="true" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--lp-hair);display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1;color:var(--lp-muted);transition:transform 250ms cubic-bezier(0.33,1,0.68,1)">+</span>
           </summary>
-          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">データは端末に残ったまま、無料プランとしてそのまま使い続けられます。上限は無料プランのもの（口座3件、目標3件、カテゴリ予算5件）に戻りますが、定期的な支払いは変わらず無制限。毎日の数字、今月のレポート、純資産、CSVインポートもそのまま使えます。</p>
+          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">消えるものはありません。データは端末に残り、Lensは閲覧専用になります。開いてすべて見ること、バックアップやCSVでの書き出し、削除はそのままできます。予算や定期項目もふくめて、追加や編集にはProが必要で、銀行同期は登録するまで止まります。トライアルが始まる前からLensを使っていた方は、終了日までは以前からの無料プラン（口座3件、目標3件、カテゴリ予算5件）に戻ります。</p>
         </details>
         <details style="border-bottom:1px solid var(--lp-hair);background:transparent">
           <summary style="display:flex;align-items:flex-start;gap:20px;cursor:pointer;padding:22px 4px;font-size:17.5px;font-weight:600;color:var(--lp-ink);line-height:1.6" style-hover="color:var(--lp-link)">
             <span style="flex:1;text-wrap:pretty">データを書き出せる？</span>
             <span class="faq-chev" aria-hidden="true" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--lp-hair);display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1;color:var(--lp-muted);transition:transform 250ms cubic-bezier(0.33,1,0.68,1)">+</span>
           </summary>
-          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">はい。Proなら取引をCSVに書き出せます。ローカルのバックアップと復元はどのプランでも使えて、CSVの取り込みもどのプランでも無料です。</p>
+          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">はい。Proのときと閲覧専用のときは、取引をCSVに書き出せます。ローカルのバックアップと復元は、Proがなくても使えます。CSVの取り込みは、Proと以前からの無料プランで使えます。</p>
         </details>
         <details style="border-bottom:1px solid var(--lp-hair);background:transparent">
           <summary style="display:flex;align-items:flex-start;gap:20px;cursor:pointer;padding:22px 4px;font-size:17.5px;font-weight:600;color:var(--lp-ink);line-height:1.6" style-hover="color:var(--lp-link)">
             <span style="flex:1;text-wrap:pretty">料金は？</span>
             <span class="faq-chev" aria-hidden="true" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--lp-hair);display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1;color:var(--lp-muted);transition:transform 250ms cubic-bezier(0.33,1,0.68,1)">+</span>
           </summary>
-          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">Lensはずっと無料で使えます。Proは月額¥800からで、7日間の無料トライアル付き。月額・年額・買い切りがあり、正確な価格はストアでご確認ください。</p>
+          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">Proは月額¥800からです。月額と年額は30日間の無料トライアルから始まり、一度きりの買い切りもあります。正確な価格はストアでご確認ください。</p>
         </details>
         <details style="border-bottom:1px solid var(--lp-hair);background:transparent">
           <summary style="display:flex;align-items:flex-start;gap:20px;cursor:pointer;padding:22px 4px;font-size:17.5px;font-weight:600;color:var(--lp-ink);line-height:1.6" style-hover="color:var(--lp-link)">
             <span style="flex:1;text-wrap:pretty">銀行同期は日本で使える？</span>
             <span class="faq-chev" aria-hidden="true" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;border:1px solid var(--lp-hair);display:inline-flex;align-items:center;justify-content:center;font-size:17px;line-height:1;color:var(--lp-muted);transition:transform 250ms cubic-bezier(0.33,1,0.68,1)">+</span>
           </summary>
-          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">銀行同期は、Apple FinanceKitが提供されている国・地域のiPhone（iOS 17.4以降）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、無料のCSVインポート、レシートスキャン（Pro）、Siriの音声入力で同じことができます。</p>
+          <p class="faq-a" style="margin:0;padding:0 60px 26px 4px;font-size:15.5px;line-height:1.95;color:var(--lp-body);text-wrap:pretty">銀行同期は、Apple FinanceKitが提供されている国・地域のiPhone（iOS 17.4以降）で使えます。対応は国ごとに決まるので日本の銀行はまだ対象外ですが、英国や米国など対応国の口座なら、アプリを日本語のまま使いながら同期できます。日本の銀行なら、CSVインポート、レシートスキャン（AIでの読み取りはPro）、Siriの音声入力で同じことができます。</p>
         </details>
       </div>
     </div>
@@ -1332,7 +1332,7 @@
     <div style="max-width:1160px;margin:0 auto;padding:clamp(80px,9vw,128px) 24px;text-align:center">
       <img src="/assets/logo.svg" alt="Lensのロゴ。円の中心に1本の線" style="width:56px;height:56px;margin:0 auto;display:block">
       <h2 style="margin:28px 0 0;font-size:clamp(30px,4.4vw,52px);font-weight:700;letter-spacing:-0.02em;line-height:1.2;text-wrap:balance">今日は、いくら使える？</h2>
-      <p style="margin:18px 0 0;font-size:17px;color:rgba(255,255,255,0.72)">明日の朝には、分かります。無料で、アカウント登録もいりません。</p>
+      <p style="margin:18px 0 0;font-size:17px;color:rgba(255,255,255,0.72)">明日の朝には、分かります。30日間無料で、アカウント登録もいりません。</p>
       <div class="lp-badges" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:36px;align-items:center">
         <a href="{{ appStoreUrl }}" target="_blank" rel="noopener" style="display:inline-flex;border-radius:13px;transition:transform 250ms cubic-bezier(0.33,1,0.68,1),opacity 250ms" style-hover="opacity:0.85" style-active="transform:scale(0.97)">
           <img src="/assets/badges/app-store-ja.svg" alt="App Storeでダウンロード" style="height:54px;display:block">
@@ -1383,7 +1383,7 @@ class Component extends DCLogic {
     "\u65c5\u884c\u7a4d\u7acb\u306f35%\u9054\u6210\u30022\u30f6\u6708\u65e9\u304f\u5c4a\u304d\u305d\u3046\u3067\u3059\u3002"
   ];
   _plans = {
-    monthly: { price: "\u00a5800", unit: "/\u6708", note: "\u5e74\u984d \u00a56,000\u3001\u8cb7\u3044\u5207\u308a \u00a515,000\u30027\u65e5\u9593\u306e\u7121\u6599\u30c8\u30e9\u30a4\u30a2\u30eb\u4ed8\u304d\u3002" },
+    monthly: { price: "\u00a5800", unit: "/\u6708", note: "\u5e74\u984d \u00a56,000\u3001\u8cb7\u3044\u5207\u308a \u00a515,000\u3002\u6708\u984d\u3068\u5e74\u984d\u306f30\u65e5\u9593\u306e\u7121\u6599\u30c8\u30e9\u30a4\u30a2\u30eb\u4ed8\u304d\u3002" },
     yearly: { price: "\u00a56,000", unit: "/\u5e74", note: "\u6708\u3042\u305f\u308a\u7d04\u00a5500\u3002\u6708\u984d\u3088\u308a37%\u304a\u5f97\u3067\u3059\u3002" },
     lifetime: { price: "\u00a515,000", unit: " \u4e00\u56de\u306e\u307f", note: "\u4eca\u5f8c\u8ffd\u52a0\u3055\u308c\u308bPro\u6a5f\u80fd\u3082\u542b\u307e\u308c\u307e\u3059\u3002" }
   };
