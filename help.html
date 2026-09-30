@@ -455,16 +455,17 @@
   <p>If you want to move to a new phone, you can back up your data from Settings &gt; Data &amp; backup and restore it on your new device.</p>
   <h3 id="starters">Starters: learning tips</h3>
   <p><strong>What are Starters?</strong></p>
-  <p>Starters are guided tips that appear on your Today screen for the first two weeks after onboarding or after you update your declared income or monthly budget.</p>
-  <p>Each starter is a small lesson about using Lens effectively. You can swipe left to dismiss one, or let it stay and learn from it.</p>
+  <p>Starters are short cards on your Today screen for the first two weeks after setup, or after you edit your monthly plan or income.</p>
+  <p>They work from your plan rather than what you have actually spent, so they make sense from day one. For example: &quot;Your plan has £3,200 coming in and £2,500 going out, so you'd keep about £700 a month.&quot;</p>
+  <p>You can swipe left to dismiss one, or let it stay and learn from it.</p>
   <p><strong>How long do Starters show?</strong></p>
-  <p>Starters appear for up to 14 days from your onboarding date or the last time you edited your declared numbers.</p>
-  <p>If you edit your budget or income again, the 14-day window resets and any dismissed starters come back so you can review them with your new numbers.</p>
+  <p>Starters appear for up to 14 days from your onboarding date or the last time you edited your monthly plan or income.</p>
+  <p>Edit your plan again and the 14-day window resets, and any starters you dismissed come back so you can see them with your new numbers.</p>
   <h3 id="free-vs-pro">Pro, and the earlier free plan</h3>
   <p><strong>The earlier free plan</strong></p>
   <p>New users start with a 30-day free trial of Pro rather than a free plan. If you were using Lens before the trial arrived, you keep the free plan you already had until a fixed end date, the same date for everyone, and Lens tells you on Today in the month before it ends. After that date, Lens without Pro is read-only: you can still see everything, export it as a backup or a CSV, and delete it, but adding and editing, budgets and recurring items included, needs Pro.</p>
   <p>On iPhone, Lens checks Apple's own record of when your Apple Account first downloaded it, so reinstalling does not lose your free plan. On Android, your backup carries it, so restore a backup when you move to a new phone.</p>
-  <p>The free plan gives you up to 3 goals, 3 accounts, and a budget on 5 categories. The whole Today tab is yours: left to spend today, the week chart, the watch this week card. So is the whole of This month in Reports: your verdict for the month, your bills, where your spending went, and a line each for goals and accounts. You also get an insight a day.</p>
+  <p>The free plan gives you up to 3 goals, 3 accounts, and a budget on 5 categories. The whole Today tab is yours: left to spend today, the week chart, the Watch this month card. So is the whole of This month in Reports: your verdict for the month, your bills, where your spending went, and a line each for goals and accounts. You also get an insight a day.</p>
   <p>Recurring bills are unlimited on the free plan too. Add all of them. Your daily number is only as honest as the bills Lens knows about, so charging for that would just make your own numbers worse.</p>
   <p>Importing a CSV is free on this plan as well.</p>
   <p><strong>Pro</strong></p>
@@ -535,7 +536,7 @@
     <li>Other: anything that does not fit the rest.</li>
     <li>Credit card, Loan, Mortgage: enter what you still owe as a positive number. Lens knows these are debts from the type you picked, so it handles the minus sign for you.</li>
   </ul>
-  <p>Current account, savings, cash, and pot are the four types Lens counts as spendable when it works out your runway.</p>
+  <p>Current account, savings, cash, and pot are the four types Lens counts as spendable when it works out your runway. If one of them is overdrawn, that counts against the rest.</p>
   <p><strong>Which type should I pick?</strong></p>
   <p>Pick the type that matches your real account. This affects how Lens groups things in your net worth breakdown. Current and savings accounts count as liquid assets. Credit cards, loans, and mortgages count as liabilities.</p>
   <h3 id="multi-currency">Multi-currency accounts</h3>
@@ -545,7 +546,8 @@
   <p><strong>Tips</strong></p>
   <p>Keep most accounts in your primary currency for the clearest picture. If you have foreign currency accounts, the balance displays in that currency on the account card.</p>
   <p>Your primary currency lives in Settings. Tap your initials at the top of Today, then Currency.</p>
-  <p>Switching it converts your budgets, goals and totals at today's rate, and Lens asks first. Accounts keep their own currency. Changing the app language never changes your currency.</p>
+  <p>Switching it converts your monthly plan, income, goals, category budgets, card statement figures and profile at today's rate, and Lens asks first. If it cannot get a rate right then, it tells you and leaves everything as it was.</p>
+  <p>Accounts keep their own currency. So does each transaction and recurring item, with its value in your main currency shown underneath. Changing the app language never changes your currency.</p>
   <h3 id="investing-accounts">Investing accounts: cash, holdings, buying and selling</h3>
   <p><strong>Cash and holdings, side by side</strong></p>
   <p>Investment, ISA and pension accounts hold two things: cash and holdings. Cash is money sitting in the account waiting to be invested, and holdings are the funds or shares you own. Lens shows both together, so uninvested cash never disappears from your net worth.</p>
@@ -589,6 +591,7 @@
   <h3 id="add-transaction">Adding a transaction</h3>
   <p><strong>How to add</strong></p>
   <p>Tap the + button in the bottom bar and choose the transaction type. Fill in the amount, pick a category, and optionally add a note.</p>
+  <p>You can paste an amount straight in, currency symbol and separators included, so &quot;£1,250.00&quot; or &quot;50.000&quot; in rupiah both work, and so do full-width Japanese digits. Yen and other currencies without smaller units take whole numbers only.</p>
   <p>The date defaults to today but you can change it.</p>
   <p><strong>Transaction types</strong></p>
   <ul>
@@ -618,7 +621,8 @@
   <p>The first row has to be a header with Date, Type, Category, and Amount columns. Description and Notes are optional. Rows that do not fit are skipped without a warning, so have a look at your transaction list afterwards.</p>
   <p><strong>Tips for a clean import</strong></p>
   <p>This is Lens's own CSV layout rather than a raw bank statement. The quickest way to see it is to export your transactions first, because the export uses exactly the columns the import expects.</p>
-  <p>Type has to be income, expense, investment, or transfer. Dates can be DD/MM/YYYY or YYYY-MM-DD. If the file from your bank uses different headings, rename the columns in a spreadsheet before importing.</p>
+  <p>Type has to be income, expense, investment, or transfer. Dates can be DD/MM/YYYY or YYYY-MM-DD, and a date that does not exist, like 31/02, is skipped. Amounts can carry a currency symbol and grouping, so &quot;£1,234.56&quot; and &quot;1.234,56&quot; both read correctly. If there is a Currency column, each row keeps its own currency. Exporting keeps your text exactly as written, so a note like &quot;-50% off&quot; comes back as it was.</p>
+  <p>If the file from your bank uses different headings, rename the columns in a spreadsheet before importing.</p>
   <p>Exporting works with Pro, and when Lens is read-only, so you can always take your data with you. On the earlier free plan it needs Pro. Importing works with Pro and on the earlier free plan. When Lens is read-only, importing needs Pro, because it adds transactions.</p>
   <h3 id="receipt-scanning">Receipt scanning</h3>
   <p><strong>How to scan a receipt</strong></p>
@@ -651,6 +655,9 @@
   <p><strong>How to edit</strong></p>
   <p>Tap any recurring item to edit its amount, frequency, name, or toggles. You can also pause or delete it.</p>
   <p>Pausing a recurring item stops it from being included in calculations without deleting it. Useful for seasonal subscriptions or items you might restart.</p>
+  <p><strong>When a bill or salary ends</strong></p>
+  <p>Give a bill or salary an End date and it keeps counting in the month it ends. After that it moves to Recurring, All Items, under Ended.</p>
+  <p>Changed your mind, or picked the wrong date? Tap it there, clear the End date or move it later, and save. It comes back straight away, and the months it spent ended are not added as missed payments.</p>
   <h3 id="recurring-vs-one-time">Recurring vs one-time transactions</h3>
   <p><strong>When to use which</strong></p>
   <p>Use recurring for anything that repeats on a schedule: rent, salary, subscriptions, regular savings transfers.</p>
@@ -753,21 +760,23 @@
     <li>Everyday = income - bills - savings.</li>
   </ul>
   <p>Example: income 2,000. Rent (800/month, fixed) plus 500 to savings leaves 700 for everyday.</p>
-  <p><strong>This month's stats</strong></p>
+  <p><strong>What counts as spending</strong></p>
+  <p>Today, This week, Watch this month, the widget, Siri, Reports and Insights all count spending the same way.</p>
   <ul>
-    <li>Income = total income transactions this month.</li>
-    <li>Expenses = total expense transactions this month.</li>
-    <li>Saved = income - expenses.</li>
+    <li>Money you move into a goal is saved, not spent.</li>
+    <li>Anything happening in an ISA, pension or investment account is your wealth moving around, so it is not everyday spending or income. That holds for an account that is locked, too.</li>
+    <li>A payment dated later, like a bill you have scheduled, does not count until its day comes.</li>
+    <li>A pending card payment from bank sync counts on the day you made it, even if your bank stamps it for tomorrow.</li>
   </ul>
-  <p>If you have not added any income transactions, income shows as 0 and saved will be negative (equal to your expenses).</p>
   <p><strong>Financial runway</strong></p>
-  <p>How long your savings would last if income stopped.</p>
+  <p>How long your spendable money would last if income stopped.</p>
   <ul>
-    <li>Liquid savings = total positive balances across current and savings accounts.</li>
-    <li>Monthly burn rate = average expenses over the last 3 months (or your budget if there is not enough history yet).</li>
-    <li>Runway = liquid savings / monthly burn rate.</li>
+    <li>Spendable money = what is in your current, savings, cash and pot accounts. An overdrawn account counts against the rest, because an overdraft eats into the same money. ISAs, pensions, investments and credit cards are left out.</li>
+    <li>Monthly burn = your average spending over your last three complete months (or as many as you have so far), leaving out money you moved into goals. Spending counts by its own date, so anything you imported, restored or typed in for months before you started using Lens counts too.</li>
+    <li>In your first month there is no complete month yet, so Lens takes this month's spending so far and scales it up to a whole month from the day you joined. Until you have logged any spending, it uses your monthly budget.</li>
+    <li>Runway = spendable money / monthly burn.</li>
   </ul>
-  <p>Example: 2,950 in savings, 1,500/month burn rate = 1 month and 29 days runway.</p>
+  <p>Example: 2,950 spendable and a burn of 1,500 a month gives 1 month and 29 days of runway.</p>
   <p>The runway updates as you add transactions and your spending patterns become clearer.</p>
   <h3 id="safe-to-spend">Left to spend today: how it works</h3>
   <p><strong>What is left to spend today?</strong></p>
@@ -872,6 +881,7 @@
   <p><strong>What it tells you</strong></p>
   <p>The briefing is a short read on how the week actually went, written in plain sentences rather than left for you to work out from charts.</p>
   <p>It covers whether you came in under or over for the week and how that compares to the week before, how many days you stayed on track, what you spent most on, the category that moved the most, what you kept as a share of what came in, bills landing in the next 30 days, and how much of your net worth is invested.</p>
+  <p>When more went out than came in, it says so plainly, as in &quot;¥12,000 more went out than came in&quot;, and never calls that kept. The written summary never congratulates a period you overspent.</p>
   <p>Once a month it changes to a longer &quot;Month in review&quot; version.</p>
   <p><strong>Where to find it</strong></p>
   <p>It sits near the top of your Today screen. If you would rather not see this week's, you can dismiss it and it will be back with next week's.</p>
@@ -916,10 +926,11 @@
   <p>RevenueCat: Only for managing subscriptions. It receives a pseudonymous device ID and your purchase receipt from the store, but not your financial information.</p>
   <h3 id="backup-restore">Backup and restore</h3>
   <p><strong>How to back up</strong></p>
-  <p>Open Settings, then Privacy, then Data &amp; backup. Tap &quot;Create backup&quot; to save a copy of all your data as a file.</p>
+  <p>Open Settings, then Privacy, then Data &amp; backup. Tap &quot;Create backup&quot; to save a copy of all your data as a file: transactions, accounts, holdings, goals, recurring items, category budgets, your own categories, card statement snapshots, your profile and your settings.</p>
   <p>Store the backup somewhere safe: your phone's files app, a cloud drive, or emailed to yourself. This is your safety net if you switch devices or need to reset.</p>
   <p><strong>How to restore</strong></p>
   <p>On the Data &amp; backup screen, find &quot;Restore from backup&quot; and tap &quot;Choose backup file&quot;. Lens will load all your data from the backup.</p>
+  <p>A backup comes back in the currency it was made in, so one made in yen restores in yen.</p>
   <p>Restoring replaces your current data, so make sure you want to overwrite what is currently in the app.</p>
   <h2>Troubleshooting</h2>
   <h3 id="balance-not-matching">Balance not matching your bank</h3>
