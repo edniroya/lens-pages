@@ -420,7 +420,7 @@
   <h2>Getting started</h2>
   <h3 id="welcome-to-lens">Welcome to Lens</h3>
   <p><strong>What is Lens?</strong></p>
-  <p>Lens is a privacy-first personal finance app. Your financial data stays on your device. No account, no ads. The only time anything leaves your phone is when you choose to use the optional Pro AI features.</p>
+  <p>Lens is a privacy-first personal finance app. Your records stay on your device. No account, no ads. The Pro AI features (Ask AI, AI receipt scanning and the weekly briefing) send only what they need, and only once you say yes. Live prices send just ticker symbols.</p>
   <p>Track accounts, transactions, goals, recurring bills, and your net worth, all in one place.</p>
   <p><strong>Quick start</strong></p>
   <p>Lens has no login. There is no sign-up, no password, and no Lens user account to create. Where this help says &quot;account&quot; it means a bank account you track, like a current account, savings, or a credit card.</p>
@@ -452,7 +452,7 @@
   </ul>
   <p>There is no email, no password, and no account to create. After onboarding, the Finish setup card on Today carries the remaining steps, with your first bank account and your income already ticked off.</p>
   <p><strong>No email, no cloud sync?</strong></p>
-  <p>That is right. Lens is privacy-first. What you enter is stored on your phone, not on a Lens server, and you do not need an account or sign in. The only time data leaves your phone is if you use the optional Pro AI features.</p>
+  <p>That is right. Lens is privacy-first. What you enter is stored on your phone, not on a Lens server, and you do not need an account or sign in. The optional Pro AI features send only what they need, and only once you say yes. Live prices send just ticker symbols.</p>
   <p>If you want to move to a new phone, you can back up your data from Settings &gt; Data &amp; backup and restore it on your new device.</p>
   <h3 id="pick-a-look">Pick a look</h3>
   <p><strong>What is a look?</strong></p>
@@ -834,7 +834,7 @@
   <p><strong>What the report shows</strong></p>
   <p>The monthly report summarises what came in, what went out, and what you kept for a given month. It breaks spending down by category so you can see where the money went.</p>
   <p>Use the period control at the top of Reports to move between This month, Last month and Year to date. Everything updates as you add transactions.</p>
-  <p>At the start of a new month, Reports offers the month just gone as a short story: six cards covering the verdict, the biggest shift, where it went, goals, net worth and what you kept. It is built on your device and nothing leaves it. After the first week the banner folds away, and you can still open it from Last month.</p>
+  <p>At the start of a new month, Lens offers the month just gone as a short story, on Today and in Reports: six cards covering the verdict, the biggest shift, where it went, goals, net worth and what you kept. It plays by itself, a few seconds a card. Hold to pause, or tap the sides to move. It is built on your device and nothing leaves it. Close the card on Today and it stays away until next month. After the first week the card folds away, and you can still open the story from Last month.</p>
   <h3 id="reports-tab">Reports: your monthly overview</h3>
   <p><strong>What is Reports?</strong></p>
   <p>Reports answers one question about a period: how did it go, and what is worth acting on?</p>
@@ -931,14 +931,14 @@
   <h3 id="data-privacy">Data privacy</h3>
   <p><strong>Where is my data?</strong></p>
   <p>All your financial data is stored locally on your device using an on-device database. Lens has no cloud database of your finances and no user accounts.</p>
-  <p>The only time data leaves your phone is when you choose to use the optional Pro AI features (Ask AI and receipt scanning). See &quot;No cloud, no tracking&quot; below for the detail.</p>
+  <p>The Pro AI features (Ask AI, AI receipt scanning and the weekly briefing) send only what they need, and only once you say yes. Live investment prices send just ticker symbols. See &quot;No cloud, no tracking&quot; below for the detail.</p>
   <p><strong>No cloud, no tracking</strong></p>
   <p>Lens is designed to be privacy-first. There is no cloud sync for your financial data. No one at Lens can see your accounts, transactions, or balances.</p>
-  <p>Data leaves your device only for features you choose. Ask AI and receipt scanning go through Lens's secure Cloud Function to Google's paid Gemini API, which Google states does not use prompts to train its models. Live investment prices send only ticker symbols, never your amounts or identity, through the same kind of Lens-operated function. Lens never stores what you send.</p>
+  <p>A few features do reach out, and only with what they need. Ask AI, AI receipt scanning and the weekly briefing ask you first, then go through Lens's secure Cloud Function to Google's paid Gemini API, which Google states does not use prompts to train its models. Live investment prices send only ticker symbols, never your amounts or identity, through the same kind of Lens-operated function. Exchange rates are a plain download. Crash reports and analytics (which you can turn off) never carry your amounts. Lens never stores what you send.</p>
   <h3 id="privacy-and-services">Privacy and data: where does my data go?</h3>
   <p><strong>Where is my data stored?</strong></p>
   <p>All your personal financial data, your transactions, accounts, balances, goals, budgets, everything, is stored in a local database on your phone. Lens has no cloud database of it and cannot see it.</p>
-  <p>The one exception is the optional Pro AI features: if you use Ask AI or receipt scanning, what you send goes through Lens's secure service to Google's Gemini to answer, and is never stored.</p>
+  <p>A few features send something out, and only what they need. If you use Ask AI, AI receipt scanning or the weekly briefing, Lens asks you first, then what you send goes through Lens's secure service to Google's Gemini to answer, and is never stored. Live investment prices send only ticker symbols, never your amounts.</p>
   <p><strong>What about Firebase and RevenueCat?</strong></p>
   <p>Lens uses both, for technical jobs only.</p>
   <p>Firebase (Google): push notifications, if you allow them; anonymous sign-in, with no name, email or password; crash reports in release builds; and anonymous product analytics, which are on by default and can be turned off in Settings, under Privacy. It also runs the Lens service that the AI features, and some live investment prices and stock searches, go through. When you use Ask AI, AI receipt scanning or the weekly briefing, the request passes through that service on its way to Google's Gemini and is not stored. The only things kept there are your AI usage counts, a daily count of your price and stock search requests (used to cap them), your Pro status and, on Pro, the wording of your current weekly briefing. App Check helps protect that service from abuse. Notifications, crash reports and analytics never carry your financial data.</p>
@@ -968,6 +968,7 @@
   <p><strong>The same payment twice</strong></p>
   <p>A payment often reaches your bank twice: once while it is still pending, then again when it settles. The settled version can arrive with a different reference and a tidier shop name, so it can look like a separate charge.</p>
   <p>Lens works out that the two are the same payment and keeps one. If you are looking at a duplicate from before this was fixed, you can leave it alone. It clears itself on the next sync.</p>
+  <p>If you also log a payment yourself on an account that syncs, Lens joins the two when the bank's copy arrives with exactly the same amount within a few days, and keeps your category, notes and goal. If the bank's copy is already in Lens, or the amounts differ a little, Lens asks instead of guessing: you'll see &quot;Looks like this is already in Lens from your bank&quot; when you save, and a possible duplicate card on Transactions. Choose Merge or Keep both. A merged entry says &quot;Matched with the entry you added&quot;, and Unmatch splits it back into two.</p>
   <p><strong>A charge that never really happened</strong></p>
   <p>Some card payments are only ever a hold. A petrol pump reserves an amount before you fill up, a hotel holds a deposit, a Transport for London touch-in sits there until the day's travel is added up. Sometimes the bank drops the hold and never turns it into a real payment.</p>
   <p>Lens clears those, so you are not left with money missing that you never actually spent. It only does this when it can see your bank is reporting properly, so a patchy connection is never mistaken for a pile of cancelled payments.</p>
