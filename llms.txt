@@ -5,18 +5,20 @@
 Key facts:
 
 - Safe-to-spend for today is calculated after bills, savings and goals are funded, then frozen each morning so the figure does not move during the day.
-- On iPhone, optional bank sync (Pro) reads Wallet-connected accounts through Apple's FinanceKit, on the device. No aggregator and no Lens server sees the transactions. Requires iPhone, iOS 17.4 or later (UK connected cards 18.4 or later), cards connected in Apple Wallet, and it is not available in every country.
-- Data lives in a local database on the device. There is no Lens cloud database of your finances, no account, no sign-up and no login. No ads, data is not sold, no advertising identifier, no cross-app tracking. One exception: the optional AI features send your question and a financial snapshot to Google Gemini to answer it.
+- On iPhone, optional bank sync (Pro) reads Wallet-connected accounts through Apple's FinanceKit, on the device. No aggregator and no Lens server sees the transactions. Requires iPhone, iOS 17.4 or later (UK connected cards 18.4 or later), and cards connected in Apple Wallet. Apple offers Connected Cards for banks in the UK and US only for now, so bank sync does not work with banks in Japan yet.
+- Data lives in a local database on the device. There is no Lens cloud database of your finances, no account, no sign-up and no login. No ads, data is not sold, no advertising identifier, no cross-app tracking. The exceptions are optional and need the user's say-so. Ask AI, AI receipt parsing and the weekly briefing (Pro) send only what each one needs (the question plus a financial snapshot, the receipt, or a few of the user's own figures) through a Lens Cloud Function to Google's paid Gemini API, and only after the user agrees in the app. Lens does not store the questions, receipts or Ask AI answers. Optional live investment prices and stock search send only ticker symbols or the search text, never amounts.
 - New users start with a 30-day free trial of Lens Pro on the monthly or yearly plan, with payment details taken by the App Store or Google Play. Lifetime is a one-off purchase with no trial. Without Pro the app is read-only: everything stays visible, can be exported (backup or CSV) and deleted, nothing is removed, adding and editing (budgets and recurring items included) needs Pro, and bank sync pauses until the user subscribes.
 - People who used Lens before the trial was introduced keep the earlier free plan until a fixed end date: 3 accounts, 3 goals, 5 category budgets, unlimited recurring bills, the whole daily number, the whole of This month in Reports, net worth, an insight a day, and CSV import in Lens's own layout (Date, Type, Category, Amount, Description, Notes).
-- Pro from £4.99/month (yearly and lifetime options in the store). Includes unlimited accounts, goals and budgets, bank sync on iPhone, AI receipt scanning and Ask AI (100 credits a month), CSV export, custom categories, Last month and Year to date reports, weekly briefing and the full insights feed.
+- Pro from £4.99/month (yearly and lifetime options in the store). Includes unlimited accounts, goals and budgets, bank sync on iPhone, AI receipt scanning and Ask AI (100 AI actions a month, up to 20 a day), CSV export, custom categories, Last month and Year to date reports, weekly briefing and the full insights feed.
 - English (en-GB) and Japanese (ja), multi-currency with live ECB exchange rates. The app language and the base currency are separate settings.
 - Lens is informational and does not provide financial advice.
 
 Pages:
 
 - [Home](https://lens.edniroya.com/): what safe-to-spend is, how bank sync works without an aggregator, the full feature list, pricing and FAQ.
+- [Home in Japanese](https://lens.edniroya.com/ja/)
 - [Support](https://lens.edniroya.com/support.html): contact and help.
 - [Help](https://lens.edniroya.com/help.html): how-to guides.
+- [Help in Japanese](https://lens.edniroya.com/ja/help.html)
 - [Privacy policy](https://lens.edniroya.com/privacy.html)
 - [Terms](https://lens.edniroya.com/terms.html)
