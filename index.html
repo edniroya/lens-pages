@@ -1358,6 +1358,7 @@
       <h2 style="margin:0;font-size:clamp(33px,4.1vw,50px);font-weight:700;letter-spacing:-0.032em;line-height:1.05;text-align:center">What does Lens <em style="font-style:normal;color:var(--lp-link)">cost</em>?</h2>
       <p style="margin:20px auto 0;font-size:17px;line-height:1.6;color:var(--lp-body);max-width:60ch;text-align:center">{{ priceIntro }}</p>
       <div style="text-align:center">{{ planToggle }}</div>
+      <div style="text-align:center">{{ currencySwitch }}</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;margin:40px auto 0;max-width:900px">
         <div style="border-top:1px solid var(--lp-ink);padding-top:24px">
           <h3 style="margin:0;font-size:20px;font-weight:600">30-day free trial</h3>
@@ -1510,7 +1511,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;appStoreUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://apps.apple.com/app/id6764731647&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Store links&quot;},&quot;playStoreUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://play.google.com/store/apps/details?id=com.ednlens.app&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Store links&quot;},&quot;heroAmount&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:24.6,&quot;min&quot;:0,&quot;max&quot;:9999,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
 class Component extends DCLogic {
-  state = { menuOpen: false, selDay: 21, aiStep: 0, aiTyping: false, aiUsed: 0, tourIdx: 0, donutSel: null, recView: "timeline", syncing: false, synced: false, siriIdx: 0, daySpent: 39.37, anonOn: true, txnIdx: 0, plan: "yearly", theme: "auto", heroDev: "ios", goalView: 0, heroSlide: 0, hubIdx: 0, pillOn: false, nudgeIdx: 0, nudgeFade: false, howOn: false, diffOnly: false };
+  state = { menuOpen: false, priceCur: null, selDay: 21, aiStep: 0, aiTyping: false, aiUsed: 0, tourIdx: 0, donutSel: null, recView: "timeline", syncing: false, synced: false, siriIdx: 0, daySpent: 39.37, anonOn: true, txnIdx: 0, plan: "yearly", theme: "auto", heroDev: "ios", goalView: 0, heroSlide: 0, hubIdx: 0, pillOn: false, nudgeIdx: 0, nudgeFade: false, howOn: false, diffOnly: false };
   _devicePickerEls() {
     const e = React.createElement;
     const cur = this.state.heroDev;
@@ -1545,31 +1546,47 @@ class Component extends DCLogic {
     JPY: { loc: "ja-JP", m: 1200, y: 9400, l: 15000 }
   };
   _currency() {
-    if (this._cur !== undefined) return this._cur;
-    let tz = "";
-    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (err) { tz = ""; }
-    const gb = ["Europe/London", "Europe/Belfast", "Europe/Guernsey", "Europe/Jersey", "Europe/Isle_of_Man"];
-    const us = ["America/New_York", "America/Chicago", "America/Denver", "America/Phoenix", "America/Los_Angeles", "America/Anchorage", "America/Juneau", "America/Sitka", "America/Nome", "America/Metlakatla", "America/Yakutat", "America/Adak", "America/Boise", "America/Detroit", "America/Menominee", "Pacific/Honolulu"];
-    let cur = null;
-    if (gb.indexOf(tz) >= 0) cur = "GBP";
-    else if (us.indexOf(tz) >= 0 || /^America\/(Indiana|Kentucky|North_Dakota)\//.test(tz)) cur = "USD";
-    else if (tz === "Asia/Tokyo") cur = "JPY";
-    if (cur) { try { new Intl.NumberFormat("en-GB", { style: "currency", currency: cur }).format(1); } catch (err) { cur = null; } }
-    this._cur = cur;
-    return cur;
+    if (this.state.priceCur) return this.state.priceCur;
+    if (this._curDefault === undefined) {
+      let saved = null;
+      try { saved = localStorage.getItem("lens-lp-currency"); } catch (err) { saved = null; }
+      if (saved && this._priceTable[saved]) this._curDefault = saved;
+      else {
+        let tz = "";
+        try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (err) { tz = ""; }
+        const gb = ["Europe/London", "Europe/Belfast", "Europe/Guernsey", "Europe/Jersey", "Europe/Isle_of_Man"];
+        this._curDefault = gb.indexOf(tz) >= 0 ? "GBP" : "USD";
+      }
+    }
+    return this._curDefault;
   }
   _money(v) {
     const c = this._currency();
     const digits = c === "JPY" || v === 0 ? 0 : 2;
-    return new Intl.NumberFormat(this._priceTable[c].loc, { style: "currency", currency: c, minimumFractionDigits: digits, maximumFractionDigits: digits }).format(v).replace(/\uffe5/g, "\u00a5");
+    try {
+      return new Intl.NumberFormat(this._priceTable[c].loc, { style: "currency", currency: c, minimumFractionDigits: digits, maximumFractionDigits: digits }).format(v).replace(/\uffe5/g, "\u00a5");
+    } catch (err) {
+      return { GBP: "\u00a3", USD: "$", JPY: "\u00a5" }[c] + v.toFixed(digits);
+    }
+  }
+  _setCurrency(c) {
+    this.setState({ priceCur: c });
+    try { localStorage.setItem("lens-lp-currency", c); } catch (err) {}
+  }
+  _currencySwitchEls() {
+    const e = React.createElement;
+    const cur = this._currency();
+    const item = (key, sym, label) => e("button", {
+      key, type: "button", onClick: () => this._setCurrency(key), "aria-pressed": cur === key ? "true" : "false", "aria-label": label,
+      style: { appearance: "none", minWidth: "40px", padding: "5px 12px", borderRadius: "999px", border: "none", cursor: "pointer", fontFamily: "'JetBrains Mono',monospace", fontSize: "13.5px", fontWeight: 600, color: cur === key ? "var(--lp-ink)" : "var(--lp-muted)", background: cur === key ? "var(--lp-bg)" : "transparent", boxShadow: cur === key ? "inset 0 0 0 1px var(--lp-hair)" : "none", transition: "background 250ms, color 250ms" }
+    }, sym);
+    return e("div", { role: "group", "aria-label": "Currency", style: { display: "inline-flex", gap: "2px", marginTop: "12px", padding: "3px", borderRadius: "999px", border: "1px solid var(--lp-hair)", background: "var(--lp-surface)" } },
+      item("GBP", "\u00a3", "Pounds sterling"), item("USD", "$", "US dollars"), item("JPY", "\u00a5", "Japanese yen"));
   }
   _priceVals() {
     const c = this._currency();
     const plan = this.state.plan;
     const chipShow = plan === "lifetime" ? "none" : "inline-block";
-    if (!c) {
-      return { priceShow: "none", proPrice: "", proPriceUnit: "", proPriceNote: "Prices are set by the App Store and Google Play, in your own currency.", trialPrice: "Free", priceIntro: "The monthly and yearly plans start with a 30-day free trial. Prices are set by the App Store and Google Play, in your own currency.", faqPrice: "The monthly and yearly plans of Lens Pro start with a 30-day free trial, and a one-off lifetime option is available too. Prices are set by the App Store and Google Play, in your own currency.", yearlyBadge: "", badgeShow: "none", chipShow };
-    }
     const p = this._priceTable[c];
     const save = Math.floor((1 - p.y / (p.m * 12)) * 100);
     const money = (v) => this._money(v);
@@ -2129,6 +2146,7 @@ class Component extends DCLogic {
       androidOpacity: this.state.heroDev === "android" ? 1 : 0,
       planToggle: this._planToggleEls(),
       ...this._priceVals(),
+      currencySwitch: this._currencySwitchEls(),
       reportDonut: this._donutEls(),
       dailyCard: this._dailyEls(true),
       dailyCardSolid: this._dailyEls(true),
