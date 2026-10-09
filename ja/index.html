@@ -1269,6 +1269,7 @@
         <button type="button" role="tab" aria-selected="{{ p2s }}" onClick="{{ plan2 }}" style="appearance:none;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:600;padding:9px 18px;border:none;border-radius:10px;background:{{ p2g }};color:{{ p2f }};box-shadow:{{ p2sh }}">買い切り</button>
       </div>
       </div>
+      <div style="display:flex;justify-content:center">{{ currencySwitch }}</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;margin:52px auto 0;max-width:900px">
         <div style="border-top:1px solid var(--lp-ink);padding-top:24px">
           <h3 style="margin:0;font-size:19px;font-weight:600">30日間の無料トライアル</h3>
@@ -1412,7 +1413,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;appStoreUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://apps.apple.com/app/id6764731647&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;ストアリンク&quot;},&quot;playStoreUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://play.google.com/store/apps/details?id=com.ednlens.app&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;ストアリンク&quot;},&quot;heroAmount&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:3400,&quot;min&quot;:0,&quot;max&quot;:999999,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;ヒーロー&quot;}}">
 class Component extends DCLogic {
-  state = { menuOpen: false, theme: "auto", heroSlide: 0, hubIdx: 0, pillOn: false, howOn: false, plan: "yearly", aiStep: 0, aiTyping: false, aiUsed: 0, daySpent: 380, siriIdx: 0, diffOnly: false };
+  state = { menuOpen: false, priceCur: null, theme: "auto", heroSlide: 0, hubIdx: 0, pillOn: false, howOn: false, plan: "yearly", aiStep: 0, aiTyping: false, aiUsed: 0, daySpent: 380, siriIdx: 0, diffOnly: false };
   _siriPhrases = ["Lens\u3067\u652f\u51fa\u3092\u8a18\u9332", "Lens\u3067\u4eca\u65e5\u306e\u6570\u5b57\u3092\u78ba\u8a8d", "Lens\u3067\u4eca\u5f8c\u306e\u8acb\u6c42\u3092\u78ba\u8a8d", "Lens\u3067\u7d14\u8cc7\u7523\u3092\u78ba\u8a8d", "Lens\u3067\u30ec\u30b7\u30fc\u30c8\u3092\u30b9\u30ad\u30e3\u30f3", "Lens\u3067\u76ee\u6a19\u3092\u78ba\u8a8d"];
   _siriAnswers = [
     "\u98df\u8cbb\u306b\u00a5980\u3092\u8a18\u9332\u3002\u4eca\u65e5\u306e\u6b8b\u308a\u306f\u00a59,931\u3002",
@@ -1428,32 +1429,42 @@ class Component extends DCLogic {
     JPY: { loc: "ja-JP", m: 1200, y: 9400, l: 15000 }
   };
   _currency() {
-    if (this._cur !== undefined) return this._cur;
-    let tz = "";
-    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (err) { tz = ""; }
-    const gb = ["Europe/London", "Europe/Belfast", "Europe/Guernsey", "Europe/Jersey", "Europe/Isle_of_Man"];
-    const us = ["America/New_York", "America/Chicago", "America/Denver", "America/Phoenix", "America/Los_Angeles", "America/Anchorage", "America/Juneau", "America/Sitka", "America/Nome", "America/Metlakatla", "America/Yakutat", "America/Adak", "America/Boise", "America/Detroit", "America/Menominee", "Pacific/Honolulu"];
-    let cur = null;
-    if (gb.indexOf(tz) >= 0) cur = "GBP";
-    else if (us.indexOf(tz) >= 0 || /^America\/(Indiana|Kentucky|North_Dakota)\//.test(tz)) cur = "USD";
-    else if (tz === "Asia/Tokyo") cur = "JPY";
-    if (cur) { try { new Intl.NumberFormat("en-GB", { style: "currency", currency: cur }).format(1); } catch (err) { cur = null; } }
-    this._cur = cur;
-    return cur;
+    if (this.state.priceCur) return this.state.priceCur;
+    if (this._curDefault === undefined) {
+      let saved = null;
+      try { saved = localStorage.getItem("lens-lp-currency"); } catch (err) { saved = null; }
+      this._curDefault = saved && this._priceTable[saved] ? saved : "JPY";
+    }
+    return this._curDefault;
   }
   _money(v) {
     const c = this._currency();
     const digits = c === "JPY" || v === 0 ? 0 : 2;
-    return new Intl.NumberFormat(this._priceTable[c].loc, { style: "currency", currency: c, minimumFractionDigits: digits, maximumFractionDigits: digits }).format(v).replace(/\uffe5/g, "\u00a5");
+    try {
+      return new Intl.NumberFormat(this._priceTable[c].loc, { style: "currency", currency: c, minimumFractionDigits: digits, maximumFractionDigits: digits }).format(v).replace(/\uffe5/g, "\u00a5");
+    } catch (err) {
+      return { GBP: "\u00a3", USD: "$", JPY: "\u00a5" }[c] + v.toFixed(digits);
+    }
+  }
+  _setCurrency(c) {
+    this.setState({ priceCur: c });
+    try { localStorage.setItem("lens-lp-currency", c); } catch (err) {}
+  }
+  _currencySwitchEls() {
+    const e = React.createElement;
+    const cur = this._currency();
+    const item = (key, sym, label) => e("button", {
+      key, type: "button", onClick: () => this._setCurrency(key), "aria-pressed": cur === key ? "true" : "false", "aria-label": label,
+      style: { appearance: "none", minWidth: "40px", padding: "5px 12px", borderRadius: "8px", border: "none", cursor: "pointer", fontFamily: "'JetBrains Mono',monospace", fontSize: "13.5px", fontWeight: 600, color: cur === key ? "var(--lp-ink)" : "var(--lp-muted)", background: cur === key ? "var(--lp-bg)" : "transparent", boxShadow: cur === key ? "inset 0 0 0 1px var(--lp-hair)" : "none", transition: "background 250ms, color 250ms" }
+    }, sym);
+    return e("div", { role: "group", "aria-label": "\u901a\u8ca8", style: { display: "inline-flex", gap: "2px", marginTop: "12px", padding: "3px", borderRadius: "12px", border: "1px solid var(--lp-hair)", background: "var(--lp-surface)" } },
+      item("GBP", "\u00a3", "\u82f1\u30dd\u30f3\u30c9"), item("USD", "$", "\u7c73\u30c9\u30eb"), item("JPY", "\u00a5", "\u65e5\u672c\u5186"));
   }
   _priceVals() {
     const c = this._currency();
     const plan = this.state.plan;
     const chipShow = plan === "lifetime" ? "none" : "inline-block";
     const badgeColor = plan === "yearly" ? "#A8DADC" : "var(--lp-good)";
-    if (!c) {
-      return { priceShow: "none", proPrice: "", proPriceUnit: "", proPriceNote: "\u4fa1\u683c\u306fApp Store\u3068Google Play\u304c\u3001\u304a\u4f4f\u307e\u3044\u306e\u56fd\u306e\u901a\u8ca8\u3067\u8868\u793a\u3057\u307e\u3059\u3002", trialPrice: "\u7121\u6599", priceIntro: "\u6708\u984d\u3068\u5e74\u984d\u306f\u300130\u65e5\u9593\u306e\u7121\u6599\u30c8\u30e9\u30a4\u30a2\u30eb\u304b\u3089\u59cb\u307e\u308a\u307e\u3059\u3002\u4fa1\u683c\u306fApp Store\u3068Google Play\u304c\u3001\u304a\u4f4f\u307e\u3044\u306e\u56fd\u306e\u901a\u8ca8\u3067\u8868\u793a\u3057\u307e\u3059\u3002", faqPrice: "\u6708\u984d\u3068\u5e74\u984d\u306f30\u65e5\u9593\u306e\u7121\u6599\u30c8\u30e9\u30a4\u30a2\u30eb\u304b\u3089\u59cb\u307e\u308a\u3001\u4e00\u5ea6\u304d\u308a\u306e\u8cb7\u3044\u5207\u308a\u3082\u3042\u308a\u307e\u3059\u3002\u4fa1\u683c\u306fApp Store\u3068Google Play\u304c\u3001\u304a\u4f4f\u307e\u3044\u306e\u56fd\u306e\u901a\u8ca8\u3067\u8868\u793a\u3057\u307e\u3059\u3002", yearlyBadge: "", badgeShow: "none", badgeColor, chipShow };
-    }
     const p = this._priceTable[c];
     const save = Math.floor((1 - p.y / (p.m * 12)) * 100);
     const money = (v) => this._money(v);
@@ -1745,6 +1756,7 @@ class Component extends DCLogic {
     const amount = this.props.heroAmount ?? 3400;
     return Object.assign({
       headerRef: this.headerRef,
+      currencySwitch: this._currencySwitchEls(),
       mobileMenu: this._menuEls(),
       spacerRef: this.spacerRef,
       chatRef: this.chatRef,
